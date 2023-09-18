@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "713e0afd89f6035e",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c91b17cd979fda1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5a02daa22ff53be6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clippings/ObsidianでiPhoneからGit Commitする.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "20a3ffb993e97766",
+    "type": "split",
+    "children": [
+      {
+        "id": "286e16b59d1ad88b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41ea040bb6bc4894",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          },
+          {
+            "id": "ae889454cff1b0cb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8f051dbab6d1a2e6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "303b0640f289c039",
+            "type": "leaf",
+            "state": {
+              "type": "tagfolder-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 446.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "012c2c0b60782ceb",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea6fa9d3bfdeb68b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "93ee03f3e14506be",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Clippings/ObsidianでiPhoneからGit Commitする.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a9eabd4f26e0281d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Clippings/ObsidianでiPhoneからGit Commitする.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "92fc52ad6cd7b2dc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "603eb903404ebb82",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Clippings/ObsidianでiPhoneからGit Commitする.md"
+              }
+            }
+          },
+          {
+            "id": "2b8578cfc4b5bd3b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "markdown-importer:Open format converter": false,
+      "obsidian-importer:Open Importer": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "5a02daa22ff53be6",
+  "lastOpenFiles": [
+    "README.md",
+    "Clippings.md",
+    "Clippings/ObsidianでiPhoneからGit Commitする.md",
+    "Clippings/[Obsidian Mobile] もう重いとは言わせない！ PCとの同期手順 (iOS-Android).md",
+    "Clippings/[Obsidian] Self-hosted LiveSyncとデータ同期に迫る！ (対談企画02).md",
+    "Clippings/高校向け 金融経済教育指導教材の公表について.md",
+    "Untitled.md",
+    "基本情報技術者試験/データベース.md",
+    "トランザクション処理.md",
+    "排他制御.md",
+    "ストアドプロシージャ.md",
+    "ロックの粒度.md",
+    "デッドロック.md",
+    "ACID特性.md",
+    "3層スキーマ構造.md",
+    "データベースの正規化.md",
+    "外部キー.md",
+    "複合キー.md",
+    "主キー.md",
+    "データの独立性.md",
+    "RDB.md",
+    "DBMS.md",
+    "データベース.md",
+    "基本情報技術者試験.md",
+    "基本情報技術者試験/ソフトウェア.md",
+    "ページング方式.md",
+    "スクリーンショット 2023-09-14 9.31.19.png",
+    "スクリーンショット 2023-09-13 9.45.30.png",
+    "スクリーンショット 2023-09-13 9.42.33.png",
+    "スクリーンショット 2023-09-13 9.42.09.png",
+    "スクリーンショット 2023-09-13 9.38.39.png",
+    "スクリーンショット 2023-09-11 10.37.53.png",
+    "スクリーンショット 2023-09-11 9.36.43.png",
+    "スクリーンショット 2023-09-11 9.34.57.png",
+    "基本情報技術者試験",
+    "スクリーンショット 2023-09-10 17.23.45.png",
+    "スクリーンショット 2023-09-10 17.22.05.png",
+    "CAPTHA",
+    "Notionチームスペース構成.canvas",
+    "Templates",
+    "読書",
+    "Notion/Startup in a Box/Startup in a Box/Company OKRs/OKR Changelog/OKRs V2/OKRs v1/Quarterly OKRs/LEGACY/Team OKRs/無題/Key Results",
+    "Notion/Startup in a Box/Startup in a Box/Company OKRs/OKR Changelog/OKRs V2/OKRs v1/Quarterly OKRs/LEGACY/Team OKRs/無題",
+    "Notion/Startup in a Box/Startup in a Box/Company OKRs/OKR Changelog/OKRs V2/OKRs v1/Quarterly OKRs/LEGACY/Company OKRs/無題/Key Results",
+    "Notion/Startup in a Box/Startup in a Box/Company OKRs/OKR Changelog/OKRs V2/OKRs v1/Quarterly OKRs/LEGACY/Company OKRs/無題",
+    "Notion/Startup in a Box/Startup in a Box/Company OKRs/OKR Changelog/OKRs V2/OKRs v1/Quarterly OKRs/Growth Levers/Team OKRs/無題/Key Results",
+    "Notion/Startup in a Box/Startup in a Box/Company OKRs/OKR Changelog/OKRs V2/OKRs v1/Quarterly OKRs/Growth Levers/Team OKRs/無題",
+    "マスタリングTCPIP/マスタリングTCPIP.canvas"
+  ]
+}

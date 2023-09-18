@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"type":"text","text":"DB_VoC","id":"08ab765a2b148253","x":340,"y":170,"width":250,"height":60},
+		{"type":"text","text":"DB_議事録","id":"dd809bb667cdb069","x":340,"y":520,"width":250,"height":60},
+		{"type":"text","text":"DB_プロジェクト ","id":"a7b41c460abfea51","x":340,"y":379,"width":250,"height":60},
+		{"type":"text","text":"General (POとTech)\n- ホーム\n- PO\n- TO\n- BE\n- FE\n- APP\n - プロジェクト\n - スプリント\n - チケット\n - ドキュメント\n - 議事録","id":"67a9abbc5a2bc11f","x":-60,"y":379,"width":250,"height":391},
+		{"type":"text","text":"CX\n- VoC\n- 案件","id":"ebfb860ca209c4f5","x":-60,"y":170,"width":250,"height":138}
+	],
+	"edges":[
+		{"id":"cc79f1b093912939","fromNode":"08ab765a2b148253","fromSide":"left","toNode":"ebfb860ca209c4f5","toSide":"right"},
+		{"id":"53f45da410860e6d","fromNode":"a7b41c460abfea51","fromSide":"left","toNode":"67a9abbc5a2bc11f","toSide":"right"},
+		{"id":"c7bc9baa461cfd9e","fromNode":"a7b41c460abfea51","fromSide":"left","toNode":"ebfb860ca209c4f5","toSide":"right"},
+		{"id":"af4542cb32f43c72","fromNode":"dd809bb667cdb069","fromSide":"left","toNode":"ebfb860ca209c4f5","toSide":"right"},
+		{"id":"8479c5f25c3789db","fromNode":"dd809bb667cdb069","fromSide":"left","toNode":"67a9abbc5a2bc11f","toSide":"right"}
+	]
+}
