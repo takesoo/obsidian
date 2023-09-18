@@ -1,1 +1,3 @@
 # obsidian
+
+obsidianのバックアップ用リポジトリ。

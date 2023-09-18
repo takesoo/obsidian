@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8c91b17cd979fda1",
+        "id": "3384fc4a06ed182c",
         "type": "tabs",
         "children": [
           {
-            "id": "5a02daa22ff53be6",
+            "id": "89f0188b2df6ffd1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/ObsidianでiPhoneからGit Commitする.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Clippings/ObsidianでiPhoneからGit Commitする.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Clippings/ObsidianでiPhoneからGit Commitする.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Clippings/ObsidianでiPhoneからGit Commitする.md"
+                "file": "README.md"
               }
             }
           },
@@ -149,14 +149,21 @@
                 "sortOrder": "frequency"
               }
             }
+          },
+          {
+            "id": "8b66a453718f7640",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -172,11 +179,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5a02daa22ff53be6",
+  "active": "89f0188b2df6ffd1",
   "lastOpenFiles": [
     "README.md",
-    "Clippings.md",
     "Clippings/ObsidianでiPhoneからGit Commitする.md",
+    "Clippings.md",
     "Clippings/[Obsidian Mobile] もう重いとは言わせない！ PCとの同期手順 (iOS-Android).md",
     "Clippings/[Obsidian] Self-hosted LiveSyncとデータ同期に迫る！ (対談企画02).md",
     "Clippings/高校向け 金融経済教育指導教材の公表について.md",
