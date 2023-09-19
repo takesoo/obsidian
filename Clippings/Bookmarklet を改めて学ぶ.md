@@ -1,12 +1,14 @@
 ---
 category: "[[Clippings]]"
 author: "[[defaultcfフォロー]]"
-title: "Bookmarklet を改めて学ぶ"
+title: Bookmarklet を改めて学ぶ
 source: https://zenn.dev/defaultcf/articles/learn-bookmarklet
 clipped: 2023-09-19
 published: 
 topics: 
-tags: [clippings]
+tags:
+  - clippings
+  - bookmarklet
 ---
 
 業務でもプライベートでも、Bookmarklet 無しには生きていけない私です。  
