@@ -12,11 +12,38 @@ Ruby on Railsにおいて、ファイルを扱うための機能。ファイル�
 > Active Storageは、アプリケーションのデータベースで `active_storage_blobs`、`active_storage_variant_records`、`active_storage_attachments`という名前の3つのテーブルを使います。
 
 ### active_storage_blobs
-[[BLOB]]の情報を保存するテーブル
+[[ActiveStorageBlob|ActiveStorage::Blob]]モデルのテーブル
+[[BLOB]]の情報（識別キー、ファイル名、Content-Type、メタデータ、サイズなど）を保存するテーブル
 
 ### active_storage_attachments
-モデルのクラス名を保存するポリモーフィックjoinテーブル
+[[ActiveStorageAttachments|ActiveStorage::Attachments]]モデルのテーブル
+[[ActiveStorageBlob|ActiveStorage::Blob]]とアプリ内のモデルをポリモーフィックで関連づける中間テーブル
 
 ### actve_storage_variant_records
 [[ActiveStorageVariant|ActiveStorage::Variant]]モデルのテーブル
 画像のサイズ変更や回転などの加工情報を保存する
+
+## How
+### 基本的な使い方
+```ruby
+# has_one_attached
+class User < ApplicationRecord
+  has_one_attached :avatar
+end
+
+user.create(avatar: ...)
+user.avatar.attach(params[:avatar])
+user.avatar.purge
+user.avatar.purge_later
+
+class Message < ApplicationRecord
+  has_many_attached :images
+end
+
+message.create({images: [...]})
+message.images.attach(params[:images])
+```
+### url生成
+### ダイレクトアップロード
+クライアントサイドからS3などのクラウドストレージにアップロードして、後からActiveRecordと紐づける方法。
+クロスオリジンリクエストを許可する必要がある。
