@@ -4,6 +4,7 @@ tags:
   - extension
 Link:
   - https://github.com/Shopify/ruby-lsp
+  - https://github.com/Shopify/vscode-ruby-lsp
 ---
 Rubyでの開発をサポートしてくれる拡張機能。
 [[LSP]]
