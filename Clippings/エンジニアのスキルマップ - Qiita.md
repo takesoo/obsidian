@@ -45,7 +45,7 @@ ITコンサル時代は業務系でJavaをガリガリ、独立後はiOS、NodeJ
 
 `スキル` ✕ `レベル別エンジニア像` のマトリックスで示しています（以下の画像）。字が小さいので、以下に箇条書きでも書いています。おまけでレベル別に読んだらいい本の議論もできると面白いと思います。
 
-[![スキルマップ](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F26825%2Ff2c3b2af-3dac-ce05-b153-54fe8d6d967c.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&s=1dd049accf581161e58a1de65c3abb76)](https://camo.qiitausercontent.com/cad1a0f641a4413088208af83d87cda4598f69b2/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f32363832352f66326333623261662d336461632d636530352d623135332d3534666538643664393637632e706e67)
+![[68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f32363832352f66326333623261662d336461632d636530352d623135332d3534666538643664393637632e706e67.png]]
 
 表の元ネタは [Googleスプレッドシートで共有](https://docs.google.com/spreadsheets/d/1_aXWtJkaM7ZKITZlcDTXnOM6-3eogV0nzG_6lr0L6NQ/edit#gid=0) しています。こちらへも直接コメント付けてもらえると嬉しいです。  
 Lv.の数字は推して知るべしです：）
