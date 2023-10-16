@@ -9,13 +9,22 @@ aliases:
 	- 照合：等しいか等しくないか。=, ≠
 	- 順序：順番が前か後か。>, <
 	- `'A' = 'a'`は照合順序によってtrueにもfalseにもなる
+- 例
+	- `utf8_Unicode_ci`
+	- `utf8_general_ci`
 - 命名規則
 	- `文字セット_文化（言語）_大文字小文字比較`
 	- [[mysql-charset|文字セット]]
 	- 文化（言語）
+		- 文字セットによって決まる
 		- bin: バイナリ文字比較
+		- unicode: [[Unicode照合アルゴリズム]]
+		- general: 一般的な照合順序
 		- ja, etc...
 	- 大文字小文字比較
+		- ci: Case Insensitive. 大文字小文字を無視する。「あ」と「ぁ」は等しい
+		- cs: Case Sensitive. 大文字小文字を区別する
+		- ai: Accent Insensitive. アクセントの違いを無視する。「は」と「ぱ」は等しい
 - [[mysql-charset|文字セット]]に合わせた照合順序がある
 	- `_general`: 一般的な照合順序
 	- `_bin`: バイナリ照合順序
