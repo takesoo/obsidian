@@ -37,4 +37,4 @@ aliases:
 		- `PAD_ATTRIBUTE`: `NO PAD`
 			- `SELECT * FROM t1 WHERE c = 'a '`でc='a'のレコードはヒットしない
 	- ![[スクリーンショット 2023-10-16 18.28.06.png]]
--  
+- ** 
