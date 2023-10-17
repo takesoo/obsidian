@@ -9,12 +9,12 @@ aliases:
 	- 照合：等しいか等しくないか。=, ≠
 	- 順序：順番が前か後か。>, <
 	- `'A' = 'a'`は照合順序によってtrueにもfalseにもなる
-- 例
-	- `utf8_Unicode_ci`
-	- `utf8_general_ci`
 - 命名規則
 	- `文字セット_文化（言語）_大文字小文字比較`
-	- [[mysql-charset|文字セット]]
+		- `utf8_Unicode_ci`
+		- `utf8_general_ci`
+	- 文字セット
+		- [[mysql-charset|文字セット]]を参照
 	- 文化（言語）
 		- 文字セットによって決まる
 		- bin: バイナリ文字比較
@@ -25,6 +25,11 @@ aliases:
 		- ci: Case Insensitive. 大文字小文字を無視する。「あ」と「ぁ」は等しい
 		- cs: Case Sensitive. 大文字小文字を区別する
 		- ai: Accent Insensitive. アクセントの違いを無視する。「は」と「ぱ」は等しい
+- システム変数
+	- `collation_connection`: [[mysql-charset#`character_set_connection`|接続文字セット]]のデフォルト照合順序
+	- `collation_server`: [[mysql-charset#`character_set_server`|サーバーの文字セット]]のデフォルト照合順序
+	- `collation_database`: [[mysql-charset#`character_set_database`|データベースの文字セット]]のデフォルト照合順序
+- 
 - MySQL5.7までは`utf8mb4`のデフォルト照合順序は`utf8mb4_general_ci`だったが、8.0からは`utf8mb4_0900_ai_ci`
 	- `utf8mb4_general_ci`
 		- 半角大文字と半角小文字は同じ文字として判断される
@@ -37,4 +42,4 @@ aliases:
 		- `PAD_ATTRIBUTE`: `NO PAD`
 			- `SELECT * FROM t1 WHERE c = 'a '`でc='a'のレコードはヒットしない
 	- ![[スクリーンショット 2023-10-16 18.28.06.png]]
-- ** 
+- 
