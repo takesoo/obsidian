@@ -25,10 +25,10 @@ aliases:
 		- ci: Case Insensitive. 大文字小文字を無視する。「あ」と「ぁ」は等しい
 		- cs: Case Sensitive. 大文字小文字を区別する
 		- ai: Accent Insensitive. アクセントの違いを無視する。「は」と「ぱ」は等しい
-- システム変数
+- [[mysql-システム変数|システム変数]]
 	- `collation_connection`: [[mysql-charset#`character_set_connection`|接続文字セット]]のデフォルト照合順序
 	- `collation_server`: [[mysql-charset#`character_set_server`|サーバーの文字セット]]のデフォルト照合順序
-	- `collation_database`: [[mysql-charset#`character_set_database`|データベースの文字セット]]のデフォルト照合順序
+	- `collation_database`: [[mysql-charset#`character_set_database`|データベースの文字セット]]のデフォルト照合順序（非推奨）
 - 
 - MySQL5.7までは`utf8mb4`のデフォルト照合順序は`utf8mb4_general_ci`だったが、8.0からは`utf8mb4_0900_ai_ci`
 	- `utf8mb4_general_ci`
