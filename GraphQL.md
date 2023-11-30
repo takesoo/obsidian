@@ -45,6 +45,7 @@ type Mutation {
 ```
 
 リクエストを解析してスキーマの型定義からレスポンスを柔軟に作成する
+また、スキーマ定義はjsonなどにエクスポートしてpostmanなどにインストールすることもできる
 
 ## Ruby on RailsにGraphQLを導入する
 →[[GraphQL Ruby]]
