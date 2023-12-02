@@ -1,0 +1,28 @@
+{
+	"nodes":[
+		{"id":"293f7ffdbbc82bf7","x":-1380,"y":-1180,"width":400,"height":400,"type":"file","file":"Notionグループ.md"},
+		{"id":"c8ad38578d253300","x":-1480,"y":-520,"width":400,"height":400,"type":"file","file":"Notionユーザー.md"},
+		{"id":"40bfd78b260c9e39","type":"file","file":"チームスペース.md","x":-340,"y":420,"width":400,"height":400},
+		{"id":"277a19346c23bbfc","type":"file","file":"ワークスペース権限.md","x":-85,"y":-150,"width":400,"height":400},
+		{"id":"57ae9bb687176413","x":440,"y":80,"width":250,"height":60,"type":"text","text":"ページ"},
+		{"id":"45d0fbc75a91e7f8","x":440,"y":-1180,"width":400,"height":400,"type":"file","file":"ページ権限.md"},
+		{"id":"4fb5ae7c4381ee91","x":-640,"y":-1180,"width":400,"height":400,"type":"file","file":"グループ権限.md"},
+		{"id":"f832dcbbe889cd61","type":"file","file":"ワークスペース.md","x":-740,"y":-240,"width":400,"height":400},
+		{"id":"0746078fe3d3f82d","type":"file","file":"Notionワークスペースオーナー.md","x":-1240,"y":110,"width":400,"height":400},
+		{"id":"bf13289a004b61c9","type":"file","file":"チームスペースオーナー.md","x":-1720,"y":480,"width":400,"height":400},
+		{"id":"0ab6968579321d36","x":220,"y":510,"width":250,"height":230,"type":"text","text":"チームスペース権限\n- チームスペースオーナー\n- チームスペースメンバー\n- ワークスペースの全員\n- フルアクセス\n- 編集権限"}
+	],
+	"edges":[
+		{"id":"682522383503316b","fromNode":"f832dcbbe889cd61","fromSide":"bottom","toNode":"40bfd78b260c9e39","toSide":"left"},
+		{"id":"e248bbf59bfdc5bd","fromNode":"f832dcbbe889cd61","fromSide":"left","toNode":"0746078fe3d3f82d","toSide":"right"},
+		{"id":"21911d06fff0452e","fromNode":"40bfd78b260c9e39","fromSide":"bottom","toNode":"bf13289a004b61c9","toSide":"right"},
+		{"id":"f54fc9c45fdbd06e","fromNode":"277a19346c23bbfc","fromSide":"left","toNode":"f832dcbbe889cd61","toSide":"right"},
+		{"id":"139a2c0e85300fc1","fromNode":"4fb5ae7c4381ee91","fromSide":"left","toNode":"293f7ffdbbc82bf7","toSide":"right"},
+		{"id":"4e127340c1e2c3f1","fromNode":"c8ad38578d253300","fromSide":"top","toNode":"293f7ffdbbc82bf7","toSide":"bottom"},
+		{"id":"1a979bf21757ebca","fromNode":"0746078fe3d3f82d","fromSide":"top","toNode":"c8ad38578d253300","toSide":"bottom"},
+		{"id":"6085d899d1d13369","fromNode":"bf13289a004b61c9","fromSide":"top","toNode":"c8ad38578d253300","toSide":"bottom"},
+		{"id":"d65b67b374db5206","fromNode":"45d0fbc75a91e7f8","fromSide":"bottom","toNode":"57ae9bb687176413","toSide":"top"},
+		{"id":"26bc129de2407b1a","fromNode":"4fb5ae7c4381ee91","fromSide":"right","toNode":"45d0fbc75a91e7f8","toSide":"left"},
+		{"id":"fd8c1b302483b5b3","fromNode":"4fb5ae7c4381ee91","fromSide":"bottom","toNode":"40bfd78b260c9e39","toSide":"top"}
+	]
+}
