@@ -1,4 +1,9 @@
-#Notion
+---
+aliases:
+  - ワークスペースオーナー
+tags:
+  - Notion
+---
 
 https://www.notion.so/ja-jp/help/guides/how-workspace-owners-can-set-up-teamspaces-for-their-organization
 
