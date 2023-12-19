@@ -4,7 +4,7 @@ tags:
 ---
 https://bundler.io/
 - ruby gemsのパッケージ管理ライブラリ
-	- gemfileを作成編集して`bundle install`すると[[gemfile.lock]]が作成される
+	- [[gemfile]]を作成編集して`bundle install`すると[[gemfile.lock]]が作成される
 	- `bundle install`はgemfile.lockをもとにgemをインストールする
 	- `bundle update`はgemfileをもとにgemをインストールし直して[[gemfile.lock]]を生成しなおす
 	- gemを追加する時はgemfileに追加して`bundle install`
