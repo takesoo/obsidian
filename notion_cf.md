@@ -43,10 +43,11 @@ cf = cloudformation
 ## TODO
 - [x] 既存ページからテンプレートを作成できる
 - [ ] テンプレートからページを作成できる
-	- [ ] paragraph
-	- [ ] heading
-	- [ ] list
-	- [ ] callout
+	- [x] paragraph
+	- [x] heading
+	- [x] list
+	- [x] column
+	- [x] callout
 	- [ ] データベースも作成
 	- [ ] ページも作成
 - [ ] テンプレートで既存ページを更新できる
