@@ -68,6 +68,7 @@ cf = cloudformation
 - pageのyamlテンプレートとblocksのyamlテンプレートは分けた方が扱いやすいかも
 	- 分けた方が作りやすいので一旦そうする
 - tableブロックはidとtable_widthをセットで指定するとエラーが返される
+	- tableぶr
 - urlプロパティが必要なブロックは有効なurlを渡さないとエラーになる。空文字なども不可
 	- videoの場合は埋め込みリンクでないとエラーになる
 	- NotionAPIでファイルアップローディングはまだできない
