@@ -1,0 +1,1 @@
+https://aligach.net/diary/2022/0604/yard-and-solargraph/
