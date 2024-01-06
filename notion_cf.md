@@ -42,7 +42,7 @@ cf = cloudformation
 ---
 ## TODO
 - [x] 既存ページからテンプレートを作成できる
-- [ ] テンプレートからページを作成できる
+- [x] テンプレートからページを作成できる
 	- [x] paragraph
 	- [x] heading
 	- [x] list
