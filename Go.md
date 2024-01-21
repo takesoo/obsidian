@@ -2,7 +2,7 @@
 tags:
   - プログラミング言語
 ---
-:
+
 ```go
 // Arrayは固定長
 var ary [2]string
@@ -27,9 +27,24 @@ Sliceは容量(capacity, cap)と長さ(length, len)を持ち、capは参照元�
 */
 s := []int{2,3,5,7,11,13}
 s = s[:0] //=> cap=6, len=0, []
-s = s[:4] //=> cap=6, len=4, [2 3 5 7 11 1]
+s = s[:4] //=> cap=6, len=4, [2,3,5,7]
+s = s[2:] //=> cap=4, len=2, [5,7]
+s = s[:4] //=> cap=4, len=4, [5,7,11,13]
+
+/*
+Sliceのゼロ値はnil
+*/
+
+s := []int{}
+fmt.Println(s, len(s), cap(s)) //=>[] 0 0
+fmt.Printf("%t\n", s == nil) //=> true
 ```
 
+```go
+/*
+Map
+*/
+```
 fmtパッケージ
 標準出力に書式設定して出力する
 ```go
