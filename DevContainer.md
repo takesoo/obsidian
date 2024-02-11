@@ -24,9 +24,9 @@ Created time: Invalid date
 ### Dockerfileまたはdocker-compose.yml
 - コンテナのイメージ定義
 	- 必要なソフトウェアやツール、ライブラリのインストール
-## Remote Extension Host
-- ローカルのVSCodeとリモート(DevContainer)のVSCodeとの通信をするコンポーネント
-	- リモートサーバー（DevContainer）との通信
+## [[Remote Extension Host]]
+- リモート開発機能を利用する際に、リモートサーバー上で拡張機能を実行するホスト
+	- リモート環境（コンテナ、サーバー）との通信
 	- 拡張機能の実行
 	- ファイルシステムのアクセス
 	- ターミナルとデバッグセッション
