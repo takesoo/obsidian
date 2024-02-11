@@ -1,6 +1,7 @@
 ---
 tags:
   - Ruby_on_Rails
+  - ActiveStorage
 Link:
   - https://railsguides.jp/active_storage_overview.html
 ---
@@ -18,10 +19,12 @@ Ruby on Railsにおいて、ファイルを扱うための機能。ファイル�
 ### active_storage_attachments
 [[ActiveStorageAttachments|ActiveStorage::Attachments]]モデルのテーブル
 [[ActiveStorageBlob|ActiveStorage::Blob]]とアプリ内のモデルをポリモーフィックで関連づける中間テーブル
+これによってモデルとblobはn対nになる
 
 ### actve_storage_variant_records
 [[ActiveStorageVariant|ActiveStorage::Variant]]モデルのテーブル
 画像のサイズ変更や回転などの加工情報を保存する
+
 
 ## How
 ### 基本的な使い方
@@ -47,3 +50,13 @@ message.images.attach(params[:images])
 ### ダイレクトアップロード
 クライアントサイドからS3などのクラウドストレージにアップロードして、後からActiveRecordと紐づける方法。
 クロスオリジンリクエストを許可する必要がある。
+### 設定
+config/storage.yml
+config/environments/development.rbでvariand_processorを設定できる
+```ruby
+Rails.application.configure do
+config.active_storage.variant_processor = :vips | :mini_magick
+```
+
+## 内部的な処理の流れ
+- [[ActiveStorageBlobAnalyzable]]
