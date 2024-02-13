@@ -79,3 +79,39 @@ a := "hoge"
 b := "999"
 fmt.Println(a, b) //=> hoge 999
 ```
+
+```go
+// 関数の定義
+func MethodName(argument argumentType) returnType {
+	...
+}
+```
+
+```go
+// Goにクラスはなく、structとポインタレシーバを持つメソッドで定義する
+// メンバはlowerCamelCaseならprotected, UpperCamelCaseならpublic
+type Person struct {
+    name string
+    age int
+}
+
+// クラスメソッドは(thisに相当する変数, *構造体名)をつける。*構造体名はポインタレシーバ
+// setter
+func (p *Person) SetPerson(name string, age int) {
+    p.name = name
+    p.age = age
+}
+
+// getter
+func (p *Person) GetPerson() (string, int) {
+    return p.name, p.age
+}
+
+func main() {
+	// structの初期化はp1 := Person{"Yamada", 26} または Person{name: "Yamada", age: 26}とも書ける
+    var p1 Person
+    p1.SetPerson("Yamada", 26)
+    name, age := p1.GetPerson()
+    fmt.Printf("%s(%d)\n", name, age)
+}
+```
