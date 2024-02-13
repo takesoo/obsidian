@@ -1,0 +1,1 @@
+https://proggy.jp/manage-dotfiles/
