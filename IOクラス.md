@@ -2,12 +2,19 @@
 tags:
   - ruby/class
 ---
-- 入出力(Input/Output)を提供するクラス
+- [[入出力]](Input/Output)を提供するクラス
 - 標準入出力
 	- 標準入力
 	- 標準出力
 	- 標準エラー出力
-- ファイル開閉操作
-	- `io = File.open(file, mode)`
+- Fileクラス
+	- IOクラスを継承している
+	- ファイル開閉操作
+		- `io = File.open(file, mode)`
+	- ファイルの入出力操作
+- Socketクラス
 	- 
-- ファイルの入出力操作
+- パイプ
+	- `IO.popen`
+- StringIOクラス
+	- メモリ上の文字列に対してIOオブジェクトと同様の操作を行う時に使用する
