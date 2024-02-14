@@ -115,3 +115,36 @@ func main() {
     fmt.Printf("%s(%d)\n", name, age)
 }
 ```
+
+```go
+// ポインタを引数に取る場合はポインタを渡さなければならない
+type Arg struct {
+	name string
+}
+func Something1(arg *Arg) {
+	...
+}
+
+a1 := Arg{"a1"}
+Something1(a1) // Compile error!
+Something1(&a1) // OK
+
+// ポインタレシーバの場合は変数でもポインタでもOK
+func (arg *Arg)Something2 {
+	...
+}
+
+a1.Something2 // OK メソッド内でポインタレシーバが自動的に呼び出される
+(&a1).Something2 // OK
+
+/*
+	ポインタレシーバを使う理由は２つ
+	- メソッドがレシーバが指す先の変数を変更するため
+	- メソッドの呼び出しごとに変数のコピーを避けるため
+*/
+```
+
+```go
+// Interfaces
+
+```
