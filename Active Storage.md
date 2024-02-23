@@ -8,7 +8,7 @@ Link:
 ## What
 > Active Storageは、Amazon S3、Google Cloud Storage、Microsoft Azure Storageなどのクラウドストレージサービスへのファイルのアップロードや、ファイルをActive Recordオブジェクトにアタッチする機能を提供します。
 
-Ruby on Railsにおいて、ファイルを扱うための機能。ファイルはレコードに紐づく。
+Ruby on Railsにおいてファイルを扱うための機能。ファイルはレコードに紐づく。
 
 > Active Storageは、アプリケーションのデータベースで `active_storage_blobs`、`active_storage_variant_records`、`active_storage_attachments`という名前の3つのテーブルを使います。
 
@@ -48,7 +48,7 @@ message.images.attach(params[:images])
 ```
 ### url生成
 ### ダイレクトアップロード
-クライアントサイドからS3などのクラウドストレージにアップロードして、後からActiveRecordと紐づける方法。
+クライアントサイドからストレージにアップロードして、後からActiveRecordと紐づける方法。
 クロスオリジンリクエストを許可する必要がある。
 ### 設定
 config/storage.yml
@@ -59,4 +59,7 @@ config.active_storage.variant_processor = :vips | :mini_magick
 ```
 
 ## 内部的な処理の流れ
-- [[ActiveStorageBlobAnalyzable]]
+1. insert into active_storage_blobs
+2. insert into active_storage_attributes
+3. after_commitでファイルアップロード
+4. [[ActiveStorageBlobAnalyzable]]
