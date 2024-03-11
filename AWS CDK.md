@@ -19,6 +19,12 @@ cdk bootstrap aws://ACCOUNT-NUMBER/REGION
 # cdkプロジェクトの初期化
 # gitリポジトリも作成される
 cdk init [project-name] --language typescript
+
+# Cfnテンプレートをcdk.outに作成する
+cdk synth
+
+# cdkリソースをAWSにデプロイする
+cdk deploy
 ```
 
 
