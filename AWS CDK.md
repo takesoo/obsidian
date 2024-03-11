@@ -23,8 +23,11 @@ cdk init [project-name] --language typescript
 # Cfnテンプレートをcdk.outに作成する
 cdk synth
 
-# cdkリソースをAWSにデプロイする
+# cdkリソースをAWSにデプロイする（内部的にcdk synthも実行する）
 cdk deploy
+
+# cdkリソースを削除する
+cdk destroy
 ```
 
 
