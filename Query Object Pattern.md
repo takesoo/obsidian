@@ -17,7 +17,7 @@ aliases:
 	- 読みやすいクエリメソッドを書くことに集中すること
 	- QueryObjectを名前空間でグループ化すること
 		- `app/queries/with_recently_created_project_query.rb`
-	- 全てのメソッドを`.call`の結果に以上することも検討すること
+	- 全てのメソッドを`.call`の結果に委譲することも検討すること
 
 ```ruby
 module Users
