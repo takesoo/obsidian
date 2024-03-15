@@ -36,3 +36,4 @@ end
 
 ---
 [Railsで重要なパターンpart 2: Query Object（翻訳）｜TechRacho by BPS株式会社](https://techracho.bpsinc.jp/hachi8833/2022_03_24/47287)
+[Railsのデザインパターン: Queryオブジェクト - applis](https://applis.io/posts/rails-design-pattern-query-objects)
