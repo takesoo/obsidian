@@ -11,3 +11,4 @@ tags:
 ## Getting Started
 1. install and configure ESLint
 2. install VSCode extension
+3. package.jsonのscriptsに`"lint"`を追加

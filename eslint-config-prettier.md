@@ -16,3 +16,8 @@ tags:
 2. install and setup eslint-config-prettier
 	1. install eslint-config-prettier
 	2. eslintrcのに`prettier`を追加する
+
+
+---
+- infra-serviceとfront.canbright.jpはこの形を使っているのか？パッケージが見当たらないし、eslintrcに設定もなさそう？
+- infra-serviceのpackages workspaceは何をしてるのか

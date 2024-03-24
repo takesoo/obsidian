@@ -1,0 +1,1 @@
+https://zenn.dev/crsc1206/articles/d92548257fb445
