@@ -1,37 +1,13 @@
 ---
 tags:
   - JavaScript
+  - npm
 ---
 [Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter](https://eslint.org/)
 
-- JavaScriptのlinter
+- JavaScriptのlinter（構文解析）
+- 静的解析
 
 ## Getting Started
 1. install and configure ESLint
-```zsh
-yarn create @eslint/config
-yarn create v1.22.11
-warning package.json: No license field
-[1/4] 🔍  Resolving packages...
-[2/4] 🚚  Fetching packages...
-[3/4] 🔗  Linking dependencies...
-[4/4] 🔨  Building fresh packages...
-
-success Installed "@eslint/create-config@0.4.6" with binaries:
-      - create-config
-✔ How would you like to use ESLint? · problems
-✔ What type of modules does your project use? · esm
-✔ Which framework does your project use? · none
-✔ Does your project use TypeScript? · No / Yes
-✔ Where does your code run? · node
-✔ What format do you want your config file to be in? · JSON
-The config that you've selected requires the following dependencies:
-
-@typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
-✔ Would you like to install them now? · No / Yes
-Successfully created .eslintrc.json file in /Users/kubotahotaka/Developments/aws/cdk/cdk_ecr
-✨  Done in 109.75s.
-```
-
-2. Setup VSCode
-	拡張機能をインストール
+2. install VSCode extension

@@ -1,23 +1,15 @@
 ---
 tags:
-  - JavaScript
+  - npm
 ---
 [Prettier · Opinionated Code Formatter](https://prettier.io/)
 
-- JavaScriptのformatter
+- code formatter
 
 ## Getting Started
-1. install
-```zsh
-# install prettier
-yarn add --dev prettier
-# create .prettierrc.json
-echo {}> .prettierrc.json
-```
-
-2. Setup Vscode
-	1. vscode拡張機能をインストール
-	2. setting.jsonに設定を追加
+1. install prettier
+2. install VSCode extension
+3. setting.jsonに設定を追加
 ```json
 {
   "editor.formatOnSave": true, // 保存時にフォーマットを起動する
@@ -25,4 +17,3 @@ echo {}> .prettierrc.json
 }
 ```
 
-3. 
