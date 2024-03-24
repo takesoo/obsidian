@@ -1,12 +1,32 @@
 ---
 tags:
+  - VSCode
   - JavaScript
 ---
-[Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter](https://eslint.org/)
+- [[eslint]]
+- [[prettier]]
+- JavaScriptのプロジェクトではこの二つを組み合わせて使用することが多い
 
-- JavaScriptのlinter
+## 設定方法
+### 1. prettierのインストール
+1. install
+```zsh
+# install prettier
+yarn add --dev prettier
+# create .prettierrc.json
+echo {}> .prettierrc.json
+```
+2. Setup VSCode
+	1. vscode拡張機能をインストール
+	2. setting.jsonに設定を追加
+```json
+{
+  "editor.formatOnSave": true, // 保存時にフォーマットを起動する
+  "editor.defaultFormatter": "esbenp.prettier-vscode" // defaultFormatterをprettierにする
+}
+```
 
-## Getting Started
+### 2. eslintのインストール
 1. install and configure ESLint
 ```zsh
 yarn create @eslint/config
@@ -35,3 +55,17 @@ Successfully created .eslintrc.json file in /Users/kubotahotaka/Developments/aws
 
 2. Setup VSCode
 	拡張機能をインストール
+	
+### 3. eslint-config-prettierの設定
+1. install eslint-config-prettier
+```zsh
+yarn --dev add eslint-config-prettier
+```
+2. eslintrc.jsonにprettierを追加する
+```json
+"extends": [
+	"eslint:recommended",
+	"plugin:@typescript-eslint/recommended",
+	"prettier"
+],
+```
