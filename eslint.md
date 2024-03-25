@@ -9,6 +9,7 @@ tags:
 - 静的解析
 
 ## Getting Started
-1. install and configure ESLint
-2. install VSCode extension
-3. package.jsonのscriptsに`"lint"`を追加
+1. `yarn add eslint --dev`
+2. `yarn eslint --init`
+3. install VSCode extension
+4. package.jsonのscriptsに`"lint"`を追加
