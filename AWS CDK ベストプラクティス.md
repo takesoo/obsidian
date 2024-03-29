@@ -23,8 +23,15 @@ tags:
 - 環境変数ではなく、API（プロパティ、メソッド）で設定する
 	- 機密情報は[[AWS Secrets Manager]]？
 - ユニットテストを書く
+- ステートフルリソースのスコープと論理IDを変更しない
+- L2Constructを継承して会社のセキュリティ仕様を実装しない
+	- [[SCP]]や[[permission bundary]]で対応する
 
 ## AWS CDK アプリケーションのベストプラクティス
+- CloudFormationの制御構文は使わない
+- 新規登録されるリソース名を使用する
+	- e.g. `table.tableName`
+- 
 
 ---
 [AWS CDKでクラウドアプリケーションを開発するためのベストプラクティス | Amazon Web Services ブログ](https://aws.amazon.com/jp/blogs/news/best-practices-for-developing-cloud-applications-with-aws-cdk/)
