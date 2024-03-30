@@ -31,7 +31,15 @@ tags:
 - CloudFormationの制御構文は使わない
 - 新規登録されるリソース名を使用する
 	- e.g. `table.tableName`
-- 
+- デプロイ要件に応じて、アプリケーションのStageを複数のStackに分割する
+	- 一般的にはできるだけ多くのリソースを同じStackに入れるのが簡単
+	- ステートフルなリソース（DBなど）はステートレスなリソースから分離しておくと良い。
+	- ステートフルリソースのあるStackは削除保護をオンにしておく
+	- ステートフルなリソースはConstractの中には入れない。名前が変更されてデータを喪失する可能性があるので。
+- `cdk.context.json`をコミットして、外部的な要因で合成結果が変わってしまうことを避ける
+- AWS CDKでロールとセキュリティグループを管理できるようにする
+- 全てのStageをコードでモデル化する
+- 全てを測定する
 
 ---
 [AWS CDKでクラウドアプリケーションを開発するためのベストプラクティス | Amazon Web Services ブログ](https://aws.amazon.com/jp/blogs/news/best-practices-for-developing-cloud-applications-with-aws-cdk/)

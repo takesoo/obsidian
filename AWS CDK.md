@@ -30,6 +30,16 @@ cdk deploy
 cdk destroy
 ```
 
+---
+## ディレクトリ構成
+![[Pasted image 20240330165238.png]]
+- `lib/{application}-stack.ts`
+	- メインスタック
+- `bin/{application}.ts`
+	- CDKアプリケーションのエントリポイント。`lib/{application}-stack.ts`で定義されたスタックをロードする
+- `cdk.json`
+	- アプリの実行方法をツールキットに指示させるためのファイル
+- 
 
 ---
 ```dataview
