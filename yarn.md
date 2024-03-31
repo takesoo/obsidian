@@ -7,18 +7,20 @@ tags:
 - npmより厳密にモジュールのバージョンを固定している
 - npmと互換性があり、同じpackage.jsonを使用できる
 
-```
-// install
+```shell
 npm install -g yarn
 
-// package.jsonの作成
 yarn init
+# 初期化
+# package.jsonの作成
 
-// yarnでパッケージインストール
-yarn
-
-// パッケージの追加
-yarn add [パッケージ名]
+yarn add package-name
+# パッケージインストール
+#
+# --dev | -D
+# devDependenciesに追記
+#
+# 
 
 // パッケージのアンインストール
 yarn remove
