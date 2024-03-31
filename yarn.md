@@ -15,13 +15,14 @@ yarn init
 # package.jsonの作成
 
 yarn add package-name
-# パッケージインストール
+# 新たにパッケージインストール
 #
 # --dev | -D
 # devDependenciesに追記
-#
-# 
 
-// パッケージのアンインストール
+yarn install
+# yarn.lockをもとにパッケージインストール
+
 yarn remove
+# パッケージのアンインストール
 ```
