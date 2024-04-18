@@ -2,7 +2,7 @@
 tags:
   - npm
 ---
-APIリクエストのラッパー
+hooks的なやつ
 
 ```javascript
 import useSWR from 'swr'
