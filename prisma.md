@@ -55,3 +55,7 @@ model books {
 }
 
 ```
+
+
+---
+[Prisma を使った効率的なバックエンド開発ワークフロー](https://zenn.dev/optimisuke/articles/387b30c547ac54)
