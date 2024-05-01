@@ -10,3 +10,5 @@ https://bundler.io/
 	- gemを追加する時はgemfileに追加して`bundle install`
 	- `bundle update`するとgemのバージョンのズレが起こってクラッシュする可能性がある。本番環境などでは安易にやらずに、ローカル環境で実行して確認する。
 - gemの作成もできる
+
+[[Ruby] Bundler 1.15の全コマンド｜TechRacho by BPS株式会社](https://techracho.bpsinc.jp/hachi8833/2017_06_06/40845)
