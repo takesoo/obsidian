@@ -27,5 +27,23 @@ write()メソッドを使用してStreamにデータをプッシュする。
 ## pipe
 Readable Streamの内部バッファからflowingモードでデータを取り出し、指定したWritable Streamに全てのデータをプッシュする。
 
+## Event Emitter
+各Streamの処理のタイミングに応じて発火するイベント
+### Readable Streamのイベント
+- readable
+- data: 取り出されたデータがコンシューマに渡される時に発火する。リスナーがアタッチされるとflowingモードになる。
+- pause
+- resume
+- end: ストリームから抽出できるデータがなくなったときに発火する
+- close
+- error: ストリーム内でエラーが発生したときに発火する
+### Writable Streamのイベント
+- drain
+- pipe: pipe()メソッドがReadable Stream上で呼び出されたときに発火する
+- unpipe
+- finish: end()メソッドが呼び出され、処理が全て完了したときに発火する
+- close: リソースが閉じたときに発火する
+- error: ストリーム内でエラーが発生したときに発火する
+
 ---
 [Node.js Stream を使ってみる｜ラキール公式｜株式会社ラキールのエンジニアたちによるTECH BLOG](https://tech-blog.lakeel.com/n/n62073e6f3101)
