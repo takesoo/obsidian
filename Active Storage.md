@@ -63,3 +63,11 @@ config.active_storage.variant_processor = :vips | :mini_magick
 2. insert into active_storage_attributes
 3. after_commitでファイルアップロード
 4. [[ActiveStorageBlobAnalyzable]]
+
+## signed_id
+ファイルを安全に参照するために使用される一意の識別子。
+署名されているので改竄されていないことを保証する。
+使用用途
+	- ファイルのセキュアな参照
+	- 一時的なアクセス許可
+	- フォームデータとの統合
