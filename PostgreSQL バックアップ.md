@@ -18,13 +18,12 @@ $ pg_dump postgres > dumpfile
 // リストア
 $ psgl restore < dumpfile
 ```
-
 ## 物理バックアップ
 データファイル自体をコピーする
 ### オフラインバックアップ
 PostgreSQLを停止した状態で、データファイルがあるディレクトリをコピーする
 ### オンラインバックアップ
-PostgreSQLが起動した状態で
+PostgreSQLが起動した状態で、データファイルのコピーと[[WALアーカイブ]]を使用してバックアップする。
 
 
 
