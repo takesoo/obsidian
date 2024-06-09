@@ -3,7 +3,7 @@ tags:
   - Linux
   - パッケージマネージャー
 ---
-| ディストリビューション                      | パッケージファイル形式 | コマンド      |
-| -------------------------------- | ----------- | --------- |
-| Red Hat Enterprise Linux, CentOs | .rpm        | rpm, yum  |
-| Debian GNU, Ubuntu               | .deb        | dpkg, apt |
+| コマンド      | ディストリビューション                      | パッケージファイル形式 |
+| --------- | -------------------------------- | ----------- |
+| rpm, yum  | Red Hat Enterprise Linux, CentOs | .rpm        |
+| dpkg, apt | Debian GNU, Ubuntu               | .deb        |
