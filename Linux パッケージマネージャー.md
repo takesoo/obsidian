@@ -7,3 +7,12 @@ tags:
 | --------- | -------------------------------- | ----------- |
 | rpm, yum  | Red Hat Enterprise Linux, CentOs | .rpm        |
 | dpkg, apt | Debian GNU, Ubuntu               | .deb        |
+
+インストール方法
+	[[リポジトリ]]からインストール
+		`yum install <package>`
+		リポジトリからパッケージを探してインストールする
+	特定のパッケージファイルのインストール
+		`yum install <url>`
+		指定したURLからパッケージをインストールする
+		リポジトリにパッケージやバージョンがない時に使用する
