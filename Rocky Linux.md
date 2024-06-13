@@ -1,0 +1,2 @@
+RedHat系Linuxディストリビューション
+CentOSの後継にあたる
