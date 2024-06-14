@@ -1,3 +1,9 @@
+---
+tags:
+  - Docker
+aliases:
+  - マルチステージビルド
+---
 ## ENTRYPOINT
 Dockerコンテナのランタイムプロセスの開始点([[エントリーポイント]])として機能する
 
@@ -9,3 +15,5 @@ CMDはコマンドラインからオーバーライドできる。ENTRYPOINTは�
 
 ## WORKDIR
 `Dockerfile` 内で以降に続く `RUN` 、 `CMD` 、 `ENTRYPOINT` 、 `COPY` 、 `ADD` 命令の処理時に（コマンドを実行する場所として）使う 作業ディレクトリを指定する。内部的にmkdirもしてくれる。
+
+## マルチステージビルド
