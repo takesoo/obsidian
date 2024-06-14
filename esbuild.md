@@ -1,5 +1,5 @@
 ---
 tags:
-  - TypeScript
+  - nodejs
   - ビルドツール
 ---
