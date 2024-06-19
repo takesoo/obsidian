@@ -2,6 +2,7 @@
 tags:
   - 技術記事
   - 下書き
+  - Qiita
 ---
 - vercel postgresの自動バックアップは2024年6月時点では未実装
 - Lambdaでpg_dumpする
