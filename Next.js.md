@@ -2,7 +2,7 @@
 tags:
   - nextjs
 ---
-Next.jsはReactの実行に必要なWebpackやBabelやらなんやらが全てパッケージされたフレームワーク
+Next.jsは[[React]]の実行に必要な[[Webpack]]や[[Babel]]やらなんやらが全てパッケージされたフレームワーク
 
 1. **[[サーバーサイドレンダリング]] (SSR)**：Next.jsは、初回のページロード時にサーバー側でページをレンダリングする機能を提供します。これにより、クライアント側でのレンダリングと比べてSEOやパフォーマンスが向上します。
 
@@ -14,31 +14,13 @@ Next.jsはReactの実行に必要なWebpackやBabelやらなんやらが全て�
 
 
 - Next.jsのしくみについて
-    
-    [
-    
-    Learn | Next.js
-    
-    Before you learn more advanced Next.js features, it would be helpful to understand the basics of how Next.js works. At the beginning of this course, we talked about how React is relatively unopinionated about how you build and structure your applications - there are multiple ways to build applications with React.
-    
-    ![](https://nextjs.org/static/favicon/favicon.ico)https://nextjs.org/learn/foundations/how-nextjs-works
-    
-    ![](https://nextjs.org/static/twitter-cards/learn-foundations.png)](https://nextjs.org/learn/foundations/how-nextjs-works)
-    
+	https://nextjs.org/learn/foundations/how-nextjs-works
 
   
 
 ## Tutorial
+https://nextjs.org/learn/basics/create-nextjs-app
 
-[
-
-Learn | Next.js
-
-To build a complete web application with React from scratch, there are many important details you need to consider: Code has to be bundled using a bundler like webpack and transformed using a compiler like Babel. You need to do production optimizations such as code splitting.
-
-![](https://nextjs.org/static/favicon/favicon.ico)https://nextjs.org/learn/basics/create-nextjs-app
-
-![](https://nextjs.org/static/twitter-cards/learn-twitter.png)](https://nextjs.org/learn/basics/create-nextjs-app)
 
   
 
