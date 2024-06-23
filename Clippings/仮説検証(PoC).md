@@ -1,5 +1,7 @@
 ---
 Created: Invalid date
+tags:
+  - clippings
 ---
 # 概要
 

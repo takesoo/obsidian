@@ -1,7 +1,9 @@
+---
+finished-reading: true
+---
 # やや中級者向け「ReadItLater」を使用したWebクリップ方法-設定説明編｜a-natsuki
   #ReadItLater 
  #ReadableArticle
-
 ## articleURL
 https://note.com/natsuki_ass/n/nb402db73e3d5
 
