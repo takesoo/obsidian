@@ -1,3 +1,6 @@
+---
+finished-reading: false
+---
 [[ReadItLater]] [[Tweet]]
 
 # [岡 拓也 / okataku](https://twitter.com/takitakiak/status/1791455796833996854)
