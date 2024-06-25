@@ -1,9 +1,9 @@
 ---
-Tags:
+tags:
   - AWS
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
+aliases:
+  - ACL
+  - Access Control List
 ---
 # ACLとは
 
