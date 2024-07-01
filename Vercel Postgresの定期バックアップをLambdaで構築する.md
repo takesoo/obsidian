@@ -15,7 +15,6 @@ tags:
 学んだこと
 - docker マルチステージビルド
 - CMDとENTRYPOINT
-- 
 - Lambdaの実行環境とaws-lambda-ric
 - aws-lambda-ricはコンテナビルド時にnpm installする必要がある？
 - OSへのパッケージインストールはVSFではできないがLambdaならできる。VSFではpg_dumpできない理由。
