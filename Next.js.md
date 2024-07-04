@@ -11,11 +11,6 @@ Next.jsは[[React]]の実行に必要な[[Webpack]]や[[Babel]]やらなんや�
 3. **[[API Routes]]**：Next.jsにはAPIルートがあり、サーバーサイドでAPIエンドポイントを簡単に定義できます。これにより、サーバーレス機能を提供し、バックエンドのロジックを統合できます。
 
 4. **ファイルベースのルーティング**：Next.jsでは、ファイルシステムに基づいたルーティングを提供し、ディレクトリ構造に基づいて自動的にルートを作成します。
-
-
-- Next.jsのしくみについて
-	https://nextjs.org/learn/foundations/how-nextjs-works
-
   
 
 ## Tutorial
