@@ -23,6 +23,16 @@ RuboCopの違反箇所を青い波線で教えてくれます。
 
 保存実行で RuboCopを使用してコード整形が自動で行われる機能です。  
 保存時のフォーマットを有効にし、Ruby LSPをRubyフォーマッタとして登録する必要があります。(Ruby LSPインストール時に自動でsetting.jsonに設定されています。)
+```json
+// settings.json
+{
+	"editor.formatOnSave": true,
+	"[ruby]": {
+		"editor.defaultFormatter": "Shopify.ruby-lsp"
+	},
+	"rubyLsp.formatter": "rubocop",
+}
+```
 ## タイプ時の書式
 ## パスの補完
 ## デバッグサポート
