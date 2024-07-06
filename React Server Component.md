@@ -1,0 +1,6 @@
+---
+tags:
+  - React
+aliases:
+  - RSC
+---
