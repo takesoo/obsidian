@@ -1,5 +1,5 @@
 ---
-finished reading: false
+finished reading: true
 ---
 # Railsのパターンとアンチパターン1: 概要編（翻訳）｜TechRacho by BPS株式会社
   #ReadItLater 
