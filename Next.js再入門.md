@@ -64,6 +64,9 @@ Placeholder data
 	JSONフォーマットかJavaScriptオブジェクトで定義するモックデータ。データベースやAPIが用意できてない時など。
 
 `global.css`はアプリケーション内のすべてのコンポーネントに適応される。`/app/layout.tsx`でインポートすることを推奨している。
+module cssを使うことでコンポーネントごとの小さなスコープでスタイリングを定義できる
+状態によってスタイリングを分岐する場合には`clsx`を使う
+また、[[sass]]を使ったり[[CSS-in-JS]]ライブラリを使用するのも良い。
 
 セグメント内で共通構造を共有するにはlayoutとtemplateがある。layoutの場合はlayoutインスタンスを共有するのに対してtemplateはインスタンスを共有しない。なのでlayoutはフェッチデータが引き継がれるがtemplateは引き継がない、また`useEffect()`がlayoutでは発火しないがtemplateでは発火するという違いがある
 
