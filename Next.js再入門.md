@@ -50,3 +50,5 @@ commit id: "set cicd"
 checkout develop
 merge cicd
 ```
+---
+app/以下がapp routerのディレクトリ
