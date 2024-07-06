@@ -54,7 +54,16 @@ checkout develop
 merge cicd
 ```
 ---
-app/以下がapp routerのディレクトリ
+`/app`: app routerのディレクトリ。ファイルの配置でルーティングが決まる。
+`/app/lib`: 関数など
+`/app/ui`: UIコンポーネント
+`/public`: 静的アセット
+`next.config.mjs(js)`:next.jsの設定ファイル
+
+Placeholder data
+	JSONフォーマットかJavaScriptオブジェクトで定義するモックデータ。データベースやAPIが用意できてない時など。
+
+`global.css`はアプリケーション内のすべてのコンポーネントに適応される。`/app/layout.tsx`でインポートすることを推奨している。
 
 セグメント内で共通構造を共有するにはlayoutとtemplateがある。layoutの場合はlayoutインスタンスを共有するのに対してtemplateはインスタンスを共有しない。なのでlayoutはフェッチデータが引き継がれるがtemplateは引き継がない、また`useEffect()`がlayoutでは発火しないがtemplateでは発火するという違いがある
 
