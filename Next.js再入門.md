@@ -1,4 +1,4 @@
-やりたいこと
+## やりたいこと
 - typescript
 - eslint, pretter
 - swr
@@ -10,18 +10,20 @@
 - cicd
 - sentry
 
-知りたいこと
+## 知りたいこと
 - next.jsについて、ディレクトリ構造を理解してどこに何を追加するのか理解する
 - 一通りわからないことがないくらいになりたい。
-今回は勉強しないこと（別の機会にすること）
+## 今回は勉強しないこと（別の機会にすること）
 - [[React Server Component|RSC]]
 - レンダリングストラテジー（静的、動的、Streaming）
-実装戦略
+
+## app router tutorial(途中まで)
+### 実装戦略
 - app router
 - chakra ui
 - (tailwind)
 - サーバーサイドはfirebase
-ブランチ戦略
+### ブランチ戦略
 - ~~tailwindリポジトリ~~
 - ~~chakra ui リポジトリ~~
 - next.js tutorial
@@ -53,8 +55,8 @@ commit id: "set cicd"
 checkout develop
 merge cicd
 ```
----
-## app router tutorial(途中まで)
+
+### メモ
 `/app`: app routerのディレクトリ。ファイルの配置でルーティングが決まる。
 `/app/lib`: 関数など
 `/app/ui`: UIコンポーネント
@@ -88,3 +90,22 @@ module cssを使うことでコンポーネントごとの小さなスコープ�
 
 
 ## pages router tutorial
+### 実装戦略
+react tutorial
+- pages router
+- chakra ui
+- swr
+```mermaid
+gitGraph
+
+commit
+branch tutorial-again
+commit id: "create-next-app"
+commit id: "swr"
+checkout main
+merge tutorial-again
+branch jest
+commit id: "add jest"
+checkout main
+merge jest
+```
