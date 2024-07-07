@@ -20,7 +20,6 @@ Next.jsは[[React]]の実行に必要な[[Webpack]]や[[Babel]]やらなんや�
 
 4. **ファイルベースのルーティング**：Next.jsでは、ファイルシステムに基づいたルーティングを提供し、ディレクトリ構造に基づいて自動的にルートを作成します。
 
-
 ## Tutorial
 https://nextjs.org/learn/basics/create-nextjs-app
 
