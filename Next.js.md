@@ -30,6 +30,8 @@ https://nextjs.org/learn/basics/create-nextjs-app
 > 
 > [初めに | Next.js 公式ドキュメント 日本語翻訳プロジェクト](https://ja.next-community-docs.dev/docs/app-router/getting-started/#app-router-vs-pages-router)
 
+App RouterかPages Routerかでファイル構成やルールが全然違う
+
 画像などの静的ファイルはpublic/ 以下に配置
 
 その他のディレクトリ構成は自由だがcomponents/ にコンポーネント、styles/ にglobal.cssを置くのが一般的

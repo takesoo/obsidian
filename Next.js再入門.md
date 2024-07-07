@@ -54,9 +54,12 @@ checkout develop
 merge cicd
 ```
 ---
+## app router tutorial(途中まで)
 `/app`: app routerのディレクトリ。ファイルの配置でルーティングが決まる。
 `/app/lib`: 関数など
 `/app/ui`: UIコンポーネント
+`/app/**/page.tsx`: ルーティング対象のページファイル
+`/app/**/layout.tsx`: page.tsxをラップするレイアウトファイル
 `/public`: 静的アセット
 `next.config.mjs(js)`:next.jsの設定ファイル
 
@@ -72,8 +75,7 @@ module cssを使うことでコンポーネントごとの小さなスコープ�
 
 画像の表示には`next/image`コンポーネントの[[<Image>]]タグを使うと自動で最適化してくれる。
 
-
-
+`page.tsx`はReact componentをエクスポートする特別なファイルであり、`/app`直下に配置しなければならない。`http://localhost:3000/`でこのファイルのページが表示される。
 
 セグメント内で共通構造を共有するにはlayoutとtemplateがある。layoutの場合はlayoutインスタンスを共有するのに対してtemplateはインスタンスを共有しない。なのでlayoutはフェッチデータが引き継がれるがtemplateは引き継がない、また`useEffect()`がlayoutでは発火しないがtemplateでは発火するという違いがある
 
@@ -83,3 +85,6 @@ module cssを使うことでコンポーネントごとの小さなスコープ�
 	- `<Link>`コンポーネント
 	- `useRouter`フック
 	- ネイティブHistory API
+
+
+## pages router tutorial
