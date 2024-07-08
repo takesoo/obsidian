@@ -95,6 +95,7 @@ react tutorial
 - pages router
 - chakra ui
 - swr
+- typescript
 ```mermaid
 gitGraph
 
@@ -109,3 +110,10 @@ commit id: "add jest"
 checkout main
 merge jest
 ```
+### メモ
+pages routerなので`/pages`配下にコードを書く
+ルートコンポーネントは`pages/index.tsx`
+ディレクトリ構成がルーティングになる
+	`pages/posts/first-post.tsx`→`/posts/first-post`
+[[<Link>]]コンポーネントでリンクを作る
+
