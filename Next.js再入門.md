@@ -116,4 +116,8 @@ pages routerなので`/pages`配下にコードを書く
 ディレクトリ構成がルーティングになる
 	`pages/posts/first-post.tsx`→`/posts/first-post`
 [[<Link>]]コンポーネントでリンクを作る
-
+静的アセットは`/public`に配置する
+[[<Image>]]コンポーネントで画像を配置する
+[[<Head>]]コンポーネントでメタデータを記述する
+サードパーティjavascriptは[[<Script>]]コンポーネントで記述する
+`pages/_app.tsx`はすべてのページをラップしている。ページ間での状態維持やグローバルスタイルの追加をする時に使う
