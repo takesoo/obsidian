@@ -1,8 +1,10 @@
 ---
 tags:
   - npm
+aliases:
+  - Stale-While-Revalidate
 ---
-hooks的なやつ
+hooks
 
 ```javascript
 import useSWR from 'swr'

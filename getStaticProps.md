@@ -7,10 +7,15 @@ tags:
 ```js
 import { getSortedPostsData } from '../lib/posts';
 
+// コンポーネントに引数として渡して使用する
+export default function Home ({ allPostData }) {
+  ...
+}
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
-    props: {
+    props: { // propsオブジェクトに入れてreturnする
       allPostsData,
     },
   };
