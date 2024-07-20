@@ -125,4 +125,4 @@ Next.jsではデフォルトとして[[Next.js Pre-rendering|Pre-rendering]]で�
 Next.jsでは生成されたHTMLに最小限のJavaScriptコードが関連付けられており、ページがブラウザによってロードされるとJavaScriptコードが実行され、ページを完全にインタラクティブにする。(このプロセスは[[hydration]]という)
 ![[スクリーンショット 2024-07-19 9.56.38.png]]
 Next.jsのプリレンダリングには[[スタティックサイトジェネレーション|Static Site Generation]]と[[サーバーサイドレンダリング|Server Side Rendering]]の2種類ある。SSGはビルド時にHTMLを生成するのに対して、SSRはリクエスト時にHTMLを生成する違いがある。
-Next.jsではページごとにレンダリング形式を選ぶことができる
+Next.jsではページごとにレンダリング形式を選ぶことができる。基本的に
