@@ -1,13 +1,17 @@
 ---
 tags:
   - npm
+  - hooks
 aliases:
   - Stale-While-Revalidate
 ---
-hooks
+データフェッチングライブラリ。
+クライアントサイドでのデータ取得やキャッシング、再検証を簡単に行うためのフックを提供している。
 
 ```javascript
 import useSWR from 'swr'
+
+const fetcher = url => fetch(url).then(res => res.json());
  
 function Profile() {
   // fetcherにはAxiosやaspidaなどのAPIクライアントを渡す
@@ -18,3 +22,5 @@ function Profile() {
   return <div>hello {data.name}!</div>
 }
 ```
+
+シンプルで軽量なライブラリであり、複雑な処理が必要な場合は[[React Query]]を使う

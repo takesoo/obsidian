@@ -129,4 +129,5 @@ Next.jsではページごとにレンダリング形式を選ぶことができ�
 [[getStaticProps]]を使うことでSSGとしてデータフェッチする
 [[getServerSideProps]]を使うことでSSRとしてデータフェッチする
 SSGをデータフェッチなしで実行して、クライアントサイドでデータフェッチして埋めるという方法もある。SEOを気にしなくていいサービスページには有効な戦略。クライアントサイドでデータフェッチするなら[[SWR]]が良い。
-Next.jsでは[[dynamic routes]]が利用できる。
+Next.jsでは[[dynamic routes]]が利用できる。`pages/[id].tsx`のようにファイルを定義する。パスからidなどの値を取得するには[[getStaticPaths]]を使う。
+Next.jsでは[[API Routes]]でAPIエンドポイントと簡易なサーバーサイドロジックを記述できる。

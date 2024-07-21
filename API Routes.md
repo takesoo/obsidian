@@ -3,8 +3,8 @@ tags:
   - nextjs
 ---
 [[Next.js]]のプロジェクト内でフロントエンドとバックエンドのロジックを分離して管理する方法を提供するしくみ
-pages/apiディレクトリにサーバーサイドコードを実装する
-	pages/api/users.jsは`/api/users`エンドポイントに対応する
+`pages/api`ディレクトリにサーバーサイドコードを実装する
+	`pages/api/users.js`は`/api/users`エンドポイントに対応する
 コンポーネント（フロントエンド）からはAPIを叩く形で呼び出す
 
 ```javascript
@@ -27,3 +27,4 @@ export default async function handler(req, res) {
   }
 }
 ```
+
