@@ -26,4 +26,18 @@ console.log(greeting + target);
 - undefinedの方がサポートが厚いのでundefinedを使う方が安心
 ### symbol
 
+## 型変換
+```js
+// 暗黙的な型変換
+const arg = '123';
+console.log(arg + 1000); // 1000が文字列として処理される
+// => '1231000'
+
+// 明示的な型変換
+const num = Number(arg);
+console.log(num + 1000);
+// => 1123
+```
+falseになる値: `0, 0n, NaN, "", null undefined`
+
 
