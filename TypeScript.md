@@ -1,4 +1,4 @@
-```js
+```ts
 const greeting: string = "Hello, "
 const target: string = "world!"
 console.log(greeting + target);
@@ -27,7 +27,7 @@ console.log(greeting + target);
 ### symbol
 
 ## 型変換
-```js
+```ts
 // 暗黙的な型変換
 const arg = '123';
 console.log(arg + 1000); // 1000が文字列として処理される
@@ -41,7 +41,7 @@ console.log(num + 1000);
 falseになる値: `0, 0n, NaN, "", null undefined`
 
 ## オブジェクト
-```js
+```ts
 const propName = "hoge"
 const obj = {
 	foo: 123,
@@ -78,7 +78,7 @@ console.log(obj2);
 }
 */
 ```
-```js
+```ts
 const obj: {
 	foo: number;
 	bar: string;
@@ -86,4 +86,43 @@ const obj: {
 	foo: 123,
 	bar: "Hello, world!"
 };
+
+// type文による型定義
+type FooBarObj = {
+	foo: number;
+	bar?: string; // オプショナル。string | undefinedと同じ
+	readonly hoge: number // 読み取り専用。再代入できない。
+};
+const obj: FooBarObj = {
+	foo: 123,
+	bar: "Hello, world!"
+};
+
+/**
+	interface宣言による型定義
+	2014年以前はinterface宣言での型定義しかなかったために今も残っている記法
+	基本的にtype文で代用可能なのでtype文を使用する
+*/
+interface FooBarObj {
+	foo: number;
+	bar: string;
+}
+const obj: FooBarObj = {
+	foo: 0,
+	bar: "one"
+}
+
+/**
+	インデックスシグネチャ
+*/
+type PriceData = {
+	[key: string]: number;
+};
+const data: PriceData = {
+	apple: 220,
+	coffee: 120,
+	bento: 500
+};
+data.chicken = 250;
+
 ```
