@@ -131,11 +131,11 @@ data.chicken = 250;
 */
 type Anymal = {
 	age: number;
-}
+};
 type Human = {
 	age: number;
 	name: string;
-}
+};
 
 /**
 	型引数を使った型定義
@@ -145,8 +145,59 @@ type Family<Parent, Child> = {
 	mother: Parent;
 	father: Parent;
 	child: Child;
-}
+};
 const obj: Family<number, string> = {
-	
+	mother: 0,
+	father: 100,
+	childer: "1000"
 }
+
+/**
+	extendsによる型定義
+	P extends T: PはTの部分型でなければならない
+*/
+type HasName = {
+	name: string;
+};
+type Family<Parent extends HasName, Child extends HasName> = {
+	mother: Parent;
+	father: Patent;
+	child: Child;
+};
+type T = Family<number, string>; // 型エラー
+
+```
+### 配列
+TypeScriptでは、配列はオブジェクトの一種。
+```ts
+const arr1: number[] = [4, 5, 6];
+const arr2 = [1, 2, 3, ...arr1];
+const arr3 = Array<{
+	name: string;
+}> = [
+	{ name: "山田" },
+]
+const arr4: readonly number[] = [1, 10, 100] // 読み取り専用
+for(const elm of arr4) {
+	...
+}
+
+/**
+	タプル型
+	要素数が固定された配列型
+	TypeScriptではタプル型は配列型の一種
+	関数の可変長引数などの型定義で使用する
+*/
+let tuple: [sting, number] = ["foo", 0]
+type User = [name: string, age: number] // ラベル付きタプル型
+const yamada: User = ["Yamada", 34]
+console.log(yamada[0]) // =>"Yamada"
+```
+### 分割代入
+```ts
+const obj = {
+	foo: 123,
+	bar: "Hello, world!"
+};
+const { foo, bar } = obj;
 ```
