@@ -125,4 +125,28 @@ const data: PriceData = {
 };
 data.chicken = 250;
 
+/**
+	部分型
+	Human型はAnimal型の部分型
+*/
+type Anymal = {
+	age: number;
+}
+type Human = {
+	age: number;
+	name: string;
+}
+
+/**
+	型引数を使った型定義
+	型引数を持つ型をジェネリック型と呼ぶ
+*/
+type Family<Parent, Child> = {
+	mother: Parent;
+	father: Parent;
+	child: Child;
+}
+const obj: Family<number, string> = {
+	
+}
 ```
