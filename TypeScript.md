@@ -250,5 +250,8 @@ if (result !== null) {
 }
 
 // Map
-
+const map: Map<string, number> = new Map(); // Map<key, value>
+map.set("foo", 1234);
+console.log(map.get("foo")); // =>1234
+console.log(map.get("bar")); // =>undefined
 ```
