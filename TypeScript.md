@@ -200,4 +200,55 @@ const obj = {
 	bar: "Hello, world!"
 };
 const { foo, bar } = obj;
+
+const nested = {
+	num: 123,
+	obj: {
+		foo: "hello",
+		bar: "world"
+	}
+};
+const { num, obj: { foo } } = nested;
+console.log(foo); // =>"hello"
+
+const arr = [1, 2, 3, 4];
+const [first, second, third] = arr;
+console.log(third); // =>3
+
+const { foo: num, ...restObj } = obj; // obj.fooを変数numに代入する
+console.log(num); // =>123
+console.log(restObj); // =>{bar:"Hello, world!"}
+
+const arr = [1,2,3,4];
+const [first, second, ...rest] = arr;
+console.log(rest); // =>[3,4]
+```
+### 組み込みオブジェクト
+```ts
+// Date
+const d = new Date();
+d.getFullYear();
+d.getMonth();
+d.getTime(); // UNIX時間に変換
+Date.now(); // 現在時刻
+// Dateは使いにくいと言われている。Temporalに置き換わる可能性もある。
+
+// RegEXp
+const r = /ab+c/;
+console.log(r.test("abbbbc")); // =>true
+console.log("Hello, abbbc world! abbbbc".replace(r, "foobar")); // =>"Hello, foobar world! abbbbc"
+
+const result = "Hello, abbbbbbc world! abc".match(/a(b+)c/); // ()はキャプチャリンググループ
+if (result !== null) { // マッチしない場合resultはnullになる。nullガードしないとコンパイルエラーになる
+  console.log(result[0]); // =>"abbbbbbc" result[0]は正規表現にマッチした部分文字列。 
+  console.log(result[1]); // =>"bbbbbb" result[1]はキャプチャリンググループにマッチした部分文字列
+}
+
+const result = "Hello, abbbbbbc world! abc".match(/a(?<worldName>b+)c/); // (?<groupName>...) 名前付きキャプチャリンググループ
+if (result !== null) {
+  console.log(result.groups); // =>{ "worldName": "bbbbbb" }
+}
+
+// Map
+
 ```
