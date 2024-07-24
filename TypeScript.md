@@ -40,4 +40,50 @@ console.log(num + 1000);
 ```
 falseになる値: `0, 0n, NaN, "", null undefined`
 
-
+## オブジェクト
+```js
+const propName = "hoge"
+const obj = {
+	foo: 123,
+	"bar": 'Hello, world!',
+	"foo bar": -500,
+	1: "one",
+	[propName]: 123
+};
+console.log(obj.foo);
+// =>123
+console.log(obj.bar);
+// =>'Hello, world!'
+console.log(obj["foo bar"]);
+// =>-500
+console.log(obj[1]);
+// =>"one"
+console.log(obj.hoge);
+// =>123
+obj.foo = 234;
+console.log(obj.foo)
+// =>234
+const obj2 = {
+	...obj // スプレッド構文。値のコピーであり、ポインタは別。
+	foo: 1234
+};
+console.log(obj2);
+/**
+=> {
+	foo: 1234, あとに書かれた方に上書きされる
+	bar: 'Hello, world!',
+	foo bar: -500,
+	1: "one",
+	hoge: 123
+}
+*/
+```
+```js
+const obj: {
+	foo: number;
+	bar: string;
+} = {
+	foo: 123,
+	bar: "Hello, world!"
+};
+```
