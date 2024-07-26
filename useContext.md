@@ -23,6 +23,7 @@ function Form() {
 // components/button.tsx
 import { useContext } from 'react';
 
+const ThemeContext = createContext<>()
 function Button() {
 	const theme = useContext(ThemeContext) // "dark"
 }
@@ -30,3 +31,6 @@ function Button() {
 
 コンテキストはグローバルな状態管理や深いコンポーネントツリーでの状態共有に適している。局所的な状態管理であればpropsで十分
 
+## createContext
+コンテキストの作成
+引数：コンテキストの初期値
