@@ -33,54 +33,46 @@ function Button() {
 
 ```js
 // contextファイル
-function useAuthUserStateDispatch(
-	state: AuthUserState,
+import { useRepository } from './somewhere' // saveメソッドはこちらで定義している
+
+function useStateDispatch(
+	state
 	{
-		useAuthUserLocalStorageRepository: useRepository,
-	}: {useAuthUserLocalStorageRepository: UseAuthUserLocalStorageRepository},
+		useRepository: useRepository,
+	},
 ) {
 	const repo = useRepository();
-	function save(authUser: AuthUser) {
-		repo.save(authUser);
+	function save(authUser) {
+		repo.save(authUser); // saveメソッドの本体はrepository
 	}
 
-	function update(authUser: Partial<Omit<AuthUser, 'id'>>) {
-		if (!state) {
-			return;
-		}
-		const newAuthUser: AuthUser = {...state, ...authUser};
-		repo.save(newAuthUser);
-	}
-
-	function destroy() {
-		repo.remove();
-	}
-
-	return {save, state, update, destroy};
+	return {save, state};
 }
 
 const MyContext = createContext({
-	destroy: () => {},
-	save: () => {},
-	update: () => {},
+	save: () => {}, // saveメソッドの初期値をとりあえず定義
 })
 
-export function useAuthUserDispatchContext() {
+export function useMyContext() {
 	return useContext(AuthUserDispatchContext);
 }
 
 export const MyContextProvider = ({
 	children,
-	dependencies
 }) => {
-	const dispatches = useStateDispatch(state, {
-		useRepo
+	const state = useRepository().data
+	const dispatches = useStateDispatch(state, { // dispatches(stateとsaveメソッド)を取得
+		useRepository: useRepository;
 	});
 	return (
-		<MyContext.Provider value={dispatches}>
+		<MyContext.Provider value={dispatches}> // providerでdispatchesを注入。
 			{childern}
 		</MyContext.Provider>
 	)
 }
+
+// 呼び出し元
+const { save } = useMyContext(); // saveメソッドを呼び出せるようになる
 ```
+==Contextの中身が知りたければ、createContextとProviderで何を渡しているかを調べる==
 
