@@ -259,3 +259,37 @@ console.log(map.get("bar")); // =>undefined
 const set: Set<string> = new Set();
 set.add("foo");
 ```
+## 関数
+```ts
+// function 関数名(引数: 引数の型): 戻り値の型 {
+function range(min: number, max: number): number[] {
+	const result = [];
+	for (let i = min; i <= max; i++) {
+		result.push(i);
+	}
+	return result;
+}
+
+// 戻り値のない関数はvoid
+function helloWorldNTimes(n: number): void {
+	if (n < 0) {
+		return; //return単独の場合もvoidとなる
+	}
+	for (let i = 0; i < n; i++) {
+		console.log("Hello world!");
+	}
+}
+
+/**
+	関数式による定義
+*/
+type Human = {
+	height: number;
+	wight: number;
+};
+const = calcBMI = function(human: Human): number {
+	return human.weight / human.height ** 2;
+};
+// 引数で分割代入をする場合
+const = calcBMI = function({ height, wight }: Human): number {...
+```
