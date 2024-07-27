@@ -261,7 +261,11 @@ set.add("foo");
 ```
 ## 関数
 ```ts
-// function 関数名(引数: 引数の型): 戻り値の型 {
+/**
+	関数宣言による定義
+	function 関数名(引数: 引数の型): 戻り値の型 {
+	関数宣言より前に呼び出しても（巻き上げしても）エラーにならない。
+*/
 function range(min: number, max: number): number[] {
 	const result = [];
 	for (let i = min; i <= max; i++) {
@@ -282,14 +286,90 @@ function helloWorldNTimes(n: number): void {
 
 /**
 	関数式による定義
+	const 関数名 = function(引数リスト): 戻り値の型 {
+	変数宣言なので巻き上げをするとエラーになる
 */
 type Human = {
 	height: number;
 	wight: number;
 };
-const = calcBMI = function(human: Human): number {
+const calcBMI = function(human: Human): number {
 	return human.weight / human.height ** 2;
 };
 // 引数で分割代入をする場合
-const = calcBMI = function({ height, wight }: Human): number {...
+const calcBMI = function({ height, wight }: Human): number {
+	return weight / height ** 2;
+};
+
+/**
+	アロー関数による定義
+	const 関数名 = (引数リスト): 戻り値の型 => {
+*/
+const calcBMI = ({ height, weight }: Human):number => {
+	return weight / height ** 2;
+};
+
+// 省略形。計算式が一つだけの場合に使える。
+const calcBMI = ({ height, weight }: Human):number => weight / height ** 2;
+
+// オブジェクトを返す場合はオブジェクトリテラルを()で囲う
+type ReturnObj = {
+	bmi: number
+};
+const calcBMIObject = ({ height, weight }):ReturnObj => ({
+	bmi: weight / height ** 2
+});
+
+/**
+	メソッド記法
+	オブジェクトの中でメソッドとして関数を定義する方法
+*/
+const obj = {
+	double(num: number): number {
+		return num * 2;
+	},
+	double2: (num: number): number => num * 2,
+}
+console.log(obj.double(100)); // =>200
+
+/**
+	可変長引数(rest引数)
+	型は必ず配列型（またはタプル型）
+*/
+const sum = (...args: number[]): number => {
+	let result = 0;
+	for (const num of args) {
+		result += num;
+	}
+	return result;
+}
+console.log(sum(1, 10, 100)); // =>111
+
+/**
+	スプレッド構文
+*/
+const nums = [1, 2, 3, 4, 5];
+console.log(sum(...nums)); // =>15
+
+/**
+	オプショナル引数
+	初期値としてundefinedが入る。つまりupperの型は boolean | undefined。
+*/
+const toLowerOrUpper = (str: string, upper?: boolean): string => {
+	if (upper) {
+		return str.toUpperCase();
+	}
+	return str.toLowerCase();
+};
+
+// 引数の初期値設定。この場合upperの方はboolean。
+const toLowerOrUpper = (str: string, upper: boolean = false): string => {...
+
+/**
+	コールバック関数
+*/
+type User = { name: string; age: number };
+const getName = (u: User): string => u.name;
+
+
 ```
