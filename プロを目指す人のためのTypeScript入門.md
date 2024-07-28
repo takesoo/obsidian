@@ -169,8 +169,8 @@ const obj: Family<number, string> = {
 }
 
 /**
-	extendsによる型定義
-	P extends T: PはTの部分型でなければならない
+	extendsを使った型定義
+	P extends T: PはTの部分型でなければならないという制約を付与する
 */
 type HasName = {
 	name: string;
@@ -487,6 +487,7 @@ console.log(bin(10, 100)); // =>20 第二引数は無視される
 /*
 	ジェネリクス(generics)
 	型引数を受け取る関数(ジェネリック関数)を作る機能のこと
+	型引数に何を当てはめるかは関数を使う側で決めることができる
 */
 function repeat<T>(element: T, length: number): T[] {
 	const result: [] = [];
@@ -496,5 +497,49 @@ function repeat<T>(element: T, length: number): T[] {
 	return result;
 }
 console.log(repeat<string>("a", 5)); // =>["a", "a", "a", "a", "a"]
-console.log(repeat<number>(123, 5)); // =>[123, 123, 123, 123, 123]
+console.log(repeat<number>(123, 3)); // =>[123, 123, 123]
+
+// function関数式
+const repeat = function<T>(element: T, length: number): T[] {
+...
+}
+
+// アロー関数
+const repeat = <T>(element: T, length: number): T[] => {
+...
+}
+
+// メソッド記法
+const utils = {
+	repeat<T>(element: T, length: number): T[] {
+	...
+	}
+}
+
+// extendsを使った定義
+const repeat2 = <T extends {
+	name: string;
+}>(element: T, length: number): T[] => {
+...
+}
+
+type HasNameAndAge = {
+	name: string;
+	age: number;
+}
+
+console.log(repeat2<HasNameAndAge>({ name: "uhyo", age: 26 }, 3));
+// =>[{ name: "uhyo", age: 26 }, { name: "uhyo", age: 26 }, { name: "uhyo", age: 26 }]
+console.log(repeat2<string>("a", 5)); // コンパイルエラー
+
+// 関数の型引数は省略できる。型引数Tは引数の型から推論される。
+console.log(repeat("a", 5)); // =>["a", "a", "a", "a", "a"]
+
+// 型定義する場合
+type Func = <T>(arg: T, num: number) => T[];
+const repeat: Func = (element, lenght) => {
+...
+};
 ```
+
+
