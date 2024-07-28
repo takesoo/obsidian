@@ -124,9 +124,16 @@ const data: PriceData = {
 	bento: 500
 };
 data.chicken = 250;
-
+```
+### 部分型関係
+```ts
 /**
-	部分型
+	部分型(subtyping relation)
+	2つの型の互換性を表す概念
+	次の条件を満たす時、型Sは型Tの部分型となる
+		1. Tが持つプロパティはすべてSにも存在する
+		2. Sのプロパティの型はTのプロパティの型の部分型（または同じ型）である
+	型Tの変数に型Sの値を代入できる。
 	Human型はAnimal型の部分型
 */
 type Anymal = {
@@ -136,6 +143,11 @@ type Human = {
 	age: number;
 	name: string;
 };
+const human: Human = {
+	age: 26,
+	name: "uhyo",
+};
+const animal: Animal = human; // HumanはAnimalの部分型であることから、Human型の値であるhumanはAnimal型でもあるので、代入できる。
 
 /**
 	型引数を使った型定義
@@ -400,6 +412,7 @@ const xRepeat(num: number) => "x".repeat(num)
 
 /**
 	引数の型注釈は省略できる
+	基本的に省略してOK
 	↓の場合、引数numの方はnumberであることが型Fから推論される。
 */
 type F = (arg: number) => string;
@@ -417,4 +430,38 @@ const obj: Greetable = {
 	greet: (str) => `Hello, ${str}!`
 };
 
+```
+### 関数型の部分型関係
+```ts
+/*
+	戻り値の型による部分型関係
+	SがTの部分型であれば、「Sを返す関数」の型は「Tを返す関数」の型の部分型である。
+	HasNameAndAgeはHasNameの部分型なので、関数fromAgeは関数fの部分型であり、変数fに変数fromAgeを代入できる。
+	ただし、引数の型が一致する場合に限る
+*/
+type HasName = {
+	name: string;
+}
+type HasNameAndAge = {
+	name: string;
+	age: number;
+}
+
+const fromAge = (age: number): HasNameAndAge => ({
+	name: "John Smith",
+	age,
+});
+const f: (age: number) => HasName = fromAge;
+// fの実際の戻り値はHasNameAndAge型が戻ることに注意。
+const obj: HasName = f(100); // =>{ name: "John Smith", age: 100 }
+
+/*
+	引数の型による部分型関係
+	HasNameAndAgeはHasNameの部分型なので、関数showName(HasNameを引数に受け取る関数)の型は関数g(HasNameAndAgeを引数に受け取る関数)の型の部分型
+*/
+const showName = (obj: HasName) => {
+	console.log(obj.name);
+}
+const g: (obj: HasNameAndAge) => void = showName;
+g({ name: "uhyo", age: 26 });
 ```
