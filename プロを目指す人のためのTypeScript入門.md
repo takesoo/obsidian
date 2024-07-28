@@ -541,5 +541,114 @@ const repeat: Func = (element, lenght) => {
 ...
 };
 ```
+## クラス
+### クラスの宣言と使用
+```ts
+class User {
+	name: string = ""; // プロパティ宣言には初期値が必要
+	age?: number; // オプショナルプロパティは初期値不要
+	readonly isMarried: boolean = false; // 読み取り専用
+}
 
+const uhyo = new User();
+console.log(uhyo); // =>{ name: "", age: undefined, isMarried: false }
+uhyo.age = 26;
+console.log(uhyo); // =>{ name: "", age: 26, isMarried: false }
+uhyo.isMarried = true; // Cannot assign to 'isMarried' because it is read-only property.
+
+/*
+	メソッドの宣言
+*/
+class User {
+	name: string = "";
+	age: number = 0;
+
+	isAdult(): boolean {
+		return this.age >= 20;
+	}
+
+	setAge(newAge: number) {
+		this.age = newAge;
+	}
+}
+
+const uhyo = new User();
+console.log(uhyo.isAdult()); // =>false
+uhyo.setAge(26);
+console.log(uhyo.isAdult()); // =>true
+
+/*
+	コンストラクタ
+	コンストラクタがある場合はプロパティの初期値は不要
+*/
+class User {
+	name: string;
+	age: number;
+
+	constructor(name: string, age: number) {
+		this.name = name;
+		this.age = age;
+	}
+
+	isAdult(): boolean {
+		return this.age >= 20;
+	}
+}
+
+const uhyo = new User("uhyo", 26);
+console.log(uhyo.name); // =>"uhyo"
+console.log(uhyo.isAdult()); // =>true
+
+/*
+	静的プロパティ(static property)と静的メソッド(static method)
+	rubyでいうクラスメソッド
+*/
+class User {
+	static adminName: string = "uhyo";
+	static getAdminUser() {
+		return new User(User.adminName, 26);
+	}
+
+	name: string;
+	age: number;
+
+	constructor(name: string, age: number) {
+		this.name = name;
+		this.age = age;
+	}
+
+	isAdult(): boolean {
+		return this.age >= 20;
+	}
+}
+
+console.log(User.adminName); // =>"uhyo"
+const admin = User.getAdminUser();
+console.log(admin.age); // =>26
+console.log(admin.isAdult()); // =>true
+
+/*
+	アクセシビリティ修飾子(accessibility modifier)
+	public
+	protected
+	private
+*/
+class User {
+	name: string;
+	private age: number;
+
+	constructor(name: string, age: number) {
+		this.name = name;
+		this.age = age;
+	}
+
+	public isAdult(): boolean {
+		return this.age > 20;
+	}
+}
+
+const uhyo = new User("uhyo", 26);
+console.log(uhyo.name); // =>"uhyo"
+console.log(uhyo.isAdult())
+```
 
