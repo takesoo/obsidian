@@ -1,3 +1,7 @@
+---
+tags:
+  - book
+---
 ```ts
 const greeting: string = "Hello, "
 const target: string = "world!"
@@ -133,7 +137,7 @@ data.chicken = 250;
 	次の条件を満たす時、型Sは型Tの部分型となる
 		1. Tが持つプロパティはすべてSにも存在する
 		2. Sのプロパティの型はTのプロパティの型の部分型（または同じ型）である
-	型Tの変数に型Sの値を代入できる。
+	S型の値はT型の値の代わりになる（S型の値はT型の値に代入できる。）
 	Human型はAnimal型の部分型
 */
 type Anymal = {
@@ -457,11 +461,40 @@ const obj: HasName = f(100); // =>{ name: "John Smith", age: 100 }
 
 /*
 	引数の型による部分型関係
-	HasNameAndAgeはHasNameの部分型なので、関数showName(HasNameを引数に受け取る関数)の型は関数g(HasNameAndAgeを引数に受け取る関数)の型の部分型
+	SがTの部分型であれば、「Tを引数に受け取る関数」の型は「Sを引数に受け取る関数」の型の部分型となる
+	HasNameAndAgeはHasNameの部分型なので、関数showNameの型は関数gの型の部分型となり、変数gに変数showNameを代入できる。
 */
 const showName = (obj: HasName) => {
 	console.log(obj.name);
 }
 const g: (obj: HasNameAndAge) => void = showName;
-g({ name: "uhyo", age: 26 });
+g({ name: "uhyo", age: 26 }); // =>"uhyo"
+
+/*
+	引数の数による部分型関係
+	関数型Fの引数リストの末尾に新たな引数を追加して関数型Gを作った場合、FはGの部分型となる
+	↓の場合、UnaryFuncはBinaryFuncの部分型
+*/
+type UnaryFunc = (arg: number) => number;
+type BinaryFunc = (left: number, right: number) => number;
+const double: UnaryFunc = arg => arg * 2;
+const add: BinaryFunc = (left, right) => left + right;
+const bin: BinaryFunc = double; // UnaryFuncをBinaryFuncとして扱うことができる
+console.log(bin(10, 100)); // =>20 第二引数は無視される
+```
+### ジェネリクス
+```ts
+/*
+	ジェネリクス(generics)
+	型引数を受け取る関数(ジェネリック関数)を作る機能のこと
+*/
+function repeat<T>(element: T, length: number): T[] {
+	const result: [] = [];
+	for (let i = 0, i < lenght; i++) {
+		result.push(element);
+	}
+	return result;
+}
+console.log(repeat<string>("a", 5)); // =>["a", "a", "a", "a", "a"]
+console.log(repeat<number>(123, 5)); // =>[123, 123, 123, 123, 123]
 ```
