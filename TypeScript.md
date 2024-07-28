@@ -260,6 +260,7 @@ const set: Set<string> = new Set();
 set.add("foo");
 ```
 ## 関数
+### 関数の作り方
 ```ts
 /**
 	関数宣言による定義
@@ -363,13 +364,57 @@ const toLowerOrUpper = (str: string, upper?: boolean): string => {
 };
 
 // 引数の初期値設定。この場合upperの方はboolean。
-const toLowerOrUpper = (str: string, upper: boolean = false): string => {...
+const toLowerOrUpper = (str: string, upper: boolean = false): string => {
+...
+}
 
 /**
 	コールバック関数
 */
 type User = { name: string; age: number };
-const getName = (u: User): string => u.name;
+const users: User[] = [
+	{ name: "uhyo", age: 26 },
+	{ name: "John Smith", age: 15 }
+]
 
+// 引数に渡している関数のことをコールバック関数と呼ぶ
+// コールバック関数を引数として受け取る関数を高階関数(higher-order function)と呼ぶ
+const names = users.map((u: User): string => u.name);
+console.log(names); // =>["uhyo", "John Smith"]
+```
+### 関数の型
+```ts
+/**
+	関数型はアロー関数のように定義する
+	このとき、引数名は型チェックに影響しない。つまり関数定義の際に使用する引数名と型の引数名が異なっていても問題がない。エディタの補完の際にわかりやすいようするために命名する。
+*/
+type F = (repeatNum: number) => string;
+const xRepeat: F = (num: number): string => "x".repeat(num);
+
+/**
+	戻り値の型注釈は省略できる
+	↓の場合、型推論によって戻り値はstringと判定される
+	基本的に省略しない方が堅牢なシステムになる。省略すると関数の実装にミスがあったら、呼び出し側でコンパイルエラーとなってしまい、原因箇所が隠蔽されてしまうため。
+*/
+const xRepeat(num: number) => "x".repeat(num)
+
+/**
+	引数の型注釈は省略できる
+	↓の場合、引数numの方はnumberであることが型Fから推論される。
+*/
+type F = (arg: number) => string;
+const xRepeat: F = (num) => "x".repeat(num);
+
+// コールバック関数の引数の型も省略できる。↓の場合、引数xの型はnumberであると推論される
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const arr2 = nums.filter((x) => x % 3 === 0);
+
+// ↓の場合も型Greetableから引数strの型はstringと推論される。
+type Greetable = {
+	greet: (str: string) => string;
+}
+const obj: Greetable = {
+	greet: (str) => `Hello, ${str}!`
+};
 
 ```
