@@ -635,7 +635,7 @@ console.log(admin.isAdult()); // =>true
 */
 class User {
 	name: string;
-	private age: number;
+	private age: number; // #age: number;とも書ける
 
 	constructor(name: string, age: number) {
 		this.name = name;
@@ -680,6 +680,37 @@ console.log(john instanceof User); // =>false Userのインスタンスではな
 ```
 ### クラスの継承
 ```ts
+/*
+	クラスの継承
+	子クラスのインスタンスは親クラスのインスタンスの部分型でなければならない
+*/
+class User {
+	name: string;
+	#age: number;
+
+	constructor(name: string, age: number) {
+		this.name = name;
+		this.#age = age;
+	}
+
+	public isAdult(): boolean {
+		return this.#age >= 20;
+	}
+}
+
+class PremiumUser extends User {
+	rank: number = 1;
+
+	constructor(name: string, age: number, rank: number) {
+		super(name, age);
+		this.rank = rank;
+	}
+
+	public isAdult(): boolean {
+		return true;
+	}
+}
+
 ```
 
 
