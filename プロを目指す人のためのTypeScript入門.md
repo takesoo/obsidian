@@ -649,6 +649,37 @@ class User {
 
 const uhyo = new User("uhyo", 26);
 console.log(uhyo.name); // =>"uhyo"
-console.log(uhyo.isAdult())
+console.log(uhyo.isAdult()); // =>true
+console.log(uhyo.age); // error: Property 'age' is private and only accessibile with in class 'User'
 ```
+### クラスの型
+```ts
+/*
+	クラス宣言はインスタンスの型を作る
+*/
+class User {
+	name: string = "";
+	age: number = 0;
+
+	isAdult(): boolean {
+		return this.age >= 20;
+	}
+}
+
+const uhyo = new User();
+console.log(uhyo instanceof User); // =>true
+console.log(typeof(uhyo)); // =>User
+
+// ↓はUser型のオブジェクトを作成
+const john: User = {
+	name: "John Smith",
+	age: 15,
+	isAdult: () => true
+}
+console.log(john instanceof User); // =>false Userのインスタンスではない(newでイニシャライズしてない)ので
+```
+### クラスの継承
+```ts
+```
+
 
