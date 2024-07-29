@@ -686,15 +686,18 @@ console.log(john instanceof User); // =>false Userのインスタンスではな
 */
 class User {
 	name: string;
-	#age: number;
+	// protected修飾子 外部からアクセスできないが子クラスからはアクセスできる
+	//　子クラスがロジックを拡張することを許す時に使う
+	// 基本的にprivateを使用する方が安全
+	protected age: number;
 
 	constructor(name: string, age: number) {
 		this.name = name;
-		this.#age = age;
+		this.age = age;
 	}
 
 	public isAdult(): boolean {
-		return this.#age >= 20;
+		return this.age >= 20;
 	}
 }
 
@@ -706,11 +709,33 @@ class PremiumUser extends User {
 		this.rank = rank;
 	}
 
-	public isAdult(): boolean {
-		return true;
+	// tsconfig.jsonでnoImplicitOverrideオプションを有効にすると、オーバーライドする時にoverride修飾子が必要になる
+	public override isAdult(): boolean {
+		return this.age >= 18;
 	}
 }
 
+console.log(new PremiumUser("uhyo", 26).age); // Property 'age' is protected and only accessible within 'User' and its subclasses.
+
+/*
+	implementsキーワード
+	class A implements B: Aの型はBの部分型である
+*/
+type HasName = {
+	name: string;
+}
+
+// Class 'User' incorrectly implements interface 'HasName'.
+// Property 'name' is missing in type 'User' but required in type 'HasName'.
+class User implements HasName {
+	#age: number;
+
+	constructor(age: number) {
+		this.#age = age;
+	}
+}
 ```
+### this
+
 
 
