@@ -736,6 +736,11 @@ class User implements HasName {
 }
 ```
 ### this
-
+```ts
+/*
+	TypeScriptのthisは呼び出し方によってはエラーになる
+*/
+const uhyo = new User("uhyo" )
+```
 
 
