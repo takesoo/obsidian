@@ -818,19 +818,23 @@ try {
 */
 type Animal = {
 	species: string;
+	age: string;
 }
 type Human = {
 	name: string;
+	age: number;
 }
 type User = Animal | Human;
 
 // Animal型オブジェクトなのでUser型に代入できる
 const tama: User = {
-	species: "Felis silvestris catus"
+	species: "Felis silvestris catus",
+	age: "永遠の17歳"
 };
 // Human型オブジェクトなのでUser型に代入できる
 const uhyo: User = {
-	name: "uhyo"
+	name: "uhyo",
+	age: 26
 };
 
 // userがAnimal型の場合にはnameプロパティを持たないため、エラーになる
@@ -839,4 +843,75 @@ function getName(user: User): string {
 	// Property 'name' does not exist on type 'Animal'.
 	return user.name;
 }
+
+// ageはstring | number型になる
+function showAge(user: User) {
+	const age = user.age;
+	console.log(age);
+}
+
+// resultはstring | number型になる
+type MysteryFunc = 
+	| ((str: string) => string)
+	| ((srt: string) => number);
+
+function useFunc(func: MysteryFunc) {
+	const result = func("uhyo");
+	console.log(result);
+}
+
+/*
+	インターセクション型
+	T型かつU型
+*/
+type Animal = {
+	species: string;
+	age: number;
+}
+// HumanはAnimalの部分型になる
+type Human = Animal & {
+	name: string;
+}
+
+const tama: Animal = {
+	species: "Felis silvestris catus",
+	age: 3
+}
+const uhyo: Human = {
+	species: "Homo sapiens sapiens",
+	age: 26,
+	name: "uhyo"
+}
+
+/*
+
+*/
+type Human = { name: string };
+type Animal = { species: string };
+
+function getName(human: Human) {
+	return human.name;
+}
+function getSpecies(animal: animal) {
+	return animal.species;
+}
+
+// mysteryFuncの型は ((human: Human) => string | (animal: Animal) => string)
+const mysteryFunc = Math.randomw() < 0.5 ? getName : getSpecies;
+
+// error: Argument of type 'Human' is not assignable to parameter of type 'Human & Animal'.
+// Property 'species' is missing in type 'Human' but required in type 'Animal'.
+mysteryFunc(uhyo);
+
+// error: Argument of type 'Animal' is not assignable to parameter of type 'Human & Animal'.
+// Property 'name' is missing in type 'Animal' but required in type 'Animal'.
+mysteryFunc(cat);
+
+const taro: Human & Animal = {
+	name: "uhyo",
+	species: "Homo sapiens sapiens"
+}
+
+// Human & Animal型を渡すと呼び出せる
+mysteryFunc(taro);
 ```
