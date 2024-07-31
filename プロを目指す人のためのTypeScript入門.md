@@ -739,8 +739,44 @@ class User implements HasName {
 ```ts
 /*
 	TypeScriptのthisは呼び出し方によってはエラーになる
+	thisを使うオブジェクトのメソッドは原則としてメソッド記法で呼び出すべき
 */
-const uhyo = new User("uhyo" )
+class User {
+	name: string;
+	#age: number;
+	
+	constructor(name: string, age: number) {
+		this.name = name;
+		this.#age = age;
+	}
+
+	public isAdult(): boolean {
+		return this.#age >= 20;
+	}
+}
+
+const uhyo = new User("uhyo", 26);
+console.log(uhyo.isAdult()); // =>true
+const isAdult = uhyo.isAdult; // isAdult関数オブジェクトをisAdult変数に代入
+// runtime error: attempted to get field on non-instance
+// オブジェクト.関数()の形式で呼び出していないので、thisがundefinedになってしまうため
+console.log(isAdult());
+
+/*
+	アロー関数は外側の関数からthisを受け継ぐ（アロー関数は自分自身のthisを持たない）
+*/
+class User {
+...
+	public filterOlder(users: readonly User[]): User[] {
+		return users.filter(u => u.#age > this.#age); // このthisはfilterOlderの呼び出し元を受け継ぐ
+	}
+}
+
+const uhyo = new User("uhyo", 26);
+const john = new User("john Smith", 15);
+const bob = new User("Bob", 40);
+const older = uhyo.filterOlder([john, bob]); // filterOlder内のコールバック関数内のthisはuhyoになる
+console.log(older); // =>[User { name: "Bob" }]
 ```
 
 
