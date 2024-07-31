@@ -884,7 +884,7 @@ const uhyo: Human = {
 }
 
 /*
-
+	ユニオン型とインターセクション型の関係
 */
 type Human = { name: string };
 type Animal = { species: string };
@@ -899,19 +899,63 @@ function getSpecies(animal: animal) {
 // mysteryFuncの型は ((human: Human) => string | (animal: Animal) => string)
 const mysteryFunc = Math.randomw() < 0.5 ? getName : getSpecies;
 
+// mysteryFuncにHuman型を渡すとエラー
 // error: Argument of type 'Human' is not assignable to parameter of type 'Human & Animal'.
 // Property 'species' is missing in type 'Human' but required in type 'Animal'.
 mysteryFunc(uhyo);
 
+// mysteryFuncにAnimal型を渡すとエラー
 // error: Argument of type 'Animal' is not assignable to parameter of type 'Human & Animal'.
 // Property 'name' is missing in type 'Animal' but required in type 'Animal'.
 mysteryFunc(cat);
 
+// Human & Animal型を渡すと呼び出せる
 const taro: Human & Animal = {
 	name: "uhyo",
 	species: "Homo sapiens sapiens"
 }
-
-// Human & Animal型を渡すと呼び出せる
 mysteryFunc(taro);
+
+/*
+	オプショナルプロパティの型
+*/
+type Human = {
+	name: string;
+	age?: number; // number | undefined
+}
+
+const john: Human = {
+	name: "John Smith",
+	// tsconfig.jsonでexactOptionalPropertyTypesを有効にするとコンパイルエラーを発生させられる。堅牢になるので有効化が推奨される。
+	// error: Type 'undefined' is not assignable to type 'number'.
+	age: undefined
+}
+
+/*
+	プロパティアクセスのオプショナルチェイニング
+	obj?.prop
+	オブジェクトがnullやundefinedの場合はundefinedを返す
+*/
+
+type Human = {
+	name: string;
+	age: number;
+}
+
+function useMaybeHuman(human: Human | undefined) {
+	const age = human?.age;
+...
+}
+
+/*
+	関数呼び出しのオプショナルチェイン
+	func?.()
+*/
+type GetTimeFunc = () => Date;
+
+function useTime(getTimeFunc: GetTimeFunc | undefined) {
+	const timeOrUndefined = getTimeFunc?.();　// Date | undefined
+}
+
+
 ```
