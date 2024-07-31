@@ -808,3 +808,35 @@ try {
 }
 ```
 オブジェクト指向プログラミングではクラスに振る舞いを持たせるが、TypeScriptにおいてはあまりメリットにならない。データと値を分離した方が便利なことが多くある。コードのminimizationの観点からも関数はメソッドではなく独立した関数にした方が有利とされている。
+クラスのメソッドが一つしかないならクロージャ関数で実装するという方法もある。
+## 高度な型
+### ユニオン型とインターセクション型
+```ts
+/*
+	ユニオン型
+	T型またはU型
+*/
+type Animal = {
+	species: string;
+}
+type Human = {
+	name: string;
+}
+type User = Animal | Human;
+
+// Animal型オブジェクトなのでUser型に代入できる
+const tama: User = {
+	species: "Felis silvestris catus"
+};
+// Human型オブジェクトなのでUser型に代入できる
+const uhyo: User = {
+	name: "uhyo"
+};
+
+// userがAnimal型の場合にはnameプロパティを持たないため、エラーになる
+function getName(user: User): string {
+	// error: Property 'name' does not exist on type 'User'.
+	// Property 'name' does not exist on type 'Animal'.
+	return user.name;
+}
+```
