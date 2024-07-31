@@ -778,5 +778,33 @@ const bob = new User("Bob", 40);
 const older = uhyo.filterOlder([john, bob]); // filterOlder内のコールバック関数内のthisはuhyoになる
 console.log(older); // =>[User { name: "Bob" }]
 ```
+### 例外処理
+```ts
+/*
+	throw文とErrorオブジェクト
+	ランタイムエラーが発生し、プログラムの実行が中断される
+*/
+throw new Error("エラーが発生しました！");
 
+/*
+	file///path/to/project/src/index.js:1
+		throw error = new Error("エラーが発生しました！");
+						  ^
+	Error: エラーが発生しました！                           // エラーメッセージ
+		at file///path/to/project/src/index.js:1:22     // スタックトレース
+*/
 
+/*
+	try-catch文
+	catchでエラーを握りつぶすのはアンチパターンなので注意する
+	処理の失敗を返す場合は、基本的にthrowで例外を発生させるよりもfalsyな値を返す方がシンプルに書ける
+*/
+try {
+	throw new Error("エラーが発生しました！");
+} catch (err) {
+	console.log(err); // => エラーメッセージとスタックトレースが表示される
+} finally {
+...
+}
+```
+オブジェクト指向プログラミングではクラスに振る舞いを持たせるが、TypeScriptにおいてはあまりメリットにならない。データと値を分離した方が便利なことが多くある。コードのminimizationの観点からも関数はメソッドではなく独立した関数にした方が有利とされている。
