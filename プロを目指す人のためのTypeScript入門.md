@@ -977,6 +977,52 @@ user?.isAdult().toString(); // user?.isAdult()の結果がundefinedだった場�
 	リテラル型(literal type)はプリミティブ型をさらに細分化した型
 */
 
-// "foo"という文字列耳が
+// "foo"という文字列のみが属する文字列のリテラル型
 type FooString = "foo";
+const foo: FooString = "foo";
+const bar: FooString = "bar"; // コンパイルエラー
+
+// 数値のリテラル型
+const one: 1 = 1;
+
+// 真偽値のリテラル型
+const t: true = true;
+
+// Bigintのリテラル型
+const three: 3n = 3n;
+
+/*
+	テンプレートリテラル型
+	型定義にテンプレートリテラルを使う定義
+	${}には型を入れる
+*/
+
+function getHelloStr(): `Hello, ${string}!` {
+	const rand = Math.random();
+	if (rand < 0.3) {
+		return "Hello, world!";
+	} else if (rand < 0.6) {
+		return "Hello, my world!";
+	} else if (rand < 0.9) {
+		return "Hello, world!!"; // コンパイルエラー
+	} else {
+		return "Hell, world!"; //コンパイルエラー
+	}
+}
+
+/*
+	ユニオン型とリテラル型の組み合わせ
+*/
+function signNumber(type: "plus" | "minus") {
+	return type === "plus" ? 1 : -1;
+}
+
+/*
+	リテラル型のwidening
+	letで宣言された変数の型推論はプリミティブ型になる
+*/
+// "uhyo"型
+const uhyo1 = "uhyo";
+// string型
+let uhyo2 = "uhyo";
 ```
