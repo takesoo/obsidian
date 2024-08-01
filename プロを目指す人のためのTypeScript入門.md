@@ -943,12 +943,12 @@ type Human = {
 }
 
 function useMaybeHuman(human: Human | undefined) {
-	const age = human?.age;
+	const age = human?.age; // number | undefined
 ...
 }
 
 /*
-	関数呼び出しのオプショナルチェイン
+	関数呼び出しのオプショナルチェイニング
 	func?.()
 */
 type GetTimeFunc = () => Date;
@@ -957,5 +957,26 @@ function useTime(getTimeFunc: GetTimeFunc | undefined) {
 	const timeOrUndefined = getTimeFunc?.();　// Date | undefined
 }
 
+/*
+	メソッド呼び出しのオプショナルチェイニング
+*/
+type User = {
+	isAdult(): boolean;
+}
 
+function checkForAdultUser(user: User | null) {
+	return user?.isAdult() // boolean | undefined
+}
+
+// オプショナルチェイニング以降のプロパティアクセス、関数呼び出し、メソッド呼び出しはすべてスキップされる
+user?.isAdult().toString(); // user?.isAdult()の結果がundefinedだった場合は、toString()は実行されず、戻り値はundefinedになる
+```
+### リテラル型
+```ts
+/*
+	リテラル型(literal type)はプリミティブ型をさらに細分化した型
+*/
+
+// "foo"という文字列耳が
+type FooString = "foo";
 ```
