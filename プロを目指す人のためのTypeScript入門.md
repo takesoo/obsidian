@@ -1019,10 +1019,17 @@ function signNumber(type: "plus" | "minus") {
 
 /*
 	リテラル型のwidening
-	letで宣言された変数の型推論はプリミティブ型になる
+	リテラル型が自動的に、対応するプリミティブ型に変化する（広げられる）挙動のこと
 */
+// letで宣言された変数の型推論はプリミティブ型になる
 // "uhyo"型
 const uhyo1 = "uhyo";
 // string型
 let uhyo2 = "uhyo";
+
+// オブジェクトリテラルの方が推論される時、各プロパティの方がリテラル型となる場合はwideningされる
+const uhyo = {
+	name: "uhyo", // string
+	age: 26 // number
+}
 ```
