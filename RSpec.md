@@ -9,3 +9,4 @@ tags:
 	- rspec-mocks
 	- rspec-rails
 ## `--profile`
+遅いexampleのリストを出力する。テストスイートパフォーマンスの計測に利用する。
