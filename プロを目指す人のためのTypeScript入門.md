@@ -1088,3 +1088,77 @@ function getUserName(user: User) {
 	}
 }
 ```
+### keyof型・lookup型
+```ts
+/*
+	lookup型
+	T[K]
+	型情報の再利用ができる
+*/
+type Human = {
+	type: "human";
+	name: string;
+	age: number;
+}
+function setAge(human: Human, age: Human["age"]) { // ageはnumber型
+	return {
+		...human,
+		age
+	}
+}
+
+/*
+	keyof型
+	keyof T
+*/
+type Human = {
+	name: string;
+	age: number;
+}
+type HumanKeys = keyof Human; // "name" | "age"
+
+// keyof typeof 変数でオブジェクトのプロパティ名のユニオン型を作成する
+// mmConversionTableに新しいプロパティを追加すると、convertUnitsのunitの型も自動的に拡張される
+const mmConversionTable = {
+	mm: 1,
+	m: 1e3,
+	km: 1e6,
+};
+
+function convertUnits(value: number, unit: keyof typeof mmConversionTable) { // unitの型は "mm" | "m" | "km"
+	const mmValue = value * mmConversionTable[unit];
+	return {
+		mm: mmValue,
+		m: mmValue / 1e3,
+		km: mmValue / 1e6,
+	}
+}
+
+/*
+	keyof型・lookup型とジェネリクス
+	<T, K extends keyof T> KはTのプロパティ名の部分型である
+*/
+function get<T, K extends keyof T>(obj: T, key: K): T[K] {
+	return obj[key];
+}
+
+type Human = {
+	name: string;
+	age: number;
+}
+
+const uhyo: Human = {
+	name: "uhyo",
+	age: 26
+};
+
+const uhyoName = get(uhyo, "name"); // uhyoNameはsting型
+const uhyoAge = get(uhyo, "age"); // uhyoAgeはnumber型
+```
+### asによる型アサーション
+```ts
+```
+
+
+
+
