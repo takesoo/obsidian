@@ -1033,3 +1033,58 @@ const uhyo = {
 	age: 26 // number
 }
 ```
+### 型の絞り込み
+```ts
+/*
+	ユニオン型を持つ値が実際にはどちらの値なのかをランタイムに特定するコードを書くことで、型情報がそれに応じて変化すること
+	コントロールフロー解析(controll flow analysis)とも言う
+*/
+
+// 等価演算子による絞り込み
+type SignType = "plus" | "minus";
+function signNumber(type: SignType) {
+	return type === "plus" ? 1 : -1;
+}
+
+function numberWithSign(num: number, type: SignType | "none") {
+	if (type === "none") {
+		return 0; // ここではtypeは"none"型
+	} else {
+		return num * signNumber(type); // ここではtypeはSignType型
+	}
+}
+
+// typeof演算子による絞り込み
+function formatNumberOrString(value: string | number) {
+	if (typeof value === "number") {
+		return value.toFixed(3); // ここではvalueはnumber型
+	} else {
+		return value; // ここではvalueはstring型
+	}
+}
+
+// 代数的データ型(algebraic data types: ADT)
+type Animal = {
+	tag: "animal"; // 判別用の情報（タグ）を持つのが代数的データ型の特徴
+	species: string;
+}
+type Human = {
+	tag: "human";
+	name: string;
+}
+type User = Animal | Human;
+
+// error: Type "alien" is not assignable to type "animal" | "human".
+const alien: User = {
+	tag: "alien",
+	name: "gray"
+}
+
+function getUserName(user: User) {
+	if (user.tag === "human") {
+		return user.name; // ここではuserはHuman型
+	} else {
+		return "名無し"; // ここではuserはAnimal型
+	}
+}
+```
