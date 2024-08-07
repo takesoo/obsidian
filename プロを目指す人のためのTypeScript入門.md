@@ -1157,8 +1157,60 @@ const uhyoAge = get(uhyo, "age"); // uhyoAgeはnumber型
 ```
 ### asによる型アサーション
 ```ts
-```
+/*
+	TypeScriptコンパイラが認識する型を変更する処理
+	型アサーションの使用はできるだけ避けるべき
+	TypeScriptの型推論を補うためにのみ使用する
+*/
 
+// アンチパターン
+function getFirstFiveLetters(strOrNum: string | number) {
+	const str = strOrNum as string; // TypeScriptコンパイラに変数strは文字列型だと信じさせる
+	return str.slice(0, 5);
+}
+
+console.log(getFirstFiveLetters(123)); // 変数strに数値型の値が入り、sliceメソッド実行時にランタイムエラーになる
+
+// コンパイラの不足を補う
+type Animal = {
+	tag: "animal";
+	species: string;
+}
+type Human = {
+	tag: "human";
+	name: string;
+}
+type User = Animal | Human
+
+function getNamesIfAllHuman(users: User[]):string[] | undefined {
+	if (users.every(user => user.tag === "human")) {
+		return (users as Human[]).map(user => user.name); // if文の条件式からusersはHuman[]であるはずだが、TypeScriptのコンパイラはUser[]と推論してしまうので、型アサーションで補足する
+	}
+	return undefined;
+}
+
+/*
+	as const
+	各種リテラルを変更できないものとして扱うことを宣言する
+	- 配列リテラルの型推論結果を配列型ではなくタプル型にする
+	- オブジェクトリテラルから推論されるオブジェクト型はすべてのプロパティがreadonlyになる。配列リテラルから推論されるタプル型もreadonlyタプル型になる
+	- 文字列・数値・BigInt・真偽値リテラルに対してつけられるリテラル型がwideningしないリテラル型になる
+	- テンプレート文字列リテラルの型がstringではなくテンプレートリテラル型になる
+*/
+const names1 = ["uhyo", "John", "Taro"]; // string[]型
+const names2 = ["uhyo", "John", "Taro"] as const; // readonly ["uhyo", "John", "Taro"]型
+
+// Lookup型とtypeofキーワードと組み合わせて、値から型を作る手段として使う
+type Name = (typeof names2)[number]; // "uhyo" | "John" | "Taro"
+
+```
+### any型とunknown型
+```ts
+/*
+	any型
+	型チェックを無効化する型
+*/
+```
 
 
 
