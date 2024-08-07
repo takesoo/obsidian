@@ -1209,7 +1209,43 @@ type Name = (typeof names2)[number]; // "uhyo" | "John" | "Taro"
 /*
 	any型
 	型チェックを無効化する型
+	型推論の恩恵がなくなるので注意
+	JavaScriptからTypeScriptへの移行の支援のためにある
+	asやユーザー定義ガードを使用するべき
 */
+function useNumber(num: number) {
+	console.log(num);
+}
+
+function doWhatever(obj: any) {
+	// any型なので何をしてもコンパイルエラーにはならない
+	console.log(obj.user.name);
+	obj();
+	const result = obj * 10;
+	// どんな型にも渡せる
+	const str: string = obj;
+	useNumber(obj); // 
+}
+// ランタイムエラーになる
+doWhatever(3);
+
+/*
+	unknouwn型
+*/
+function doNothing(val: unknouwn) {
+	console.log(val);
+	const name = val.name; // any型と違い、コンパイルエラーになる
+}
+// unknown型にはどんな値でも渡すことができる
+doNothing(3);
+doNothing({
+	user: {
+		name: "uhyo"
+	}
+})
+doNothing(()=>{
+	console.log("hi");
+})
 ```
 
 
