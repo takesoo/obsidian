@@ -1281,6 +1281,94 @@ function useToString2(value: HasToString & object) {
 // object型ではないのでコンパイルエラー
 useToString2(3.14)
 
+/*
+	never型
+	「当てはまる型が存在しない」
+*/
+function useNever(value: never) {
+	// never型はどんな型にも当てはめることができる
+	const num: number = value;
+	const str: string = value;
+	const obj: object = value;
+}
+
+useNever({}); // error: Argument of type '{}' is not assignable to parameter of type 'never'
+useNever(3.14); // error: Argument of type 'number' is not assignable to parameter of type 'never'
+
+/*
+	型述語(ユーザー定義型ガード)
+	user-defined type guards
+	型の絞り込みを自由に行うためのしくみ
+	堅安全性を破壊する恐れのある危険な機能だが、anyやasよりは取り回しが良い
+*/
+
+// value is string | numberによって、valueはunknown型から string | number 型に推論される
+function isStringOrNumber(value: unknown): value is string | number {
+	return typeof value === "string" || typeof value === "number";
+}
+
+const something: unknown = 123;
+
+if (isStringOrNumber(something)) {
+	// ここではsomethingは string | number 型
+	conosole.log(something.toString());
+}
+
+// 例外が発生する関数の場合はasserts型述語
+function assertHuman(value: any): asserts value is Human {
+	if (value == null) {
+		throw new Error("Given value is null or undefined");
+	}
+	if (
+		value.type !== "Human" ||
+		typeof value.name !== "string" ||
+		typeof value.age !== "number"
+	) {
+		throw new Error("Given value is not a Human");
+	}
+}
+
+assertHuman(value);
+// ここから下ではvalueはHuman型になる
+const name = value.name;
+
+/*
+	可変長タプル型
+	variablic tuple types
+*/
+
+type NumberAndStrings = [number, ...string[]];
+
+const arr1: NumberAndStrings = [25, "uhyo", "hyo", "hyo"];
+const arr2: NumberAndStrings = [25];
+const arr3: NumberAndStrings = ["uhyo", "hyo"]; // 一つ目がnumberでないのでコンパイルエラー
+const arr4: NumberAndStrings = [25, 26, 17]; // 二つ目以降がstringでないのでコンパイルエラー
+const arr5: NumberAndStrings = []; // コンパイルエラー
+
+type NumberStringNumber = [number, ...string[], number];
+
+const arr6: NumberStringNumber = [25, "uhyo", "hyo", 0];
+const arr7: NumberStringNumber = [25, 25];
+// 以下はコンパイルエラー
+const arr8: NumberStringNumber = [25, "uhyo", "hyo", "hyo"];
+const arr9: NumberStringNumber = [];
+const arr10: NumberStringNumber = ["uhyo", "hyo", 25];
+const arr11: NumberStringNumber = [25, "uhyo", 25, "hyo"];
+
+// ...配列型を2回以上使うとコンパイルエラー
+type T1 = [number, ...string[], number, ...string[]]
+// オプショナルな要素を...配列型よりも後ろで使うとコンパイルエラー
+type T2 = [number, ...string[], number?]
+
+// タプル型のスプレッド構文
+type NSN = [number, string, number];
+type SNSNS = [string, ...NSN, string]; // [string, number, string, number, string]型
+
+/*
+	mapped types
+	{ [P in K] }
+*/
+
 ```
 
 
