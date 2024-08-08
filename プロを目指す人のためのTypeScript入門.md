@@ -1366,8 +1366,65 @@ type SNSNS = [string, ...NSN, string]; // [string, number, string, number, strin
 
 /*
 	mapped types
-	{ [P in K] }
+	{ [P in K]: T }
+	「Kというユニオン型の各構成要素Pに対して、Pというプロパティが型Tを持つようなオブジェクトの型」
 */
+type Fruit = "apple" | "orange" | "strawberry";
+type FruitNumber = { [P in Fruit]: number } // { apple: number, orange: number, strawberry: number }型
+
+const numbers: FruitNumbers = {
+	apple: 3,
+	orange: 10,
+	strawberry: 20
+}
+
+type FruitArrays = { [P in Fruit]: P[] } // { apple: "apple"[], orange: "orange"[], strawberry: "strawbery"[] }型
+
+const numbers2: FruitArrays = {
+	apple: ["apple", "apple"],
+	orange: ["orange", "orange", "orange"],
+	strawbery: []
+}
+
+/*
+	conditional types
+	X extends Y ? S : T
+*/
+type RestArgs<M> = M extends "string" ? [string, string] : [number, number, number];
+
+function func<M extends "string" | number>(
+	mode: M,
+	...args: RestArgs<M>
+) {
+	console.log(mode, ...args);
+}
+
+func("string", "uhyo", "hyo");
+func("number", 1, 2, 3);
+func("string" 1, 2); // error: Argument of type 'number' is not assignable to parameter of type 'string'.
+func("number", "uhyo", "hyo"); // error: Expected 4 arguments. but got 3.
+
+/*
+	組み込みの型
+*/
+type T = Readonly<{
+	name: string;
+	age: number
+}> // { readonly name: string; readonly age: string; }
+
+type U = Partial<{
+	name: string;
+	age: number;
+}> // { name?: string | undefined; age?: string | undefined; }
+
+type V = Pick<{
+	name: string;
+	age: number;
+}, "age"> // { age: number }
+
+type Union = "uhyo" | "hyo" | 1 | 2 | 3;
+type W = Extract<Union, string>; // "uhyo" | "hyo"
+type X = Exclude<Union, string>; // 1 | 2 | 3
 
 ```
 
