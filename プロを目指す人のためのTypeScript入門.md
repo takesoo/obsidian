@@ -1247,6 +1247,40 @@ doNothing(()=>{
 	console.log("hi");
 })
 ```
+### さらに高度な型
+```ts
+/*
+	object型
+	{}は実質any型で、プリミティブも代入できる。eslintでエラーになる。
+*/
+const val: {} = "uhyo";
 
+type HasToString = {
+	toString: () => string
+}
+
+function useToString1(value: HasToString) {
+	console.log(`value is ${value.toString()}`);
+}
+
+useToString1({
+	toString() {
+		return "foo!";
+	}
+});
+// => "value is foo!"
+
+// 3.14はnumber型だが、toStringメソッドを持っているので型エラーにならない
+useToString1(3.14); // => "value is 3.14"
+
+// 引数の型にobject型を追加
+function useToString2(value: HasToString & object) {
+	console.log(`value is ${value.toString()}`);
+}
+
+// object型ではないのでコンパイルエラー
+useToString2(3.14)
+
+```
 
 
