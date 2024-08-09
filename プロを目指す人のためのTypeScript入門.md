@@ -1429,6 +1429,90 @@ type X = Exclude<Union, string>; // 1 | 2 | 3
 ## TypeScriptのモジュールシステム
 ### import宣言とexport宣言
 ```ts
+/*
+	変数のエクスポートとインポート
+	export const
+	import { 変数リスト }
+*/
+// uhyo.ts
+export const name = "uhyo";
+export const age = 26;
 
+// 以下のようにも書ける
+const name = "uhyo";
+const age = 26;
+export { name, age };
+
+// index.ts
+import { name, age } from "./uhyo.js";
+
+console.log(name, age) // => "uhyo 26"
+
+// 別名をつけてexport
+// uhyo.ts
+export { name as uhoName, age };
+
+// index.ts
+import { uhyoName, age } from "./uhyo.js";
+
+// 別名をつけてimport
+import { uhyoName, age as uhyoAge } from "./uhyo.js";
+
+/*
+	関数のエクスポート
+*/
+// uhyo.ts
+export const getUhyoName = () => {
+	return "uhyo";
+}
+
+// functionを使う場合
+export function getUhyoName() {
+	return "uhyo";
+}
+
+// index.ts
+import { getUhyoName } from "./uhyo.js";
+
+console.lot(getUhyoName()); // "uhyo"
+
+/*
+	defaultエクスポートとdefaultインポート
+	defaultインポートしたものをなんと言う変数に入れるかはインポートする側が決められる
+	暗黙のうちに変数を用意し、defaultという名前でエクスポートする機能
+	vscodeのimport補完が効かない時があるので、筆者は推奨しない構え
+*/
+// uhyoAge.ts
+export default 26;
+
+// index.ts
+import uhyoAge from "./uhyoAge.js";
+
+console.log(uhyoAge); // 26
+
+// 関数のdefaultエクスポート
+// counter.ts
+let value = 0;
+
+export default function increment() {
+	return ++value;
+}
+
+// index.ts
+import increment from "./counter.js";
+console.log(increment()); // 1
+console.log(increment()); // 2
+console.log(increment()); // 3
+
+// 通常のexportと併用する場合
+// counter.ts
+export let value = 0;
+
+export default function increment() {
+	return ++value;
+}
+
+// index.ts
+import increment, { value } from "./counter.js";
 ```
 
