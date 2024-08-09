@@ -1425,7 +1425,10 @@ type V = Pick<{
 type Union = "uhyo" | "hyo" | 1 | 2 | 3;
 type W = Extract<Union, string>; // "uhyo" | "hyo"
 type X = Exclude<Union, string>; // 1 | 2 | 3
+```
+## TypeScriptのモジュールシステム
+### import宣言とexport宣言
+```ts
 
 ```
-
 
