@@ -1514,5 +1514,115 @@ export default function increment() {
 
 // index.ts
 import increment, { value } from "./counter.js";
+
+/*
+	型のインポート・エクスポート
+*/
+// animal.ts
+// 基本的にこれ
+export type Animal = {
+	species: string;
+	age: number;
+}
+
+// または
+type Animal = {
+	species: string;
+	age: number;
+}
+
+export { Animal };
+
+// export type { 変数 }で型だけをエクスポート
+const tama: Animal = {
+	species: "Felis silvestris catus",
+	age: 1
+};
+
+export type { Animal, tama };
+
+// inddex.ts
+// 基本的にこれ
+import { Animal, tama } from "./animal.js"
+
+const myCat: Animal = tama; // error: 'tama' cannot be used as a value because it was exported using 'export type'.
+
+const myCat: typeof tama = {
+	species: "Felis silvestris catus",
+	age: 1
+};
+
+// import typeで型だけをインポート
+import type { Animal, tama } from "./animal.js";
+
+const myCat: Animal = { ...tama }; // error: 'tama' cannot be used as a value because it was imported using 'import type'.
+
+const otherCat: typeof tama = {
+	species: "Felis silvestris catus",
+	age: 1
+};
+
+// 値も型もインポートする
+import { tama, type Animal } from './animal.js';
+
+/*
+	一括インポート
+*/
+// uhyo.ts
+export const name = "uhyo";
+export const age = 26;
+
+// index.ts
+import * as uhyo from "./uhyo.js";
+
+console.log(uhyo.name); // "uhyo"
+console.log(uhyo.age); // 26
+
+/*
+	再エクスポート
+*/
+export { 変数リスト } from "モジュール名";
+export * from "モジュール名";
+export * as 変数名 from "モジュール名";
+```
+### Node.jsのモジュールシステム
+詳細は[[Node.js]]に
+```ts
+/*
+	組み込みモジュール
+	readline, fs, net, http, pathなど
+*/
+import { createInterface } from "readline"; // readlineはNode.jsの組み込みモジュール
+
+/*
+	npmモジュール
+	npm install して追加するモジュール
+	importして使用する
+*/
+npm install fastify
+import fastify from "fastify";
+const app = fastify();
+app.get('/', (req, reply) => {
+	reply.send("Hello, world!");
+});
+app.listen(8080);
+
+/*
+	package.jsonとpackage-lock.jsonの役割
+	package.json
+		- 依存関係を記述する
+		- npm initで作成
+	package-lock.json
+		- node_modulesの内容を淡表すスナップショット
+		- node_modulesの状態を完全に記述し、再現性を高める
+		- package.jsonだけだとバージョン指定を固定できないが、package-lock.jsonには実際にnode_modulesに何がインストールされたのかという情報を保持するため、異なる環境でも同じ依存関係を再現できる。
+		- 
+*/
+
+/*
+	DefinitelyTypedと@types
+	npmモジュールにはTypeScript向けの型定義が同梱されているものがある
+	@types
+*/
 ```
 
