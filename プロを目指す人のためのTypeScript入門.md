@@ -1636,3 +1636,29 @@ JavaScriptの実行モデルはシングルスレッドモデルが採用され�
 コールバック関数：非同期処理が終わった時に呼び出される関数
 非同期処理のエラーは関数の外部へと伝播しないため、握りつぶしてしまわないように注意が必要
 同期的に実行中のプログラムに非同期処理が割り込むことはない。同期的な実行がすべて終了してからコールバック関数が呼び出される。
+### Promiseを使う
+```ts
+import { readFile } from "fs/promises";
+
+// Promiseオブジェクト:Promise<T>を返す
+const p = readFile("foo.txt", "utf8"); // Promise<string>
+
+// Promiseオブジェクトに対してthen()でコールバック関数を受け取る
+// 引数dataはPromiseの結果
+// thenは成功時(fullfill)に呼び出される
+p.then((data) => {
+	console.log(data);
+})
+
+// chatchは失敗時(refect)に呼び出される
+p.catch((error: unknown) => { // any型が渡ってくるがunknown型を指定する方が適切
+	console.log(error);
+})
+
+// 成功時と失敗時の処理を同時に登録する
+p.then((data) => {
+	console.log(data)
+}, (error: unknown) => { // any型が渡ってくるがunknown型を指定する方が適切
+	console.log(error)
+})
+```
