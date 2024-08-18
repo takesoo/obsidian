@@ -1650,9 +1650,14 @@ p.then((data) => {
 	console.log(data);
 })
 
-// chatchは失敗時(refect)に呼び出される
+// catchは失敗時(refect)に呼び出される
 p.catch((error: unknown) => { // any型が渡ってくるがunknown型を指定する方が適切
 	console.log(error);
+})
+
+// finalyは成功でも失敗でも呼び出される
+p.finaly(() => {
+	console.log("done");
 })
 
 // 成功時と失敗時の処理を同時に登録する
