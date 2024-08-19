@@ -1666,4 +1666,56 @@ p.then((data) => {
 }, (error: unknown) => { // any型が渡ってくるがunknown型を指定する方が適切
 	console.log(error)
 })
+
+/*
+	自作Promiseオブジェクト
+	型引数が戻り値の型になる
+	(resolve) => {}はexecutor関数という。
+	resolve引数の型は関数。thenで渡す。
+	reject引数の型も関数。catchで渡す
+*/
+const p = new Promise<number>((resolve, reject) => {
+	setTimeout(() => {
+		resolve(100);
+	}, 3000);
+})
+
+p.then((num) => {
+	console.log(`result is ${num}`);
+}).catch(() => {
+	console.log("error occured")
+});
+
+/*
+	Promiseの静的メソッド
+*/
+// new Promise((resolve) => { resolve(100) })と同じ
+Promise.resolve(100);
+
+// new Promise((resolve, reject) => { reject("foo") })と同じ
+Promise.reject("foo");
+
+// allはPromiseオブジェクトの配列を引数として受け取り、すべて成功したら成功とみなす
+const p = Promise.all([
+	readFile("foo.txt", "utf8"),
+	readFile("bar.txt", "utf8"),
+	readFile("baz.txt", "utf8"),
+]);
+
+p.then(results => {
+	const [foo, bar, baz] = results;
+	console.log("foo.txt", foo);
+	console.log("bar.txt", bar);
+	console.log("baz.txt", baz);
+})
+
+// raceは最も早く処理されたものの結果を全体の結果とする
+const p = Promise.race([
+	readFile("foo.txt", "utf8"),
+	readFile("bar.txt", "utf8"),
+	readFile("baz.txt", "utf8"),
+]);
+p.then((result) => {
+	cnosole.log(result)
+});
 ```
