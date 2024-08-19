@@ -1718,4 +1718,17 @@ const p = Promise.race([
 p.then((result) => {
 	cnosole.log(result)
 });
+
+/*
+	Promiseチェーン
+	then, catch, finallyはPromiseを返す
+*/
+readFile("foo.txt", "utf8")
+	.catch(() => "") // readFileが失敗した場合に、空文字を結果とする成功に変換してthenに渡している
+	.finally(() => { // finallyはPromiseの結果に影響を与えない
+		console.log("foo.txt is loaded.")
+	})
+	.then((result) => { // resultにはcatchの結果が渡される
+		console.log(result);
+	});
 ```
