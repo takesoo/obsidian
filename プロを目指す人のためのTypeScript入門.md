@@ -1731,4 +1731,6 @@ readFile("foo.txt", "utf8")
 	.then((result) => { // resultにはcatchの結果が渡される
 		console.log(result);
 	});
+
+
 ```
