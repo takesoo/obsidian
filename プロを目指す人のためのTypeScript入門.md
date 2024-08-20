@@ -1760,5 +1760,36 @@ import("fs/promises")
 	.catch((error) => {
 		console.log("error: ", error)
 	})
+```
+### async / await 構文
+```ts
+/*
+	async関数
+	Promiseを返す
+	return文で返された値がPromiseの結果となる
+*/
+async function get3(): Promise<number> {
+	return 3;
+}
 
+/*
+	await式
+	与えられたPromiseの結果が出るまで待つ
+*/
+const sleep = (duration: number) => {
+	return new Promise<void>((resolve) => {
+		setTimeout(resolve, duration);
+	})
+}
+
+async function get3() {
+	await sleep(1000); // sleep()の実行が終わるのを待つ。結果が出るまで次に進まない。
+	return 3;
+}
+
+const p = get3();
+p.then(num => {
+	// ここで初めてget3()の中身が実行される
+	console.log(`num is ${num}`);
+})
 ```
