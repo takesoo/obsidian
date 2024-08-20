@@ -1732,5 +1732,33 @@ readFile("foo.txt", "utf8")
 		console.log(result);
 	});
 
+// thenのチェーンで順番に実行する
+const repeat10 = (str: string) => {
+	new Promise<string>((resolve) => {
+		setTimeout(
+			() => resolve(str.repeat(10)),
+			1000
+		);
+	});
+}
+
+readFile("foo.txt", "utf8")
+	.then((result) => repeat10(result)) // 戻り値はrepeat10の結果
+	.then((result) => {
+		console.log(result)
+	});
+
+// dynamic import
+// モジュールを非同期的に読み込む(遅延読み込み)ことができる
+import("fs/promises")
+	.then((readFile) => 
+		readFile("foo.txt", "utf8")
+	)
+	.then((result) => {
+		console.log(result);
+	})
+	.catch((error) => {
+		console.log("error: ", error)
+	})
 
 ```
