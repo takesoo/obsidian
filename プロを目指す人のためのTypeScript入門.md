@@ -1792,4 +1792,25 @@ p.then(num => {
 	// ここで初めてget3()の中身が実行される
 	console.log(`num is ${num}`);
 })
+
+/*
+	awaitの戻り値
+*/
+
+async function main() {
+	const num1 = await get3(); // 処理が1秒中断し、Promiseの結果として3が返る
+	const num2 = await get3();
+	const num3 = await get3();
+	return num1 + num2 + num3;
+}
+
+main().then(result => {
+	console.log(`result is ${result}`);
+});
+
+// readFileの場合
+async function main() {
+	const { readFile, writeFile } = await import("fs/promises");
+	const fooContent = await readFile("foo.txt", "utf8");
+}
 ```
