@@ -1775,6 +1775,7 @@ async function get3(): Promise<number> {
 /*
 	await式
 	与えられたPromiseの結果が出るまで待つ
+	async関数の中でしか使えない
 */
 const sleep = (duration: number) => {
 	return new Promise<void>((resolve) => {
@@ -1808,9 +1809,49 @@ main().then(result => {
 	console.log(`result is ${result}`);
 });
 
-// readFileの場合
+// await式を使うと「ある非同期処理が終わってから次の非同期処理をする」というプログラムを同期処理のように書ける
+async function main() {
+	const { readFile, writeFile } = await import("fs/promises"); // importが終わってから代入
+	const fooContent = await readFile("foo.txt", "utf8"); // readFileが終わってから結果を代入
+	await writeFile("bar.txt", fooContent + fooContent); // writeFileがおわっるのを待つ
+	console.log("書き込み完了");
+}
+
+main().then(() => {
+	console.log("main()実行完了");
+});
+
+/*
+	awaitとエラー処理
+*/
 async function main() {
 	const { readFile, writeFile } = await import("fs/promises");
-	const fooContent = await readFile("foo.txt", "utf8");
+
+	try {
+		const fooContent = await readFile("foo.txt", "utf8");
+		await writeFile("bar.txt", fooContent + fooContent);
+		console.log("書き込み完了");
+	} catch {
+		// awaitで例外が発生した場合はcatchで捕捉できる
+		console.error("失敗しました");
+		// mainは正常終了した扱いになる
+	}
+}
+
+/*
+	async関数のいろいろな宣言方法
+*/
+const main = async function() {
+...
+};
+
+const main = async () => {
+...
+};
+
+const obj = {
+	async asyncMethod() {
+	...
+	}
 }
 ```
