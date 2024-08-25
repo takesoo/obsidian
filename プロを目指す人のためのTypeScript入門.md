@@ -1855,3 +1855,5 @@ const obj = {
 	}
 }
 ```
+## TypeScriptのコンパイラオプション
+[[tsconfig.json]]
