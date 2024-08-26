@@ -1,133 +1,68 @@
-## やりたいこと
-- typescript
-- eslint, pretter
-- swr
-- prisma
-- vercelデプロイ
-- pathpida
-- athpida
-- jest
-- cicd
-- sentry
-
 ## 知りたいこと
 - next.jsについて、ディレクトリ構造を理解してどこに何を追加するのか理解する
 - 一通りわからないことがないくらいになりたい。
+- Next.js中級者
 ## 今回は勉強しないこと（別の機会にすること）
 - [[React Server Component|RSC]]
 - レンダリングストラテジー（静的、動的、Streaming）
-
-## app router tutorial(途中まで)
 ### 実装戦略
-- app router
-- chakra ui
-- (tailwind)
-- サーバーサイドはfirebase
-### ブランチ戦略
-- ~~tailwindリポジトリ~~
-- ~~chakra ui リポジトリ~~
-- next.js tutorial
-	- tailwindブランチ
-	- chakra uiブランチ
-- fullstack next.jsは別リポジトリ？
-```mermaid
-gitGraph LR:
-
-commit
-branch develop
-branch nextjs-tutorial
-commit id: "create-next-app"
-checkout develop
-merge nextjs-tutorial
-branch tailwind
-commit id: "try tailwind"
-checkout develop
-branch chakra-ui
-commit id: "try chakra ui"
-checkout develop
-merge chakra-ui
-branch jest
-commit id: "try jest"
-checkout develop
-merge jest
-branch cicd
-commit id: "set cicd"
-checkout develop
-merge cicd
-```
-
-### メモ
-`/app`: app routerのディレクトリ。ファイルの配置でルーティングが決まる。
-`/app/lib`: 関数など
-`/app/ui`: UIコンポーネント
-`/app/**/page.tsx`: ルーティング対象のページファイル
-`/app/**/layout.tsx`: page.tsxをラップするレイアウトファイル
-`/public`: 静的アセット
-`next.config.mjs(js)`:next.jsの設定ファイル
-
-Placeholder data
-	JSONフォーマットかJavaScriptオブジェクトで定義するモックデータ。データベースやAPIが用意できてない時など。
-
-`global.css`はアプリケーション内のすべてのコンポーネントに適応される。`/app/layout.tsx`でインポートすることを推奨している。
-module cssを使うことでコンポーネントごとの小さなスコープでスタイリングを定義できる
-状態によってスタイリングを分岐する場合には`clsx`を使う
-また、[[sass]]を使ったり[[CSS-in-JS]]ライブラリを使用するのも良い。
-
-`/app/ui/fonts.ts`でフォントの定義をして、page.tsxなどで呼び出して使用する。フォントファイルをクライアントサイドにダウンロードさせずにサーバーサイドで適応できるためパフォーマンスの最適化につながる。
-
-画像の表示には`next/image`コンポーネントの[[<Image>]]タグを使うと自動で最適化してくれる。
-
-`page.tsx`はReact componentをエクスポートする特別なファイルであり、`/app`直下に配置しなければならない。`http://localhost:3000/`でこのファイルのページが表示される。
-
-セグメント内で共通構造を共有するにはlayoutとtemplateがある。layoutの場合はlayoutインスタンスを共有するのに対してtemplateはインスタンスを共有しない。なのでlayoutはフェッチデータが引き継がれるがtemplateは引き継がない、また`useEffect()`がlayoutでは発火しないがtemplateでは発火するという違いがある
-
-ルートレイアウトで`<head>`タグを追加するのではなく、Metadata APIを使用する方がいい
-
-ページ遷移
-	- `<Link>`コンポーネント
-	- `useRouter`フック
-	- ネイティブHistory API
-
-
-## pages router tutorial
-### 実装戦略
-react tutorial
+### 前提
 - pages router
 - chakra ui
 - swr
 - typescript
+- biome
+### ステップ
+- **ステップ1: TypeScriptとNext.jsの連携、およびBiomeの導入（1〜2週間）**
+  - **目標**: TypeScriptを用いてNext.jsの基本機能を実装し、Biomeを導入してコード品質を管理する。
+  - **具体的なアクション**:
+    - Next.jsの公式ドキュメントを参照し、TypeScript環境の設定方法を学ぶ。
+    - 小規模なプロジェクト（例えばTodoアプリやブログ）をTypeScriptで構築し、型定義やPropsの型指定、カスタムフックの作成などを実践する。
+    - **Biome**をプロジェクトに導入し、コードフォーマットとLintingの設定を行う。これにより、コードの整合性と品質を一貫して維持できるようにする。
+    - Biomeの設定を使って、プロジェクトのコードスタイルを自動化し、TypeScriptとNext.jsに適したLintingルールを適用する。
+
+- **ステップ2: 実践的なプロジェクト構築（3〜4週間）**
+  - **目標**: Next.jsとTypeScriptを組み合わせたプロジェクトで、より高度な機能を実装し、保守性の高いコードを書けるようになる。
+  - **具体的なアクション**:
+    - 動的ルーティング、API Routes、環境変数の使用など、実践的なNext.jsの機能をTypeScriptと組み合わせて学習する。
+    - 複数ページやコンポーネントが絡むプロジェクト（例: ダッシュボードアプリケーション）を構築し、保守性を考慮したコード設計を実践する。
+    - コンポーネントのリファクタリングを行い、再利用可能なコンポーネントやカスタムフックを作成し、コードのDRY（Don't Repeat Yourself）を意識する。
+
+- **ステップ3: 保守性の高いコードの設計と実装（4〜6週間）**
+  - **目標**: 保守性の高いコードを書き、長期的なプロジェクトでのメンテナンスが容易な設計を学ぶ。
+  - **具体的なアクション**:
+    - ソリッド（SOLID）原則やデザインパターン（例えば、コンポジション、依存性注入）を学び、それをNext.jsプロジェクトに適用する。
+    - ReduxやReact Contextを用いた状態管理の実装を練習し、スケーラブルな状態管理アーキテクチャを設計する。
+    - Storybookを使用して、コンポーネントをドキュメント化し、保守性を高める。
+    - プロジェクト内のコードの一貫性と品質をBiomeで維持し、コードレビューを通じて改善する。
+
+- **ステップ4: 実務での適用とリファクタリング（6〜8週間）**
+  - **目標**: 実際のプロジェクトでTypeScriptとNext.jsを適用し、保守性の高いコードを書くスキルを実践で磨く。
+  - **具体的なアクション**:
+    - 現在の仕事や個人プロジェクトでNext.jsとTypeScriptを使い、実際のプロジェクトにおける保守性の問題に対処する。
+    - プロジェクト全体のリファクタリングを行い、コードの読みやすさや変更のしやすさを向上させる。
+    - ドキュメントやコメントを充実させ、他の開発者が理解しやすいコードを意識する。
+
+
+
 ```mermaid
 gitGraph
 
 commit
 branch tutorial-again
 commit id: "create-next-app"
-commit id: "swr"
+commit id: "biome"
+commit id: "create todo app"
 checkout main
 merge tutorial-again
+branch swr
+checkout swr
+commit id: "pnpm install swr"
+checkout main
+merge swr
 branch jest
-commit id: "add jest"
+checkout jest
+commit id: "pnpm install jest"
 checkout main
 merge jest
 ```
-### メモ
-pages routerなので`/pages`配下にコードを書く
-ルートコンポーネントは`pages/index.tsx`
-ディレクトリ構成がルーティングになる
-	`pages/posts/first-post.tsx`→`/posts/first-post`
-[[<Link>]]コンポーネントでリンクを作る
-静的アセットは`/public`に配置する
-[[<Image>]]コンポーネントで画像を配置する
-[[<Head>]]コンポーネントでメタデータを記述する
-サードパーティjavascriptは[[<Script>]]コンポーネントで記述する
-`pages/_app.tsx`はすべてのページをラップしている。ページ間での状態維持やグローバルスタイルの追加をする時に使う
-Next.jsではデフォルトとして[[Next.js Pre-rendering|Pre-rendering]]でページを生成する。クライアントサイドJavaScriptで生成するのではなく、あらかじめ生成しておくことであり、パフォーマンスとSEOの向上になる。
-Next.jsでは生成されたHTMLに最小限のJavaScriptコードが関連付けられており、ページがブラウザによってロードされるとJavaScriptコードが実行され、ページを完全にインタラクティブにする。(このプロセスは[[hydration]]という)
-![[スクリーンショット 2024-07-19 9.56.38.png]]
-Next.jsのプリレンダリングには[[スタティックサイトジェネレーション|Static Site Generation]]と[[サーバーサイドレンダリング|Server Side Rendering]]の2種類ある。SSGはビルド時にHTMLを生成するのに対して、SSRはリクエスト時にHTMLを生成する違いがある。
-Next.jsではページごとにレンダリング形式を選ぶことができる。基本的にSSGを選ぶと良いが、リクエストに先立ってレンダリングできない場合はSSRを使用する。
-[[getStaticProps]]を使うことでSSGとしてデータフェッチする
-[[getServerSideProps]]を使うことでSSRとしてデータフェッチする
-SSGをデータフェッチなしで実行して、クライアントサイドでデータフェッチして埋めるという方法もある。SEOを気にしなくていいサービスページには有効な戦略。クライアントサイドでデータフェッチするなら[[SWR]]が良い。
-Next.jsでは[[dynamic routes]]が利用できる。`pages/[id].tsx`のようにファイルを定義する。パスからidなどの値を取得するには[[getStaticPaths]]を使う。
-Next.jsでは[[API Routes]]でAPIエンドポイントと簡易なサーバーサイドロジックを記述できる。
