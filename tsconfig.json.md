@@ -23,3 +23,23 @@ includeで指定されたファイル群から一部のファイルを除外す�
 }
 ```
 
+## strictオプション
+strict系コンパイラオプションをまとめて有効にする
+原則有効化することを推奨
+```json
+{
+	"compilerOptions": {
+		"strict": true
+	}
+}
+```
+### strict系コンパイラオプション
+今後さらに追加されることもある
+- noImplicitAny
+- noImplicitThis
+- alwaysStrict
+- strictBindCallApply
+- strictNullChecks
+- strictFunctionTypes
+- strictPropertyInitialization
+- useUnknownInCatchVariables
