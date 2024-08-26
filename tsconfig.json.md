@@ -35,11 +35,14 @@ strict系コンパイラオプションをまとめて有効にする
 ```
 ### strict系コンパイラオプション
 今後さらに追加されることもある
-- noImplicitAny
+- noImplicitAny: 暗黙的にany型と推論することを禁止する。JSからの移行の際には一旦外すこともある。
 - noImplicitThis
 - alwaysStrict
 - strictBindCallApply
-- strictNullChecks
+- strictNullChecks: nullとundefinedをチェックする
 - strictFunctionTypes
 - strictPropertyInitialization
 - useUnknownInCatchVariables
+## noUncheckedIndexedAccess
+[[インデックスシグネチャ]]を通じたプロパティアクセスで得られる型は常にundefinedとのユニオン型になる
+デフォルトのtsconfig.jsonでは有効になっていない。
