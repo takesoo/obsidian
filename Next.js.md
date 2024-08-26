@@ -11,13 +11,9 @@ tags:
 > [初めに | Next.js 公式ドキュメント 日本語翻訳プロジェクト](https://ja.next-community-docs.dev/docs/app-router/getting-started/)
 
 Next.jsは[[React]]の実行に必要な[[Webpack]]や[[Babel]]やらなんやらが全てパッケージされたフレームワーク
-
 1. **[[サーバーサイドレンダリング]] (SSR)**：Next.jsは、初回のページロード時にサーバー側でページをレンダリングする機能を提供します。これにより、クライアント側でのレンダリングと比べてSEOやパフォーマンスが向上します。
-
 2. **[[スタティックサイトジェネレーション]] (SSG)**：ビルド時にページを静的に生成し、サーバーにホストすることで、さらに高速なページロードを実現します。
-
 3. **[[API Routes]]**：Next.jsにはAPIルートがあり、サーバーサイドでAPIエンドポイントを簡単に定義できます。これにより、サーバーレス機能を提供し、バックエンドのロジックを統合できます。
-
 4. **ファイルベースのルーティング**：Next.jsでは、ファイルシステムに基づいたルーティングを提供し、ディレクトリ構造に基づいて自動的にルートを作成します。
 
 ## Tutorial
@@ -25,7 +21,7 @@ https://nextjs.org/learn/basics/create-nextjs-app
 
 
 ## [[App Router]] vs [[Pages Router]]
-> Next.js には、App Router と Pages Router の 2 種類の Router があります。App Router は、Server Components やストリーミングなど、React の最新機能を利用できる新しい Router です。Pages Router は、サーバーレンダリングされた React アプリケーションをビルドできる Next.js オリジナルのルーターで、古い Next.js アプリケーションも引き続きサポートされています。
+> Next.js には、App Router と Pages Router の 2 種類の Router があります。App Router は、[[サーバーコンポーネント|Server Components]] やストリーミングなど、React の最新機能を利用できる新しい Router です。Pages Router は、サーバーレンダリングされた React アプリケーションをビルドできる Next.js オリジナルのルーターで、古い Next.js アプリケーションも引き続きサポートされています。
 > 
 > [初めに | Next.js 公式ドキュメント 日本語翻訳プロジェクト](https://ja.next-community-docs.dev/docs/app-router/getting-started/#app-router-vs-pages-router)
 
