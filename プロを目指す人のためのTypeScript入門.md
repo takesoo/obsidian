@@ -1858,3 +1858,38 @@ const obj = {
 ```
 ## TypeScriptのコンパイラオプション
 [[tsconfig.json]]
+
+## さらなる学習の道標
+### JavaScriptの言語機能
+- イテレータ・ジェネレータ関数
+- メタプログラミング系
+	- オブジェクト操作（Object.keys）など
+	- プロパティデスクリプタ・プロパティ属性
+	- Reflect・Proxy
+	- シンボル
+	- prototype
+### TypeScriptの言語機能
+- 標準ライブラリに属する他の型
+	- Record
+	- Parameters
+	- Awaited
+	- など
+- abstractクラス・abstract new シグネチャ
+- 型レベルプログラミング
+- mapped types・conditional typesの詳細
+	- infer
+	- union distribution
+	- homomophic mapped types
+	- など
+### その他
+- フロントエンド開発
+	- DOM
+	- 各種UIライブラリ
+		- React
+		- Vue
+	- 開発ツール
+		- webpack
+		- Vite
+- サーバーサイド開発
+	- Node.jsとNode.js上で動くライブラリ
+	- Deno
