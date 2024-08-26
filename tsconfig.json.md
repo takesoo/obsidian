@@ -45,4 +45,50 @@ strict系コンパイラオプションをまとめて有効にする
 - useUnknownInCatchVariables
 ## noUncheckedIndexedAccess
 [[インデックスシグネチャ]]を通じたプロパティアクセスで得られる型は常にundefinedとのユニオン型になる
-デフォルトのtsconfig.jsonでは有効になっていない。
+デフォルトのtsconfig.jsonでは有効になっていないが、新規開発する際には有効化を推奨する。
+```json
+{
+	"compilerOptions": {
+		"noUncheckedIndexedAccess": true,
+	}
+}
+```
+```ts
+type PriceData = {
+	[key: string]: number;
+}
+const data: PriceData = {
+	apple: 220,
+	coffee: 120,
+	bento: 500,
+};
+
+const applePrice = data.apple; // number | undefined
+
+const arr = [1, 2, 3];
+const val = arr[0]; // number | undefined
+```
+### exactOptionalPropertyTypes
+オプショナルプロパティに対してundefinedを代入できなくなる。そのため、省略可能なプロパティの場合はオプショナルプロパティで定義し、undefinedも代入可能なプロパティの場合はユニオン型で定義しなければならなくなる。
+```json
+{
+	"compilerOptions": {
+		"exactOptionalPropertyTypes": true
+	}
+}
+```
+```ts
+type Human = {
+	name: string;
+	age: number | undefined;
+	job?: string;
+}
+
+const john: Human = {
+	name: "John Smith",
+	age: undefined,
+	// error: Type 'undefined' is not assignable to type 'string'.
+	job: undefined,
+}
+
+```
