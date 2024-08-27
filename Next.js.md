@@ -72,6 +72,7 @@ tree -I node_modules
 ```
 - 画像などの静的ファイルはpublic/ 以下に配置
 - その他のディレクトリ構成は自由だがcomponents/ にコンポーネント、styles/ にglobal.cssを置くのが一般的
+- [[Next.jsのディレクトリ構成を考えてみた-2024-07-26 19-34-44]]
 
 ## RenderingとData Fetching
 - [[Next.js Pre-rendering|Pre-rendering]]

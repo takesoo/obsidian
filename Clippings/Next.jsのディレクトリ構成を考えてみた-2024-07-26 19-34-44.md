@@ -1,5 +1,5 @@
 ---
-finished reading: false
+finished reading: true
 ---
 # Next.jsのディレクトリ構成を考えてみた
   #ReadItLater 
