@@ -31,7 +31,7 @@ Node.jsを対象としたオープンソースの[[Object-Relational Mapping|ORM
 - etc...
 ### フレームワーク・ライブラリ
 - [[Next.js]]
-- [[Nest.js]]
+- [[NestJS]]
 - etc...
 
 ## 設定ファイル
