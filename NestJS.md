@@ -13,16 +13,89 @@ https://docs.nestjs.com/
 	- app.service.ts: サービス
 	- main.ts: エントリ
 
-
-```typescript
-import { Controller、 } from '@nestjs/common'；
+## コントローラ
+入力されたリクエストを処理し、レスポンスをクライアントに返す責任を持つ
+```ts
+// src/cats/cats.controller.ts
+import { Controller, Get, Post, Body, Bind, Dependencies } from '@nestjs/common';
+import { CatsService } from './cats.service';
 
 // @xxxはデコレーター
-@Controller('cats')uid="873">) // @Controllerで/catsにルーティングを指定。
+@Controller('cats') // @Controllerで/catsにルーティングを指定。
+@Dependencies(CatsService)
 export class CatsController {
-	@Get() findAll() { // @Getでハンドラーを指定。GET /catsリクエストをマップする
-		return『このアクションはすべての猫を返します』；
-	}
-} 
-```
+  constructor(catsService) {
+    this.catsService = catsService;
+  }
 
+  @Post()
+  @Bind(Body())
+  async create(createCatDto) {
+    this.catsService.create(createCatDto);
+  }
+
+  @Get() // @Getでハンドラーを指定。GET /catsリクエストをマップす
+  async findAll() {
+    return this.catsService.findAll();
+  }
+}
+```
+## プロバイダー
+サービス、リポジトリ、ファクトリ、ヘルパーなどはプロバイダーをして扱われ、依存関係としてインジェクトできる。`@Injectable()`デコレーターを使用して宣言する。依存性を注入される側で`@Dependencies()`デコレーターを宣言する。
+```typescript
+// src/cats/cats.service.ts
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class CatsService {
+  constructor() {
+    this.cats = [];
+  }
+
+  create(cat) {
+    this.cats.push(cat);
+  }
+
+  findAll() {
+    return this.cats;
+  }
+}
+```
+インジェクションを実行できるようにするために、`app.module.ts`にプロバイダーを登録する
+```ts
+// app.module.ts
+import { Module } from '@nestjs/common';
+import { CatsController } from './cats/cats.controller';
+import { CatsService } from './cats/cats.service';
+
+@Module({
+  controllers: [CatsController],
+  providers: [CatsService],
+})
+export class AppModule {}
+```
+## モジュール
+`@Module()`デコレーターでアノテーションされたクラス。`@Module()`はNestがアプリケーションの構造を整理するために利用するメタデータを提供する。
+```typescript
+// src/cats/cats.module.ts
+// feature moduleとして定義
+import { Module } from '@nestjs/common';
+import { CatsController } from './cats.controller';
+import { CatsService } from './cats.service';
+
+@Module({
+  controllers: [CatsController],
+  providers: [CatsService],
+})
+export class CatsModule {}
+```
+```typescript
+// src/app.module.ts
+import { Module } from '@nestjs/common';
+import { CatsModule } from './cats/cats.module';
+
+@Module({
+  imports: [CatsModule],
+})
+export class AppModule {}
+```
