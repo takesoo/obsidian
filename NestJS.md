@@ -78,7 +78,7 @@ export class AppModule {}
 `@Module()`デコレーターでアノテーションされたクラス。`@Module()`はNestがアプリケーションの構造を整理するために利用するメタデータを提供する。
 ```typescript
 // src/cats/cats.module.ts
-// feature moduleとして定義
+// feature moduleとして定義する
 import { Module } from '@nestjs/common';
 import { CatsController } from './cats.controller';
 import { CatsService } from './cats.service';
@@ -86,11 +86,14 @@ import { CatsService } from './cats.service';
 @Module({
   controllers: [CatsController],
   providers: [CatsService],
+  exports: [CatsService] // CatsModuleをインポートしたモジュールはCatsServiceにアクセスできるようになり、同様にインポートしている他のモジュールと同じCatsServiceインスタンスを共有できるようになる
 })
 export class CatsModule {}
+
 ```
 ```typescript
 // src/app.module.ts
+// app.module.tsでインポートして登録する
 import { Module } from '@nestjs/common';
 import { CatsModule } from './cats/cats.module';
 
@@ -99,3 +102,29 @@ import { CatsModule } from './cats/cats.module';
 })
 export class AppModule {}
 ```
+## ミドルウェア
+ルートハンドラの前に呼び出される関数。リクエストとレスポンスオブジェクト、およびアプリケーションのリクエスト-レスポンスサイクルの`next()`ミドルウェア関数にアクセスできる。
+## [[Data Transfer Object|DTO]]
+NestではDTOにバリデーションデコレーター(`@IsString()`や`@IsInt()`など)を使用してリクエストのバリデーションを実装できる
+```ts
+import { IsString, IsNotEmpty } from 'class-validator';
+
+export class CreateTodoDto {
+  @IsString()
+  @IsNotEmpty()
+  title: string;
+
+  @IsString()
+  description: string;
+}
+
+```
+ビジネスロジック層と分離することで依存関係を分離できる。
+```ts
+// todos.controller.ts
+@Post()
+createTodo(@Body() createTodoDto: CreateTodoDto) {
+	return this.todosService.create(createTodoDto);
+}
+```
+また、DTOクラスに型情報を持たせることで型安全性の確保になる。
