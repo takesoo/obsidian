@@ -16,4 +16,4 @@ function App() { // 2. Wrap ChakraProvider at the root of your app
 	)
 }
 ```
-`npx create-next-app`で作成されるstylesディレクトリ以下のglobals.cssとかは不要になる？
+`npx create-next-app`で作成されるstylesディレクトリ以下のglobals.cssとかは基本的に不要になる。併用も可能。
