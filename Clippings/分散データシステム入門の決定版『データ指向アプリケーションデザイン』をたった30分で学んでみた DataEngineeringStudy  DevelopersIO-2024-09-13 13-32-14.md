@@ -1,5 +1,5 @@
 ---
-finished reading: false
+finished reading: true
 ---
 # 分散データシステム入門の決定版『データ指向アプリケーションデザイン』をたった30分で学んでみた #DataEngineeringStudy | DevelopersIO
   #ReadItLater 
