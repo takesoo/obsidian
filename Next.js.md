@@ -103,21 +103,13 @@ tree -I node_modules
 - [[<Link>]]
 - [[<Head>]]
 - [[<Script>]]
-## フルスタック開発（バックエンド実装）
-[[API Routes]]を使用してサーバーサイドロジックを実装することもできる。（Next.jsにおけるフロントエンドとバックエンドの区別は曖昧なものだが、`jsx`や`tsx`ファイルをフロントエンド、それ以外をバックエンドと捉えておく。）
-```ts
-// pages/api/todos.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    res.status(200).json({ message: 'Here are your todos' });
-  } else {
-    res.status(405).json({ message: 'Method Not Allowed' });
-  }
-}
-
-```
+## フルスタック開発
+[[API Routes]]を使用してサーバーサイドロジックを実装することもできる。
+## Next.jsにおけるクライアントサイドとサーバーサイド
+### クライアントサイド
+[[クライアントサイドレンダリング|CSR]]のコンポーネントやクライアントサイドでのデータフェッチなど、クライアントサイドで動作する部分。
+### サーバーサイド
+[[API Routes]]や[[getServerSideProps]]、[[getStaticProps]]など、サーバーサイドで動作する部分。
 ## アーキテクチャ
 ルーティングディレクトリ（[[App Router]]のappディレクトリ、[[Pages Router]]のpagesディレクトリ）には最低限の各ページファイルだけしか含めず、具体的なマークアップはcomponentsディレクトリは以下に実装する構成がよく採用される。
 ```
