@@ -78,12 +78,19 @@ tree -I node_modules
 - [[Next.js Pre-rendering|Pre-rendering]]
 	- [[スタティックサイトジェネレーション|Static Site Generation]]
 		- APIを叩く時は`getStaticProps`を使用する
+		- ビルド時にサーバーサイドでデータフェッチする
+		- ビルドでHTMLファイルを生成するので[[静的ホスティングサービス]]へのデプロイでOK
 	- [[サーバーサイドレンダリング|Server Side Rendering]]
 		- APIっを叩く時は`getServerSideProps`を使用する
+		- リクエスト時にサーバーサイドでデータフェッチする
+		- サーバーサイドの実行環境が必要。[[Vercel]]、[[Amplify]] + [[AWS Lambda|Lambda]]など。
 	- プリレンダリングされたHTMLに対してクライアントサイドJavaScriptを実行させる[[Hydration]]という方法もある
 - [[クライアントサイドレンダリング|Client Side Rendering]]
 	- APIを叩く時は[[SWR]]や[[tanstack query]]、[[React Query]]などを使用する
+	- リクエスト時にクライアントサイドでデータフェッチする
+	- [[静的ホスティングサービス]]へのデプロイでOK
 - [[Search Engine Optimization|SEO]]を気にしなくていいならCSRでいい
+- いずれの場合も[[Vercel]]へのデプロイで動作する
 ## Styling
 以下に対応している
 - [[CSS Modules]]
@@ -96,9 +103,32 @@ tree -I node_modules
 - [[<Link>]]
 - [[<Head>]]
 - [[<Script>]]
-## フルスタック開発
-[[API Routes]]を使用してサーバーサイドロジックを実装することもできる
+## フルスタック開発（バックエンド実装）
+[[API Routes]]を使用してサーバーサイドロジックを実装することもできる。（Next.jsにおけるフロントエンドとバックエンドの区別は曖昧なものだが、`jsx`や`tsx`ファイルをフロントエンド、それ以外をバックエンドと捉えておく。）
+```ts
+// pages/api/todos.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    res.status(200).json({ message: 'Here are your todos' });
+  } else {
+    res.status(405).json({ message: 'Method Not Allowed' });
+  }
+}
+
+```
 ## アーキテクチャ
+ルーティングディレクトリ（[[App Router]]のappディレクトリ、[[Pages Router]]のpagesディレクトリ）には最低限の各ページファイルだけしか含めず、具体的なマークアップはcomponentsディレクトリは以下に実装する構成がよく採用される。
+```
+your-project
+  |- components
+  |- lib
+  |- app
+     |- dashboard
+        |- page.tsx
+     |- page.tsx
+```
 コンポーネント
 [[hooks]]
 [[データフェッチングライブラリ]]
