@@ -2,10 +2,12 @@
 tags:
   - npm
   - hooks
+  - データフェッチングライブラリ
 aliases:
   - Stale-While-Revalidate
 ---
-データフェッチングライブラリ。
+[[データフェッチングライブラリ]]。
+https://swr.vercel.app/ja
 クライアントサイドでのデータ取得やキャッシング、再検証を簡単に行うためのフックを提供している。
 
 ```javascript
