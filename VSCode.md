@@ -8,13 +8,13 @@
 ### settings.json
 ```json
 {
-	"editor.defaultFormatter": "biomejs.biome",
-	"editor.formatOnSave": true,
-	"editor.codeActionsOnSave": {
+	"editor.defaultFormatter": "biomejs.biome", // プロジェクトのデフォルトフォーマッター
+	"editor.formatOnSave": true,  // 保存時にフォーマットを実行する
+	"editor.codeActionsOnSave": { // 保存時の動作
 		"quickfix.biome": "explicit",
 		"source.organizeImports.biome": "explicit"
 	},
-	"[javascript]": {
+	"[javascript]": { // 言語ごとの設定
 		"editor.maxTokenizationLineLength": 2500,
 		"editor.defaultFormatter": "biomejs.biome"
 	},
