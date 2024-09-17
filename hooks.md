@@ -39,3 +39,6 @@ function MyComponent() {
 }
 
 ```
+## [[useMemo]]と[[useCallback]]の違い
+いずれもキャッシュを駆使してパフォーマンス改善のためのhooks。
+useMemoは関数の実行結果をキャッシュするのに対して、useCallbackは関数自体をキャッシュするという違いがある。

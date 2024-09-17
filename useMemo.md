@@ -19,6 +19,7 @@ function TodoList({ todos, tab }) {
 		/**
 		dependencies: 依存配列。
 		この中の値が変わったときはcalculateValue関数が再実行される。
+		calculateValueのコード内で参照されるすべてのリアクティブな値のリスト。
 		*/
 		[todos, tab]  
 	);  
