@@ -29,3 +29,5 @@ export const ProductPage = () => {
 	);
 };
 ```
+逆にパフォーマンスが悪くなる時もあるので注意
+[[いつuseCallbackを使うべきなのか - asoview-engineering - Medium-2024-09-18 09-58-33]]
