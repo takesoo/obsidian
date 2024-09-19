@@ -112,7 +112,7 @@ tree -I node_modules
 [[API Routes]]や[[getServerSideProps]]、[[getStaticProps]]など、サーバーサイドで動作する部分。
 ## アーキテクチャ
 ### ルーティングディレクトリとコンポーネントを分ける
-ルーティングディレクトリ（[[App Router]]のappディレクトリ、[[Pages Router]]のpagesディレクトリ）には最低限の各ページファイルだけしか含めず、具体的なマークアップはcomponentsディレクトリは以下に実装する構成がよく採用される。
+ルーティングディレクトリ（[[App Router]]のappディレクトリ、[[Pages Router]]のpagesディレクトリ）には最低限の各ページファイルだけしか含めず、具体的なマークアップはcomponentsディレクトリ配下に実装する構成がよく採用される。
 ```bash
 your-project
   |- components # UIコンポーネント
