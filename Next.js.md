@@ -111,16 +111,45 @@ tree -I node_modules
 ### サーバーサイド
 [[API Routes]]や[[getServerSideProps]]、[[getStaticProps]]など、サーバーサイドで動作する部分。
 ## アーキテクチャ
+### ルーティングディレクトリとコンポーネントを分ける
 ルーティングディレクトリ（[[App Router]]のappディレクトリ、[[Pages Router]]のpagesディレクトリ）には最低限の各ページファイルだけしか含めず、具体的なマークアップはcomponentsディレクトリは以下に実装する構成がよく採用される。
-```
+```bash
 your-project
-  |- components
-  |- lib
-  |- app
+  |- components # UIコンポーネント
+  |- lib        # ユーティリティやライブラリ
+  |- hooks      # カスタムフック
+  |- pages      # ルーティング
      |- dashboard
         |- page.tsx
-     |- page.tsx
+     |- index.tsx
+  |- styles     # CSSやスタイル関連（CSSinModuleの場合はないこともある）
+  |- types      # 型定義
 ```
+利点
+- 各ディレクトリに関心を分離
+- コードの再利用性の向上
+- 保守性の向上
+- スケーラビリティ
+- テスト容易性
+
+さらに大規模なプロジェクトの場合、ルーティングディレクトリは単一コンポーネントを置くだけにすることもある。
+```bash
+your-project
+  |- components # UIコンポーネント
+      |- pages
+	     |- top-page.tsx
+  |- pages
+      |- index.tsx
+```
+```tsx
+// index.tsx
+import { TopPage } from '@components/pages/top-page';
+
+export default TopPage;
+```
+
+
+---
 コンポーネント
 [[hooks]]
 [[データフェッチングライブラリ]]
