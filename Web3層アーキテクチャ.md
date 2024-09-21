@@ -18,4 +18,4 @@ SPAなどのフロントエンドはこのアーキテクチャの外側と理�
 
 webサーバーが生きてる限りは最低限503ページなどが表示できる
 ## RailsアプリケーションにおけるWeb3層アーキテクチャ
-Webサーバー([[Nginx]]), APPサーバー([[Puma]] + Ruby on Rails), DBサーバーの構成。PumaがNginxからHTTPリクエストを受け取り、Railsに処理を伝える。
+Webサーバー([[Nginx]]), APPサーバー([[Puma]] + Ruby on Rails), DBサーバーの構成。NginxからHTTPリクエストをPumaが受け取り、Railsに処理を伝える。
