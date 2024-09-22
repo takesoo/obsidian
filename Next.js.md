@@ -152,15 +152,15 @@ export default TopPage;
 [[リポジトリパターン]]を採用して、APIクライアントを外部からDIすることもある。
 ### クリーンアーキテクチャ
 ## 環境変数
-環境変数のビルトインサポートがある
-`.env.local`に記載する
-ブラウザに環境変数を公開するには、`NEXT_PUBLIC_`プレフィックスをつける必要がある
+環境変数を `.env.local` ファイルから `process.env` にロードするためのビルトインサポートがある。
+デフォルトでは、環境変数はNode.js環境でのみしようでき、ブラウザには公開されない。ブラウザに環境変数を公開するには、`NEXT_PUBLIC_`プレフィックスをつける必要がある
 ```bash
 NEXT_PUBLIC_ANALYTICS_ID=abcdefghijk
 ```
 ```ts
 prosess.env.NEXT_PUBLIC_ANALYTICS_ID;
 ```
+
 
 ---
 コンポーネント
