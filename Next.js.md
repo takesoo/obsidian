@@ -148,6 +148,19 @@ import { TopPage } from '@components/pages/top-page';
 export default TopPage;
 ```
 
+### リポジトリパターン
+[[リポジトリパターン]]を採用して、APIクライアントを外部からDIすることもある。
+### クリーンアーキテクチャ
+## 環境変数
+環境変数のビルトインサポートがある
+`.env.local`に記載する
+ブラウザに環境変数を公開するには、`NEXT_PUBLIC_`プレフィックスをつける必要がある
+```bash
+NEXT_PUBLIC_ANALYTICS_ID=abcdefghijk
+```
+```ts
+prosess.env.NEXT_PUBLIC_ANALYTICS_ID;
+```
 
 ---
 コンポーネント
