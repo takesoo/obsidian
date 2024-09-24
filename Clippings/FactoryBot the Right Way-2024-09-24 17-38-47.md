@@ -1,6 +1,10 @@
 ---
 finished reading: true
 favorite: true
+tags:
+  - factory_bot
+  - ベストプラクティス
+  - clippings
 ---
 # FactoryBot the Right Way
   #ReadItLater 
