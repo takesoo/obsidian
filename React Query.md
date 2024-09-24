@@ -5,7 +5,7 @@ tags:
   - React
   - データフェッチングライブラリ
 ---
-データフェッチングやキャッシング、サーバー状態管理を簡単に行うための[[Custom Hook|カスタムフック]]を提供している。
+データフェッチングやキャッシング、[[Server State]]の管理を簡単に行うための[[Custom Hook|カスタムフック]]を提供している。
 ```js
 import { useQuery } from 'react-query';
 
@@ -24,3 +24,14 @@ const Component = () => {
 };
 
 ```
+## useQuery
+### queryKey
+このキーを参考にキャッシュを管理する。[[LocalStorage]]にこのキーでキャッシュする。
+### queryFn
+データフェッチする関数。[[Promise]]を返ることを期待している。
+
+## staleTime
+キャッシュがstale(古い状態)になったとみなす時間
+## cacheTime
+キャッシュを[[ガベージコレクション]]するまでの時間
+
