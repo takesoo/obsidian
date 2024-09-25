@@ -1,7 +1,9 @@
 ---
-aliases: []
-tags: [ruby/gems]
-cssclass:
+aliases: 
+tags:
+  - ruby/gems
+  - factory_bot
+cssclasses: 
 publish: false
 ---
 https://github.com/thoughtbot/factory_bot
@@ -12,4 +14,3 @@ https://github.com/thoughtbot/factory_bot
 
 関連gem
 - [[factory_trace]]
-- 
