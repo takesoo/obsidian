@@ -162,9 +162,29 @@ prosess.env.NEXT_PUBLIC_ANALYTICS_ID;
 ```
 
 ## テスト
-[[Jest]]と[[React Testing Library]]を使用する。
+### UIのテスト
+[[Jest]]と[[React Testing Library]], [[testing-library-jest-dom|@testing-library/jest-dom]]を使用する。
 ```zsh
+# パッケージインストール
 npm install --save-dev jest @types/jest jest-environment-jsdom @testing-library/react @testing-library/dom @testing-library/jest-dom ts-node
+
+# jest.config.tsを作成
+npm create jest@latest
+
+# jest.setup.tsを作成
+touch jest.setup.ts
+```
+```ts
+// jest.config.ts
+import "@testing-library/jest-dom";
+
+// jest.config.ts
+const config: Config = {
+  ...
+  // jestの実行前にjest.setup.tsを読み込むようにする
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+
+};
 ```
 
 ---
