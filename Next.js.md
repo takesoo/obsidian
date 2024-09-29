@@ -161,6 +161,9 @@ NEXT_PUBLIC_ANALYTICS_ID=abcdefghijk
 prosess.env.NEXT_PUBLIC_ANALYTICS_ID;
 ```
 
+## テスト
+[[Jest]]と[[React Testing Library]]を使用する。
+
 
 ---
 コンポーネント
