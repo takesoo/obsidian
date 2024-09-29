@@ -163,7 +163,9 @@ prosess.env.NEXT_PUBLIC_ANALYTICS_ID;
 
 ## テスト
 [[Jest]]と[[React Testing Library]]を使用する。
-
+```zsh
+npm install --save-dev jest @types/jest jest-environment-jsdom @testing-library/react @testing-library/dom @testing-library/jest-dom ts-node
+```
 
 ---
 コンポーネント

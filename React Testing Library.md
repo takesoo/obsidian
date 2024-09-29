@@ -1,6 +1,7 @@
 ---
 tags:
   - npm
+  - testing-library
 aliases:
   - RTL
 ---

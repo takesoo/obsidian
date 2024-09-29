@@ -4,7 +4,7 @@ tags:
   - JavaScript
 ---
 - JavaScriptのテスティングフレームワーク
-- スナップショットテスト
+- [[スナップショットテスト]]ができる
 
 ```bash
 pnpm add --save-dev jest # jsの場合
@@ -29,3 +29,6 @@ pnpm add --save-dev @jest/globals
 # or
 pnpm add --save-dev @types/jest
 ```
+## jest.config.ts
+## jest.setup.ts
+テスト実行前に特定の設定やグローバルな準備を行うためのファイル。
