@@ -2,7 +2,7 @@
 aliases:
   - node package manager
 ---
-- nodeのパッケージマネージャー
+- [[Node.js]]のパッケージマネージャー
 
 ```shell
 

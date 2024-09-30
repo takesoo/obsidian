@@ -186,6 +186,49 @@ const config: Config = {
 
 };
 ```
+### ユニットテスト
+#### hooks
+```tsx
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { act, renderHook, waitFor } from "@testing-library/react";
+import { useTodos } from "./use-todos";
+import { FirebaseTodoRepository } from "@/repositories/firebase-todo-repository";
+
+jest.mock('@/repositories/firebase-todo-repository')
+
+const createWrapper = () => {
+  const queryClient = new QueryClient();
+  return ({ children }: { children: React.ReactNode }) => {
+    return (
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    );
+  };
+};
+
+describe("useTodos", () => {
+  it("should fetch todos initially", async () => {
+    const { result } = renderHook(() => useTodos(), {
+      wrapper: createWrapper(),
+    });
+    expect(result.current.isLoading).toBe(true);
+    await waitFor(() => result.current.todos && result.current.todos.length > 0)
+    result.current.todos && expect(result.current.todos.length).toBeGreaterThan(0)
+    });
+
+  it('should add a new todo', async () => {
+    const { result } = renderHook(() => useTodos(), {
+	  wrapper: createWrapper(),
+	});
+	const initialTodoCount = result.current.todos?.length;
+	act(() => {
+	  result.current.setNewTodoTitle('New Todo')
+	  result.current.addTodo()
+	})
+    await waitFor(() => { result.current.todos && result.current.todos.length > initialTodoCount })
+	expect(result.current.todos?.some((todo) => { todo.title === 'New Todo' }))
+  })
+});
+```
 
 ---
 コンポーネント
