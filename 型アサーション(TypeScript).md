@@ -2,8 +2,8 @@
 tags:
   - TypeScript
 aliases:
-  - 型キャスト
-  - Type Casting
+  - 型アサーション
+  - Type Assertion
   - as
 ---
 ```ts
