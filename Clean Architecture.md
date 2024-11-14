@@ -41,6 +41,38 @@ End:
 	- コンポーネントの基盤として、多くのソフトウェアシステムで利用できること
 ### 第7章 SRP：単一責任の原則
 - モジュールはたったひとつのアクター（変更を望む人たちをひとまとめにしたグループ）に対して責務を負うべきである
+	- Employeeクラスには複数のメソッドが実装されており、それぞれのメソッドを使用するステークホルダーは異なるため、SRPに違反している。
+```mermaid
+classDiagram
+class Employee {
+  +calculatePay()
+  +reportHours()
+  +save()
+}
+
+```
+- 処理を分離それぞれのクラスに分離し、Employeeクラスを[[Facadeパターン|Facade]]とする
+```mermaid
+classDiagram
+class Employee {
+  - employeeData
+  +calculatePay()
+  +reportHours()
+  +save()
+}
+
+class HourReporter {
+  +reportHours()
+}
+
+class EmployeeSaver {
+  +save()
+}
+
+Employee --> HourReporter : 
+Employee --> EmployeeSaver : 
+
+```
 ### 第8章 OCP：オープン・クローズドの原則
 ### 第9章 LSP：リスコフの置換原則
 ### 第10章 ISP：インターフェース分離の原則
