@@ -18,6 +18,7 @@ tags:
 	- `"compilerOptions: { "baseUrl": ".", "paths": { "@/*": ["./src/*"] } }"`
 - ファイル命名規則もeslintで強制する
 ## Project Structure
+ソースコードはsrcディレクトリ以下に配置することで、フレームワークのコードと分離させる
 ```bash
 src
 |
