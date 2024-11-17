@@ -70,7 +70,34 @@ src/features/awesome-feature
 - [[バレルファイル]]は[[vite]]だとパフォーマンスの低下につながるので推奨しない。
 - [[import/no-restricted-paths]]でimportできるパスを制限することで、各機能の独立性を確保する。コードの依存関係も制限することができる。
 ## Components And Styling
+### コンポーネントのベストプラクティス
+- 使用場所にできるだけ近い場所に配置する
+- レンダリング関数を入れ子にした大きなコンポーネントは避ける
+```jsx
+// this is very difficult to maintain as soon as the component starts growing
+function Component() {
+  function renderItems() {
+    return <ul>...</ul>;
+  }
+  return <div>{renderItems()}</div>;
+}
 
+// extract it in a separate component
+function Items() {
+  return <ul>...</ul>;
+}
+
+function Component() {
+  return (
+    <div>
+      <Items />
+    </div>
+  );
+}
+```
+- コーディングスタイルに一貫性を保つ
+- コンポーネントが入力として受け取るpropsの数を制限する
+	- 多すぎる場合はコンポーネントを分割する
 ## API Layer
 ## State Management
 ## Testing
