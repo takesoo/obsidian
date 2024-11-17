@@ -112,7 +112,20 @@ function Component() {
 ### [[Storybook]]
 コンポーネント単位での開発やカタログとして使う
 ## API Layer
+- APIクライアントは単一インスタンスを使用する
+- コンポーネントでリクエストを定義せず、apiディレクトリ以下に、リクエストごとに分けて定義する
+	- リクエストデータとレスポンスデータの型を提供すること
+	- APIクライアントインスタンスを使用したフェッチャー関数を提供すること
+	- [[データフェッチングライブラリ]]を利用して構築されたフェッチャー関数を使用して、データフェッチとキャッシュ・ロジックを管理する[[hooks]]を提供すること
 ## State Management
+### Component State
+- コンポーネント内で定義する。グローバルに共有しない。
+- [[useState]]
+- 1つのアクションで複数の状態を更新するなど、複雑な状態管理は[[useReducer]]
+### Application State
+### Server Cache State
+### Form State
+### URL State
 ## Testing
 ## Error Handling
 ## Security

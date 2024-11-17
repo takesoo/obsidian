@@ -4,6 +4,8 @@ tags:
   - CSS-in-JS
 ---
 ```jsx
+// on React
+
 // when using css prop
 import { css } from '@emotion/react'
 
