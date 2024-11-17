@@ -1,3 +1,7 @@
+---
+tags:
+  - ComponentLiblary
+---
 ## Getting Start
 https://v2.chakra-ui.com/getting-started
 ```zsh
