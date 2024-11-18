@@ -19,9 +19,10 @@ end
 ```
 - `for`
 	- 引数は`AssociationLoader#initialize`に渡されて、Loaderインスタンスが作成される
-	- `Executor`の`@loaders\[key]`にLoaderインスタンスを格納
+	- `Executor`の`@loaders[key]`にLoaderインスタンスを格納
 	- `AssociationLoader`のインスタンスを返す
 - `load`
 	- `AssociationLoader`の`@queue`に引数のobjectが格納される
-	- Promiseインスタンスを生成し、sourceに自身（loaderインスタンス）を格納する
-	- `@cache[object]`にPromiseインスタンスを追加する
+	- `@cache`からPromiseインスタンスを返す
+		-  `@cache`にない場合は、Promiseインスタンスを生成する。この時、Promiseの`source`にself（loaderインスタンス）を格納する
+- 一通りのfieldのresolveが実行された後、Promiseを返していたfieldの解決が遅延実行される
