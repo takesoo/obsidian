@@ -39,3 +39,4 @@ end
 ![[Pasted image 20241119095041.png]]
 [graphql-batchが何をしているか](https://zenn.dev/2bo/articles/graphql-batch-mechanism)
 
+partitionのタイミングでSQL実行してた？includesを省いてもselect step_memberは逐一実行されてるはず。
