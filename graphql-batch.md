@@ -39,4 +39,27 @@ end
 ![[Pasted image 20241119095041.png]]
 [graphql-batchが何をしているか](https://zenn.dev/2bo/articles/graphql-batch-mechanism)
 
-partitionのタイミングでSQL実行してた？includesを省いてもselect step_memberは逐一実行されてるはず。
+---
+```ruby
+# form_answer_approval_step_type.rb
+def approvers
+	Loaders::Association.for(FormAnswerApprovalStep, :form_answer_approval_step_members).load(object).then do
+	Rails.logger.debug "FormAnswerApprovalStepType#approvers: object=#{object.inspect}: start"
+	ret = object.sorted_approval_step_members
+	Rails.logger.debug "FormAnswerApprovalStepType#approvers: object=#{object.inspect}: end"
+	ret
+	end
+end
+
+# form_answer_approval_step.rb
+def sorted_approval_step_members
+	not_approved_members, approved_members = form_answer_approval_step_members.includes(
+		member: { approver_form_answers: %i[signature_attachment form_answer] }
+	).partition { |asm|
+		asm.approved_date.nil?
+	}
+	approved_members.sort_by(&:approved_date) + not_approved_members
+end
+```
+![[スクリーンショット 2024-11-19 18.29.56.png]]
+- loaderでpreloadしたFormAnswerApprovalStepインスタンスそれぞれで、sorted_approval_step_membersが実行される。つまりN+1問題の発生
