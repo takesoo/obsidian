@@ -123,10 +123,29 @@ function Component() {
 - [[useState]]
 - 1つのアクションで複数の状態を更新するなど、複雑な状態管理は[[useReducer]]
 ### Application State
+- アプリケーションのグローバルなステート管理
+	- グローバルなモーダルの制御、通知、カラーモードの切り替えなど
+- 最適なパフォーマンスとメンテナンスのしやすさを保証するために、ステートを必要とするコンポーネントのできるだけ近くに配置する。状態変数は不必要にグローバルにしない。
+- [[useContext]]
+- [[redux]] + [[redux toolkit]]
+- [[jotai]]
 ### Server Cache State
+- サーバーから取得したデータをクライアント側でローカルに保存すること。
+- [[React Query]]
+- [[swr]]
+- [[apollo client]]
 ### Form State
+- [[React Hook Form]]
+- [[formik]]
+- バリデーションライブラリ
+	- [[zod]]
+	- [[yup]]
 ### URL State
+- ブラウザのアドレスバー内に保存され、操作されるデータのこと。
+- [[useLocation]]
+- [[useSearchParams]]
 ## Testing
+
 ## Error Handling
 ## Security
 ## Performance
