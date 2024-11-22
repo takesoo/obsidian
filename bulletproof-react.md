@@ -145,9 +145,32 @@ function Component() {
 - [[useLocation]]
 - [[useSearchParams]]
 ## Testing
-
+### テストの種類
+- ユニットテスト
+	- アプリケーション全体で使われる共有コンポーネントや関数
+	- 単一のコンポーネントの複雑なロジック
+- 統合テスト
+	- ユニット同士の連携を確認する
+- E2E
+	- アプリケーション全体としての振る舞いを確認する
+### 推奨ツール
+- [[vitest]]
+- [[React Testing Library]]
+- [[Playwright]]
+- [[msw]]
 ## Error Handling
+- API Errors
+	- エラーを管理するためのインターセプターを実装する
+	- エラーを知らせるトーストをトリガーしたり、許可されていないユーザーをログアウトしたり、トークンリフレッシュのリクエストを送信したり
+- In App Errors
+	- Reactのエラー境界を利用し、ドメインごとにエラー境界を配置する。こうすることでエラーが発生してもアプリケーション全体を中断することなく、ローカルでエラーを抑制および管理することができ、スムーズなUXを確保できる
+- Error Tracking
+	- [[Sentry]]使う
 ## Security
+- Authentication
+	- [[SPA]]では[[JWT]]を使うのが一般的
+	- トークンは[[Cookie]]か[[LocalStorage]]に保存する
+- Authorization
 ## Performance
 ## Deployment
 
