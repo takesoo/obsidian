@@ -195,11 +195,61 @@ const [state, setState] = React.useState(myExpensiveFn());
 // prefer this which is executed only once:
 const [state, setState] = React.useState(() => myExpensiveFn());
 ```
-- 
+- [[useContext|context]]の前にlift-stateやchildrenでの状態管理を検討すること
+- [[useContext|context]]は、テーマ、ユーザーデータなど、定速度のデータに適しており、中速/高速のデータの場合はセレクタをサポートしている[[use-context-selector]]、[[jotai]]などを検討する。
+- パフォーマンスに影響するような頻繁な更新がある場合には、ランタイムスタイリングソリューション([[emotion]]など)から、ゼロランタイムスタイリングソリューション([[tailwind]]、[[vanilla-extract]]など)を検討する。
 ### チルドレン
+- childrenを上手に分割すると、親のコンポーネントのライフサイクルと独立させ、不要な再レンダリングを回避できる。
+```tsx
+// Not optimized example
+const App = () => <Counter />;
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <button onClick={() => setCount((count) => count + 1)}>
+        count is {count}
+      </button>
+      <PureComponent /> // will rerender whenever "count" updates
+    </div>
+  );
+};
+
+const PureComponent = () => <p>Pure Component</p>;
+
+// Optimized example
+const App = () => (
+  <Counter>
+    <PureComponent />
+  </Counter>
+);
+
+const Counter = ({ children }) => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <button onClick={() => setCount((count) => count + 1)}>
+        count is {count}
+      </button>
+      {children} // won't rerender whenever "count" updates
+    </div>
+  );
+};
+
+const PureComponent = () => <p>Pure Component</p>;
+```
 ### 画像
+- [[viewport]]にない画像の遅延読み込み
+- [[WebP]]などの最新の画像フォーマットを使用する
+- [[srcset]]を使用して、クライアントサイドの画面サイズに最適な画像を読み込む
 ### Web Vital
+- GoogleがWebサイトをインデックスする際に、[[WebVitals]]を考慮するようになった
+- [[Lighthouse]]と[[Pagespeed Insights]]に注目すること
 ### データプリフェッチ
+- [[React Query]]の`queryClient.prefetchQuery`を使用すると、ユーザーがページに移動する前にデータをプリフェッチすることができる。データ読み込み時間を短縮できる。
 ## Deployment
 
 ---

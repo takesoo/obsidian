@@ -1,0 +1,5 @@
+- Googleが定めたサイトの健全性を示す重要指標
+- [[Largest Contentfull Paint]](LCP)
+	- ページで最も有意義なコンテンツを、ユーザーがどれくらい早く見ることができるか。
+- [[First Input Delay]](FID)
+- [[Cumulative Layout Shift]](CLS)
