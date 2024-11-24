@@ -246,11 +246,15 @@ const PureComponent = () => <p>Pure Component</p>;
 - [[WebP]]などの最新の画像フォーマットを使用する
 - [[srcset]]を使用して、クライアントサイドの画面サイズに最適な画像を読み込む
 ### Web Vital
-- GoogleがWebサイトをインデックスする際に、[[WebVitals]]を考慮するようになった
+- GoogleがWebサイトをインデックスする際に、[[Core Web Vitals]]を考慮するようになった
 - [[Lighthouse]]と[[Pagespeed Insights]]に注目すること
 ### データプリフェッチ
 - [[React Query]]の`queryClient.prefetchQuery`を使用すると、ユーザーがページに移動する前にデータをプリフェッチすることができる。データ読み込み時間を短縮できる。
 ## Deployment
+- [[Vercel]]
+- [[Netlify]]
+- [[AWS]]
+- [[CloudFlare]]
 
 ---
 [Reactベストプラクティスの宝庫！「bulletproof-react」が勉強になりすぎる件](https://zenn.dev/manalink_dev/articles/bulletproof-react-is-best-architecture)
