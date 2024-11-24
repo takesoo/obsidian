@@ -172,8 +172,34 @@ function Component() {
 	- トークンは[[Cookie]]か[[LocalStorage]]に保存する
 		- HttpOnly属性で設定されたCookiedに保存することで、クライアントサイドJavaScriptからアクセスできないようにする。js-cookieなどを使用する
 	- [[クロスサイトスクリプティング|XSS]]対策として、[[サニタイズ]]する
+	- [[OWASP Top 10 Client-Side Security Risks-2024-11-24 14-57-40]]
+	- ユーザーデータはグローバルステートで管理する
+		- [[react-query-auth]]、[[useContext|context]]、サードパーティ状態管理ライブラリ
 - Authorization
+	- [[Roll-Based Access Controll|RBAC]]
+		- ロールベースの認可モデル
+	- [[Precision-Based Access Controll|PBAC]]
+		- 役割ベースの認可モデル
 ## Performance
+### コード分割
+- 必要な時に必要なコードだけをロードするように
+- 理想的にはルートレベルで実装されるべきで、最初に必要なコードだけがロードされ、必要に応じて追加部分が遅延フェッチされる。
+- 過剰なコード分割は避ける。全てのコードチャンクをフェッチするために必要なリクエスト数が増え、パフォーマンスの低下につながる。
+### コンポーネントとステートの最適化
+- 全ての状態を一つのステートにまとめない。
+- 初期化に複雑な計算が必要なstateは、直接実行ではなく初期化関数を使用する
+```ts
+// instead of this which would be executed on every re-render:
+const [state, setState] = React.useState(myExpensiveFn());
+
+// prefer this which is executed only once:
+const [state, setState] = React.useState(() => myExpensiveFn());
+```
+- 
+### チルドレン
+### 画像
+### Web Vital
+### データプリフェッチ
 ## Deployment
 
 ---
