@@ -2,8 +2,29 @@
 aliases:
   - Per-Page Layouts
 ---
+- ページごとに異なるレイアウトを使用する場合に使う
 ```tsx
-// pages/index.tsx
+// src/app/pages/app/dashboard.tsx
+import { ReactElement } from 'react';
+
+import { ContentLayout, DashboardLayout } from '@/components/layouts';
+
+export const DashboardPage = () => {
+  ...
+  return (
+    <>
+    ...
+    </>
+  );
+};
+
+DashboardPage.getLayout = (page: ReactElement) => {
+  return (
+    <DashboardLayout>
+      <ContentLayout title="Dashboard">{page}</ContentLayout>
+    </DashboardLayout>
+  );
+};
 
 // pages/_app.tsx
 import { NextPage } from 'next';
