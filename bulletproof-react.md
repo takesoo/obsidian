@@ -178,8 +178,10 @@ function Component() {
 - Authorization
 	- [[Roll-Based Access Controll|RBAC]]
 		- ロールベースの認可モデル
+		- User, Admin
 	- [[Precision-Based Access Controll|PBAC]]
 		- 役割ベースの認可モデル
+		- コンテンツの作成者とか
 ## Performance
 ### コード分割
 - 必要な時に必要なコードだけをロードするように
