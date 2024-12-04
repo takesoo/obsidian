@@ -17,3 +17,4 @@ tags:
 }
 ```
 
+4. .prettierrcを作成
