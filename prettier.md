@@ -4,7 +4,7 @@ tags:
 ---
 [Prettier · Opinionated Code Formatter](https://prettier.io/)
 
-- code formatter
+- code [[formatter]]
 
 ## Getting Started
 1. install prettier
