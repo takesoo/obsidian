@@ -13,3 +13,11 @@ tags:
 2. `yarn eslint --init`
 3. install VSCode extension
 4. package.jsonのscriptsに`"lint"`を追加
+
+## 設定ファイル
+### Flat Config
+- `eslint.config.js`に記述していく方式
+- v9からの設定方式
+### .eslintrc.*
+- `.eslintrc.*`ファイルに記述していく方式
+- v8までの設定方式
