@@ -17,7 +17,8 @@ tags:
 	- Espreeパーサーを使ってコードを抽象構文木に変換する（？）
 - Custom Processor
 	- プロセッサは他の種類のファイルからJavaScriptコードを抽出し、ESLintにlintさせる。
-- 
+- Extends
+	- 別の設定ファイルを拡張できる
 
 ## Getting Started
 1. `yarn add eslint --dev`
