@@ -11,14 +11,22 @@ tags:
 	- ESLintが何をチェックするかは、設定ファイルに追加したruleで決まる
 	- `--fix`オプションで自動修正もする
 - Plugins
-	- ルール、設定、プロセッサ、環境のセットを含むnpmモジュール
+	- rules、processor、envの実装や設定を提供するnpmモジュール
 	- e.g. @angular-eslint/eslint-plugin
+	- shareable configの提供もできる（？）
 - Parsers
-	- Espreeパーサーを使ってコードを抽象構文木に変換する（？）
+	- コードを抽象構文木に変換する
 - Custom Processor
 	- プロセッサは他の種類のファイルからJavaScriptコードを抽出し、ESLintにlintさせる。
 - Extends
-	- 別の設定ファイルを拡張できる
+	- Shareable configを適用する
+		- Shareable configの名前、またはpathを指定する
+	- 
+
+- Shareable config
+	- 設定をobjectとしてexportしているライブラリ
+	- `eslint-config-xxxx`
+	- rule, pluginなどの提供ができる
 
 ## Getting Started
 1. `yarn add eslint --dev`
@@ -40,7 +48,7 @@ tags:
   "root": true,
 
   /**
-  * 静的解析の
+  * 静的解析のルール
   */
   "rules": {
     "quotes": [2, "double"]
@@ -48,8 +56,8 @@ tags:
 
   /**
   * npmで配布されているプラグインを元にルールの追加などを行える
-  * `plugins`に追加しただけではルールは有効化されない
-  * `plugins`ではルールの追加のみで、`extends`や`rule`でルールの有効化が必要
+  * `rules`にルールを追加するが、有効化はされない
+  * `extends`や`rule`でルールの有効化が必要
   */
   "plugins": ["eslint-plugin-abcd"], // eslint-plugin- は省略可能
   
