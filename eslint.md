@@ -13,7 +13,6 @@ tags:
 - Plugins
 	- rules、processor、envの実装や設定を提供するnpmモジュール
 	- e.g. @angular-eslint/eslint-plugin
-	- shareable configの提供もできる（？）
 - Parsers
 	- コードを抽象構文木に変換する
 - Custom Processor
@@ -42,7 +41,6 @@ tags:
 ### .eslintrc.*
 - `.eslintrc.*`ファイルに記述していく方式
 - v8までの設定方式
-- プラグインのインストールと記述が必要かどうか、extendsだけでいいかどうかは、環境(TypeScript, Next.js, Nuxt.js, Node.jsなど)によって異なるので、都度調べる
 ```json
 {
   "root": true,
@@ -57,18 +55,20 @@ tags:
   /**
   * npmで配布されているプラグインを元にルールの追加などを行える
   * `rules`にルールを追加するが、有効化はされない
-  * `extends`や`rule`でルールの有効化が必要
+  * プラグインのインストールの際に`plugins`への記述が必要かどうか、`extends`だけでいいかどうかは、導入するプラグインによって異なるので、都度調べる。（プラグインの内部で`plugins`の記載がある場合は、`.eslintrc.*`で`plugins`を記載する必要はない。）
   */
   "plugins": ["eslint-plugin-abcd"], // eslint-plugin- は省略可能
   
   /**
   * Shareable configを適用する時に記述する
-  * e.g. `eslint-config-google`, `eslint-config-airbnb`
+  * e.g. `eslint-config-google`, `eslint-config-airbnb`, `plugin:react/recommended`
   * 後ろに行くほど優先的に設定が上書きされていく
-  * pluginが提供している設定ファイルを使用する場合は`plugin:`プレフィックスをつける
   */
   "extends": [
-	  "hogehoge", 
+	  "eslint-config-google", 
+	  /**
+	  * プラグインが提供している設定を使用する場合は`plugin:`プレフィックスを使って以下のように記載する
+	  */
 	  "plugin:eslint-plugin-abcd/setting_name" // eslint-plugin- は省略可能
   ],
 
