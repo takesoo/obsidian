@@ -7,20 +7,27 @@ tags:
 
 - JavaScriptのlinter（構文解析）
 - 静的解析
-- `--fix`オプションで自動修正もする
+- `--fix`オプションで自動修正もする。ただしフォーマットは[[prettier]]に任せるのが一般的。
 - Shareable config
 	- 設定をobjectとしてexportしているライブラリ
 	- `eslint-config-xxxx`
 	- rule, pluginなどの提供ができる
 
 ## Getting Started
-### Quick start
-`npm init @eslint/config`
-### Manual Set Up
+### v9
+### v8以前
+Quick start
+```shell
+npm init @eslint/config
+```
+
+Manual Set Up
 1. `npm install --save-dev eslint`
 2. `touch .eslintrc.js`
 3. `npx eslint project-dir/ file1.js`
-- install VSCode extension
+
+その他
+- vscode-eslintをインストールするとリアルタイムに解析してくれる
 - package.jsonのscriptsに`"lint"`を追加
 	```json
 	{
@@ -109,8 +116,15 @@ tags:
 ```
 
 ## [[prettier]]との連携
-### 1. `prettier-eslint`と`prettier-eslint-cli`をインストール
+- ESLintでコードチェックし、Prettierでフォーマットする
+- ESLintのRulesにはフォーマット関連のものもあるが、Pritterと衝突するため無効にする。→[[eslint-config-prettier]]を使う
 ```shell
-npm install -D prettier-eslint prettier-eslint-cli
+npm install eslint-config-prettier --save-dev
 ```
-### 2. ???
+```json
+// .eslintrc.json
+{
+  // extendsの最後に追加する
+  "extends": ["prettier"]
+}
+```
