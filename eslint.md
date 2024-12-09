@@ -7,31 +7,28 @@ tags:
 
 - JavaScriptのlinter（構文解析）
 - 静的解析
-- Rules
-	- ESLintが何をチェックするかは、設定ファイルに追加したruleで決まる
-	- `--fix`オプションで自動修正もする
-- Plugins
-	- rules、processor、envの実装や設定を提供するnpmモジュール
-	- e.g. @angular-eslint/eslint-plugin
-- Parsers
-	- コードを抽象構文木に変換する
-- Custom Processor
-	- プロセッサは他の種類のファイルからJavaScriptコードを抽出し、ESLintにlintさせる。
-- Extends
-	- Shareable configを適用する
-		- Shareable configの名前、またはpathを指定する
-	- 
-
+- `--fix`オプションで自動修正もする
 - Shareable config
 	- 設定をobjectとしてexportしているライブラリ
 	- `eslint-config-xxxx`
 	- rule, pluginなどの提供ができる
 
 ## Getting Started
-1. `yarn add eslint --dev`
-2. `yarn eslint --init`
-3. install VSCode extension
-4. package.jsonのscriptsに`"lint"`を追加
+### Quick start
+`npm init @eslint/config`
+### Manual Set Up
+1. `npm install --save-dev eslint`
+2. `touch .eslintrc.js`
+3. `npx eslint project-dir/ file1.js`
+- install VSCode extension
+- package.jsonのscriptsに`"lint"`を追加
+	```json
+	{
+	  "scripts": {
+	    "lint": "eslint src/**/*" // npm run lint で実行できる
+	  }
+	}
+	```
 
 
 ## 設定ファイル
@@ -69,7 +66,8 @@ tags:
 	  /**
 	  * プラグインが提供している設定を使用する場合は`plugin:`プレフィックスを使って以下のように記載する
 	  */
-	  "plugin:eslint-plugin-abcd/setting_name" // eslint-plugin- は省略可能
+	  "plugin:eslint-plugin-abcd/setting_name", // eslint-plugin- は省略可能
+	  "plugin:node/recommended", // プラグイン内部で`plugins: ["node"]`が定義されているため、.eslintrc.*でpluginsの記載が不要
   ],
 
   /**
@@ -96,7 +94,17 @@ tags:
     "ecmaFeatures": {
       "jsx": true // JSX構文を有効化する
     }
-  }
+  },
+
+  /**
+  * .ts, .vue などごとに異なるパーサールールを設定したい場合に記載するオプション
+  */
+  "overrides": [
+    {
+      files: ["*.vue"],
+      extends: ["plugin:vue/recommend"],
+    }
+  ]
 }
 ```
 
