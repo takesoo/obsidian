@@ -1,6 +1,6 @@
 ---
 tags:
   - eslint/plugin
-overview:
+overview: "[[eslint-plugin-import]]にTypeScriptサポートを追加する"
 ---
-- [[eslint-plugin-import]]にTypeScriptサポートをつい
+- [[eslint-plugin-import]]にTypeScriptサポートを追加する
