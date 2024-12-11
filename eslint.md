@@ -131,3 +131,8 @@ npm install eslint-config-prettier --save-dev
   "extends": ["prettier"]
 }
 ```
+
+```dataview
+TABLE overview
+FROM #eslint/plugin
+```

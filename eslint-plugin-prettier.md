@@ -1,6 +1,8 @@
 ---
 tags:
   - npm
+  - eslint/plugin
+overview: prettierとeslintの設定の競合を解消する
 ---
 - [[prettier]]と[[eslint]]を統合するためのプラグイン
 	- **コードフォーマットの統一:** ESLintとPrettierのルールを一元管理できるため、コードフォーマットの一貫性を保ちやすくなります。
