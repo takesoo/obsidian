@@ -40,8 +40,21 @@ Manual Set Up
 
 ## 設定ファイル
 ### Flat Config
-- `eslint.config.js`に記述していく方式
+- `eslint.config.*`に記述していく方式
 - v9からの設定方式
+```js
+import js from "@eslint/js";
+
+export default [
+  js.configs.recommended,
+  {
+    rules: {
+      "no-unused-vars": "error", // ["off" | "warn" | "error" ]
+      "no-undef": "error"
+    }
+  }
+];
+```
 ### .eslintrc.*
 - `.eslintrc.*`ファイルに記述していく方式
 - v8までの設定方式
