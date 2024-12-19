@@ -131,6 +131,16 @@ export default [
 }
 ```
 
+## VSCodeで自動整形
+```json
+// settings.json
+{
+  "editor.formatOnSave": true, // 保存時のフォーマットを有効にする
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit" // eslintの自動修正を有効にする
+  },
+}
+```
 ## [[prettier]]との連携
 - ESLintでコードチェックし、Prettierでフォーマットする
 - ESLintのRulesにはフォーマット関連のものもあるが、Pritterと衝突するため無効にする。→[[eslint-config-prettier]]を使う
@@ -145,6 +155,7 @@ npm install eslint-config-prettier --save-dev
 }
 ```
 
+## plugins
 ```dataview
 TABLE overview
 FROM #eslint/plugin
