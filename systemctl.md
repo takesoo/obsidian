@@ -27,4 +27,5 @@ Dec 19 16:44:43 822619c2c890 httpd[135]: AH00558: httpd: Could not reliably dete
 Dec 19 16:44:43 822619c2c890 systemd[1]: Started The Apache HTTP Server.
 Dec 19 16:44:43 822619c2c890 httpd[135]: Server configured, listening on: port 80
 lines 1-20/20 (END)
+[root@822619c2c890 /]# systemctl stop httpd
 ```
