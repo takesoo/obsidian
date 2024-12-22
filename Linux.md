@@ -19,7 +19,10 @@ tags:
 		- `sysctl`
 		- 起動したまま処理要求を待機するプログラムのことを[[デーモンプロセス]]と呼ぶ
 ## Linuxコマンド
+```
+コマンド [オプション] サブコマンド 引数 
+```
 ```dataview
-Table
+Table overview
 FROM #Linux/コマンド 
 ```
