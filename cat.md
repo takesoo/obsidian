@@ -3,7 +3,7 @@ tags:
   - Linux/コマンド
 ---
 - ファイルの内容を表示
-- conCATenate
+- con==cat==enate
 ```bash
 cat ~/.bashrc
 # .bashrc
@@ -17,3 +17,4 @@ fi
 
 - `-n`
 	- 行番号をつけて表示
+- 引数を指定しない場合、[[標準入力]]をそのまま[[標準出力]]する
