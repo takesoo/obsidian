@@ -7,11 +7,15 @@ overview: ディレクトリ、ファイルの削除
 ```bash
 rm リソース名
 
-# -r 再起的に削除
+# -r 再起的に削除(ディレクトリの削除)
 ls -R dir1
 dir1:
 file.txt
 rm -r dir1
 ls -R dir1
 ls: cannot access 'dir1': No such file or directory
+
+# -f 強制的に削除
+
+# -i 確認を求める
 ```
