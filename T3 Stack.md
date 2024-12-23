@@ -8,4 +8,13 @@ tags:
 - modularity(モジュール性)
 - full-stack typesafety(フルスタックな型安全性)
 
-[[Next.js]]などで採用されている
+## t3-oss/create-t3-app
+T3 Stackを構築できるCLIツール
+https://github.com/t3-oss/create-t3-app
+以下の技術スタックが採用されている
+- [[Next.js]]
+- [[tRPC]]
+- [[NextAuth.js]]
+- [[Prisma]]
+- [[Tailwind CSS]]
+- [[TypeScript]]

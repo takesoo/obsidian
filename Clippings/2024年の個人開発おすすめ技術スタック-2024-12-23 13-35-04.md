@@ -1,6 +1,6 @@
 ---
-finished reading: false
-favorite: false
+finished reading: true
+favorite: true
 tags:
   - clippings
 ---
