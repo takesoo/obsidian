@@ -4,8 +4,8 @@ tags:
   - Linux/コマンド
 aliases:
   - ip
+overview: IPアドレスの確認
 ---
-- IPアドレス確認
 ```bash
 $ apt install iproute
 ...
