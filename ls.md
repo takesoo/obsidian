@@ -18,4 +18,9 @@ dir1:
 dir2
 
 dir1/dir2:
+
+$ ls -l
+total 0
+-rw-r--r-- 1 linuc linuc 0 Dec 25 00:57 test
+# アクセス権 サイズ 所有ユーザー 所有グループ 作成日時 ファイル名
 ```
