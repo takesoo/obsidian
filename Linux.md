@@ -97,6 +97,9 @@ FROM #Linux/コマンド
 #### /etc/sudoers
 - sudoコマンドの設定ファイル
 - エディタで直接編集せず、[[visudo]]コマンドで変更する
+### /etc/resolv.conf
+- [[Domain Name System|DNS]]名前解決設定ファイル
+- DNSサーバーのIPアドレスを記載する
 ### /var
 - ==var==iable
 - システム運用中に生成されて削除されるデータを 一時的に保存するためのディレクトリ
