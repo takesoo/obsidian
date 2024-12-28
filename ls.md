@@ -20,9 +20,10 @@ dir2
 dir1/dir2:
 
 $ ls -l
-total 0
--rw-r--r-- 1 linuc linuc 0 Dec 25 00:57 test
-# アクセス権 サイズ 所有ユーザー 所有グループ 作成日時 ファイル名
+total 4
+drwxr-xr-x 2 linuc wheel 4096 Dec 26 00:44 testdir
+-rw-r--r-- 1 linuc linuc    0 Dec 27 00:22 testfile
+# アクセス権 ハードリンクの数 所有ユーザー 所有グループ サイズ タイムスタンプ ファイル名
 ```
 
 | 項目 | 8進数 | 内容                               |
