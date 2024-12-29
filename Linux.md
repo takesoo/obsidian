@@ -100,6 +100,7 @@ FROM #Linux/コマンド
 #### /etc/resolv.conf
 - [[Domain Name System|DNS]]名前解決設定ファイル
 - DNSサーバーのIPアドレスを記載されている
+- 設定の変更は[[Network Manager]]で行う
 ### /var
 - ==var==iable
 - システム運用中に生成されて削除されるデータを 一時的に保存するためのディレクトリ
