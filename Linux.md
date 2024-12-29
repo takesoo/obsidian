@@ -30,6 +30,7 @@ tags:
 ```dataview
 Table overview
 FROM #Linux/コマンド 
+ORDER BY 
 ```
 ## ユーザーとグループ
 - ユーザーは必ずひとつのグループに所属し（プライマリグループ）、さらに複数のサブグループに所属することができる
