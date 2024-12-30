@@ -3,6 +3,7 @@ tags:
   - TypeScript
 aliases:
   - in
+overview: ユニオン型からオブジェクト型を作成する
 ---
 ```ts
 type Keys = 'x' | 'y';

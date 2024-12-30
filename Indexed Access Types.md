@@ -26,4 +26,14 @@ type T = StringArray[number]; // number | undefined
 // typeofとの組み合わせ
 const array = [null, "a", "b"];
 type T = (typeof array)[number]; // string | null
+
+/**
+ * タプル型とインデックスアクセス型
+ */
+type Tuple = [string, number];
+type T = Tuple[0]; // string
+
+// typeofとの組み合わせ
+const stateList = ["open", "closed"] as const;
+type State = (typeof stateList)[number]; // "open" | "close"
 ```
