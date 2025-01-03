@@ -1,7 +1,7 @@
 ---
 tags:
   - TypeScript/UtilityType
-overview: オブジェクト型TからKeysで指定したプロパティを除いたオブジェクト型を返す
+overview: 型TからKeysに指定したキーだけを含むオブジェクト型を返す
 ---
 ```ts
 type User = {
@@ -14,12 +14,12 @@ type User = {
   createdAt: string;
   updatedAt: string;
 };
-type Optional = "age" | "address" | "nationality" | "createdAt" | "updatedAt";
-type Person = Omit<User, Optional>;
-/*
+type Person = Pick<User, "surname" | "middleName" | "givenName">;
+/**
  * type Person = {
  *   surname: string;
  *   middleName?: string;
+ *   givenName: string;
  * };
  */
 ```
