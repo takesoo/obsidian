@@ -1,7 +1,7 @@
 ---
 tags:
   - TypeScript/UtilityType
-overview: Tのすべてのプロパティを必須にする
+overview: オブジェクト型Tのすべてのプロパティを必須にする
 ---
 ```ts
 type Person = {

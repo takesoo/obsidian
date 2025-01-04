@@ -8,5 +8,5 @@ aliases:
 ```dataview
 TABLE overview
 FROM #TypeScript/UtilityType 
-SORT filename ASC
+SORT file.name ASC
 ```

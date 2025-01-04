@@ -1,7 +1,7 @@
 ---
 tags:
   - TypeScript/UtilityType
-overview: 型TからKeysに指定したキーだけを含むオブジェクト型を返す
+overview: オブジェクト型TからKeysで指定したプロパティだけを含むオブジェクト型を返す
 ---
 ```ts
 type User = {

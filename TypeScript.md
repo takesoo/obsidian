@@ -15,3 +15,9 @@ npm install -D typescript
 ```bash
 npx tsc --init
 ```
+
+```dataview
+TABLE overview
+FROM #TypeScript 
+WHERE !contains(file.tags, "#TypeScript/")
+```

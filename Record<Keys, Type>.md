@@ -1,7 +1,7 @@
 ---
 tags:
   - TypeScript/UtilityType
-overview: プロパティのキーがkeys、バリューがTypeであるオブジェクト型を作る
+overview: プロパティのキーがkeys、バリューがTypeであるオブジェクト型を返す
 ---
 ```ts
 type StringNumber = Record<string, number>;

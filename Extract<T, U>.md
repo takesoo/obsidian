@@ -1,7 +1,7 @@
 ---
 tags:
   - TypeScript/UtilityType
-overview: ユニオン型TからUで指定した型だけを抽出した型を返す
+overview: ユニオン型TからUで指定した型だけを抽出したユニオン型を返す
 ---
 ```ts
 type Grade = "A" | "B" | "C" | "D" | "E";
