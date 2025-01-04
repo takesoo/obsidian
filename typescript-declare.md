@@ -4,7 +4,7 @@ tags:
 aliases:
   - declare
 ---
-TypeScriptに変数、関数、クラスなどが「存在する」ことを伝える。（アンビエント宣言）
+TypeScriptに変数、関数、クラスなどが「存在する」ことを伝える。（アンビエント宣言）（???）
 
 ```ts
 function hello(name) {
