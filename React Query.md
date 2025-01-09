@@ -16,7 +16,7 @@ import {
 } from '@tanstack/react-query'
 import { getTodos, postTodo } from '../my-api'
 
-// app.tsx
+// app.tsxで、QueryClientProviderを使ってqueryClientを提供する
 // Create a client
 const queryClient = new QueryClient()
 
@@ -29,14 +29,19 @@ function App() {
   )
 }
 
+// コンポーネントで、useQueryClientでqueryClientにアクセスする
 function Todos() {
   // Access the client
   const queryClient = useQueryClient()
 
   // Queries
-  const query = useQuery({ queryKey: ['todos'], queryFn: getTodos })
+  // queryKey: このキーでキャッシュが管理される
+  // queryFn: データフェッチする関数
+  const query = useQuery({ queryKey: ['todos'], queryFn: getTodos }) 
 
   // Mutations
+  // mutationFn: ミューテーションする関数
+  // onSuccess: ミューテーションに成功した時の処理。キャッシュを取得し直すなど。
   const mutation = useMutation({
     mutationFn: postTodo,
     onSuccess: () => {
