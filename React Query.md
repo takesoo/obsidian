@@ -7,22 +7,63 @@ tags:
 ---
 データフェッチングやキャッシング、[[Server State]]の管理を簡単に行うための[[Custom Hook|カスタムフック]]を提供している。
 ```js
-import { useQuery } from 'react-query';
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import { getTodos, postTodo } from '../my-api'
 
-const fetchData = async () => {
-  const response = await fetch('/api/data');
-  return response.json();
-};
+// app.tsx
+// Create a client
+const queryClient = new QueryClient()
 
-const Component = () => {
-  const { data, error, isLoading } = useQuery('data', fetchData);
+function App() {
+  return (
+    // Provide the client to your App
+    <QueryClientProvider client={queryClient}>
+      <Todos />
+    </QueryClientProvider>
+  )
+}
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error</div>;
+function Todos() {
+  // Access the client
+  const queryClient = useQueryClient()
 
-  return <div>{data.message}</div>;
-};
+  // Queries
+  const query = useQuery({ queryKey: ['todos'], queryFn: getTodos })
 
+  // Mutations
+  const mutation = useMutation({
+    mutationFn: postTodo,
+    onSuccess: () => {
+      // Invalidate and refetch
+      queryClient.invalidateQueries({ queryKey: ['todos'] })
+    },
+  })
+
+  return (
+    <div>
+      <ul>{query.data?.map((todo) => <li key={todo.id}>{todo.title}</li>)}</ul>
+
+      <button
+        onClick={() => {
+          mutation.mutate({
+            id: Date.now(),
+            title: 'Do Laundry',
+          })
+        }}
+      >
+        Add Todo
+      </button>
+    </div>
+  )
+}
+
+render(<App />, document.getElementById('root'))
 ```
 ## useQuery
 ### queryKey
