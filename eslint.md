@@ -42,10 +42,17 @@ Manual Set Up
 ### Flat Config
 - `eslint.config.*`に記述していく方式
 - v9からの設定方式
+- `override`や`extends`という概念が廃止された
+- ruleやconfigはJSのモジュール解決の仕組みを使う
 ```js
 import js from "@eslint/js";
 
 export default [
+  /**
+   * 配列の要素一つ一つがconfiguration object
+   * configuration objectには対象ファイル(files)、plugin, rule, ignore, その他の設定などが書ける
+   * 適応するruleが重複した場合、配列の後ろのものが優先される
+   */
   js.configs.recommended,
   {
     rules: {
