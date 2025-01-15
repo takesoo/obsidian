@@ -47,6 +47,14 @@ message.create({images: [...]})
 message.images.attach(params[:images])
 ```
 ### url生成
+```ruby
+if file.image?
+	url_for(file.variant(resize_to_limit: [3456, 3018]))
+else
+	rails_blob_url(file)
+end
+
+```
 ### ダイレクトアップロード
 クライアントサイドからストレージにアップロードして、後からActiveRecordと紐づける方法。
 クロスオリジンリクエストを許可する必要がある。
