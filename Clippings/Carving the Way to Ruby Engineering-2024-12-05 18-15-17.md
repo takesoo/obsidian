@@ -1,5 +1,5 @@
 ---
-finished reading: false
+finished reading: true
 favorite: false
 tags:
   - clippings
