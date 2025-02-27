@@ -5,7 +5,8 @@ macの[[パッケージ管理システム]]としてデファクトスタンダ�
 
 特徴
 - 管理者ユーザーでなくても使用できる
-- インストール先は`/usr/local/Cellar/`で、`/usr/local/bin`にシンボリックリンクする（[[usrディレクトリ]]）
+- Intel Macの場合、パッケージのインストール先は`/usr/local/Cellar/`で、`/usr/local/bin`にシンボリックリンクする（[[usrディレクトリ]]）
+- Apple Siliconの場合は/opt/homebrew/Cellarと/opt/homebrew/opt
 
 ```shell
 #パッケージ検索
