@@ -23,7 +23,7 @@ Data Manipulation Language
 
 [[SQLの実行順序]]に注意する。
 
-OVER
+[[OVER]]
 PARTITION BY
 GROUP BY
 DISTINCT
