@@ -22,3 +22,18 @@ Data Manipulation Language
 - INSERT 
 
 [[SQLの実行順序]]に注意する。
+
+OVER
+PARTITION BY
+GROUP BY
+DISTINCT
+WINDOW関数
+EXIST
+HAVING
+
+SQLが遅くなる要因
+join
+DISTINCT
+サブクエリの多様
+HAVINGの過剰利用
+order by
