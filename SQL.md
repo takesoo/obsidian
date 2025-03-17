@@ -37,3 +37,10 @@ DISTINCT
 サブクエリの多様
 HAVINGの過剰利用
 order by
+
+月毎にグループする
+```sql
+select DATE_FORMAT(`column`, '%Y-%m') as month, count(`column`) as count
+from 'tests'
+group by grouping_column;
+```
