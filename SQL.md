@@ -44,3 +44,34 @@ select DATE_FORMAT(`column`, '%Y-%m') as month, count(`column`) as count
 from 'tests'
 group by grouping_column;
 ```
+
+サブクエリ
+FROM句
+あまり使い道はない
+```sql
+select s1.age, s1.age_count
+from (
+	select age, count(age) as age_count
+	from students
+	group by age
+) as s1
+```
+WHERE句
+```sql
+# 14歳の生徒が受講するコース
+select distinct courseId
+from enrollments
+where studentId in (
+	select id
+	from students
+	where age = 14
+);
+```
+SELECT文の列指定
+```sql
+select name, age, (
+	select avg(age)
+	from students
+)
+from students;
+```
