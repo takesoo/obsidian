@@ -44,3 +44,9 @@ D attach 'host=localhost user=root port=3306 database=database password=password
 D use mysqldb;
 D select * from members limit 5;
 ```
+
+```sql
+# create tableでduckdb tableを作成できる
+D create table organizations as select * from 'organizations.parquet';
+D select * from organizations;
+```
