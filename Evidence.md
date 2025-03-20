@@ -7,4 +7,6 @@ tags: []
 - データソースはsourcesディレクトリ
 	- sources/source-name
 		- connection.yaml: /settingsページ経由で作成される、データソースへの接続情報ファイル。
-		- 
+		- source_query.sql: 
+			- データソースからクエリするためのファイル。マークダウン内で`source-name.source_query`で参照する。
+	- source queryを変更したら`npm run sources`を実行する。デプロイ前のビルド時などで。開発サーバーが立ち上がってるなら不要。
