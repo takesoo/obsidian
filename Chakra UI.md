@@ -1,6 +1,7 @@
 ---
 tags:
   - ComponentLiblary
+  - CSS-in-JS
 ---
 ## Getting Start
 https://v2.chakra-ui.com/getting-started
