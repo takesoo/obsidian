@@ -67,7 +67,7 @@ src/features/awesome-feature
 +-- utils       # utility functions for a specific feature
 ```
 - apiディレクトリの処理が機能間で共有されるなら、apiディレクトリをfeaturesの外に配置するのもOK
-- [[バレルファイル]]は[[vite]]だとパフォーマンスの低下につながるので推奨しない。
+- [[バレルファイル]]は[[Vite]]だとパフォーマンスの低下につながるので推奨しない。
 - [[import/no-restricted-paths]]でimportできるパスを制限することで、各機能の独立性を確保する。コードの依存関係も制限することができる。
 ## Components And Styling
 ### コンポーネントのベストプラクティス

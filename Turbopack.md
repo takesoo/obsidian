@@ -2,6 +2,7 @@
 tags:
   - JavaScript
   - TypeScript
+  - モジュールバンドラ
 ---
 - JavaScript, TypeScript向けに最適化された増分バンドラー
 - [[Next.js]]に組み込まれている
