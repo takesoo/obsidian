@@ -8,6 +8,14 @@ tags:
 ```js
 import { useReducer } from 'react';
 
+/*
+ * reducer関数
+ * @params
+ * state 現在のstate
+ * action　actionオブジェクト
+ * @return
+ * 変更後のstate
+ */
 function reducer(state, action) {
 	switch(action){
 		case 'increment':
@@ -24,11 +32,32 @@ function MyComponent() {
 	);
 
 	function handleClick() {
-		// dispatchを実行。actionを引数に渡す。
+		// dispatch関数にactionオブジェクトを引数で渡すと、reducer関数が実行される
 		dispatch({ type: 'increment' })
 	}
 }
 ```
 
-- dispatch: stateの更新とリレンダリングをトリガーする関数。
-- reducer: dispatchから受け取ったactionと、store内のstateをもとに、変更されたstateを返す純粋関数
+- dispatch: stateの更新とリレンダリングをトリガーする関数。ユーザーアクションをリデューサーに「派遣」する
+- reducer: dispatchから受け取ったactionと、store内のstateをもとに、変更されたstateを返す[[純粋関数]]
+	- [[immer]]を使用することで元のstateを不変にしたままstate更新ができるようになる。reducerを純粋関数として実装できる
+```js
+// reducer
+// 元のstateは残したまま、draft作成して差し替える。
+function reducer(draft, acrion) {
+	switch(action) {
+		case 'increment':
+			return draft.age + 1
+	}
+}
+
+// component
+import { useImmerReducer } from 'use-immer';
+
+export default function MyComponent() {
+	const [state, dispatch] = useImmerReducer(
+		reducer,
+		{ age: 42 }
+	);
+}
+```
