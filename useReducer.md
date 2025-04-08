@@ -61,3 +61,5 @@ export default function MyComponent() {
 	);
 }
 ```
+- [[useContext]]と組み合わせることで巨大な状態管理に対応することができる
+	- https://ja.react.dev/learn/scaling-up-with-reducer-and-context

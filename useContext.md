@@ -78,3 +78,5 @@ const { save } = useMyContext(); // saveメソッドを呼び出せるように�
 ```
 ==Contextの中身が知りたければ、createContextとProviderで何を渡しているかを調べる==
 
+- [[useReducer]]と組み合わせることで巨大な状態管理に対応することができる
+	- https://ja.react.dev/learn/scaling-up-with-reducer-and-context
