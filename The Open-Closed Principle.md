@@ -8,3 +8,30 @@ aliases:
 - インターフェースを用いて設計することで実現できる。呼び出す側のクラスがインターフェースに依存するようにすることで、新しい機能を実装したクラスがインターフェースに準拠していれば、再利用が可能になる
 - [[オブジェクト指向]]の[[ポリモーフィズム]]はOCPの実装方法の代表例
 - [[ストラテジパターン|Strategy Pattern]]、[[Observer Pattern]]、[[Template Pattern]]、[[Decoratorパターン]]などもOCPの実現例
+```mermaid
+classDiagram
+    class Shape {
+        <<interface>>
+        +area() float
+    }
+
+    class Circle {
+        -radius: float
+        +area() float
+    }
+
+    class Rectangle {
+        -width: float
+        -height: float
+        +area() float
+    }
+
+    class AreaCalculator {
+        +totalArea(shapes: List~Shape~) float
+    }
+
+    Shape <|.. Circle
+    Shape <|.. Rectangle
+    AreaCalculator --> Shape : uses
+
+```
