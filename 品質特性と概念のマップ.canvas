@@ -3,7 +3,6 @@
 		{"id":"908464ffab1bcf78","type":"file","file":"再構築.md","x":40,"y":158,"width":400,"height":400},
 		{"id":"98569b1740b235c1","type":"file","file":"拡張性.md","x":-1000,"y":158,"width":400,"height":400},
 		{"id":"419c9575fbb0896d","type":"file","file":"変更容易性.md","x":-160,"y":-420,"width":400,"height":400},
-		{"id":"13df1db60020574d","type":"file","file":"単一責任の原則.md","x":-356,"y":2042,"width":400,"height":400},
 		{"id":"6db846ed3b0e34c6","type":"file","file":"パッケージ化.md","x":900,"y":845,"width":400,"height":400},
 		{"id":"f12f316dcfd91c77","type":"file","file":"再利用性.md","x":1460,"y":849,"width":400,"height":400},
 		{"id":"fd8efc7a215651bd","type":"file","file":"インターフェース.md","x":-1855,"y":1545,"width":400,"height":400},
@@ -13,9 +12,6 @@
 		{"id":"c1438e37d6b1b184","type":"file","file":"モジュール結合度.md","x":-1095,"y":1488,"width":400,"height":400},
 		{"id":"6592dcf0624b60a3","type":"file","file":"The Open-Closed Principle.md","x":-1960,"y":845,"width":400,"height":400},
 		{"id":"7076e08b2a6057c1","type":"file","file":"直交性.md","x":-1400,"y":845,"width":400,"height":400},
-		{"id":"fbc78e44f68a9086","type":"file","file":"カプセル化.md","x":-220,"y":1460,"width":400,"height":400},
-		{"id":"0db33a0fe98edd4e","type":"file","file":"凝集度.md","x":140,"y":2053,"width":400,"height":400},
-		{"id":"18dcae828244dac8","type":"file","file":"抽象化.md","x":40,"y":849,"width":400,"height":400},
 		{"id":"7b1e2b3fc56344ce","type":"text","text":"分割統治","x":-145,"y":660,"width":250,"height":60},
 		{"id":"ee0b86d509cecfb6","type":"file","file":"効率性.md","x":1520,"y":-420,"width":400,"height":400},
 		{"id":"2b22bbe19f1906c3","type":"file","file":"信頼性.md","x":1980,"y":-400,"width":400,"height":400},
@@ -23,7 +19,14 @@
 		{"id":"fc1f23f0ec5bd149","type":"file","file":"相互運用性.md","x":1060,"y":-820,"width":400,"height":400},
 		{"id":"b6f4fa4eeedae681","type":"text","text":"ソフトウェアの品質を上げるには","x":1595,"y":-1360,"width":250,"height":60},
 		{"id":"bcbb0348d3fa1732","type":"file","file":"保守性.md","x":60,"y":-1020,"width":400,"height":400},
-		{"id":"ca71cbc5498361f6","type":"file","file":"移植性.md","x":580,"y":-880,"width":400,"height":400}
+		{"id":"ca71cbc5498361f6","type":"file","file":"移植性.md","x":580,"y":-880,"width":400,"height":400},
+		{"id":"db9f6e0520463277","x":-420,"y":-1020,"width":400,"height":400,"type":"file","file":"機能適合性.md"},
+		{"id":"6180587bd712995e","x":-360,"y":-1600,"width":400,"height":400,"type":"file","file":"使用性.md"},
+		{"id":"4c90aa2e6b8e759a","x":2140,"y":-1500,"width":400,"height":400,"type":"file","file":"情報セキュリティ.md"},
+		{"id":"fbc78e44f68a9086","type":"file","file":"カプセル化.md","x":-60,"y":1545,"width":400,"height":400},
+		{"id":"0db33a0fe98edd4e","type":"file","file":"凝集度.md","x":-610,"y":1488,"width":400,"height":400},
+		{"id":"13df1db60020574d","type":"file","file":"単一責任の原則.md","x":140,"y":2113,"width":400,"height":400},
+		{"id":"18dcae828244dac8","type":"file","file":"抽象化.md","x":-460,"y":2083,"width":400,"height":400}
 	],
 	"edges":[
 		{"id":"b9f67e8c304c0c28","fromNode":"419c9575fbb0896d","fromSide":"bottom","toNode":"98569b1740b235c1","toSide":"top"},
@@ -44,8 +47,6 @@
 		{"id":"84d4f37476be0d4c","fromNode":"7b1e2b3fc56344ce","fromSide":"bottom","toNode":"fbc78e44f68a9086","toSide":"top"},
 		{"id":"6cad86e41dcf4d7c","fromNode":"7076e08b2a6057c1","fromSide":"bottom","toNode":"c1438e37d6b1b184","toSide":"top"},
 		{"id":"c7a86c1d32d57f26","fromNode":"7b1e2b3fc56344ce","fromSide":"bottom","toNode":"7076e08b2a6057c1","toSide":"top"},
-		{"id":"6ea67de68fb67501","fromNode":"fbc78e44f68a9086","fromSide":"bottom","toNode":"0db33a0fe98edd4e","toSide":"top"},
-		{"id":"2f186139910a6609","fromNode":"7b1e2b3fc56344ce","fromSide":"bottom","toNode":"18dcae828244dac8","toSide":"top"},
 		{"id":"c1412240da97079f","fromNode":"908464ffab1bcf78","fromSide":"bottom","toNode":"7b1e2b3fc56344ce","toSide":"top"},
 		{"id":"2beff92fc9833519","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"ee0b86d509cecfb6","toSide":"top"},
 		{"id":"cf227cabbc13080c","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"2b22bbe19f1906c3","toSide":"top"},
@@ -56,6 +57,10 @@
 		{"id":"de9add64b466c95c","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"fc1f23f0ec5bd149","toSide":"top"},
 		{"id":"89b4f014b6ad2bb6","fromNode":"725b134fbf77a2dd","fromSide":"bottom","toNode":"c1438e37d6b1b184","toSide":"top"},
 		{"id":"7f5c4de94078e2f8","fromNode":"725b134fbf77a2dd","fromSide":"bottom","toNode":"fbc78e44f68a9086","toSide":"top"},
-		{"id":"6cc7c48f695af0ab","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"ca71cbc5498361f6","toSide":"top"}
+		{"id":"6cc7c48f695af0ab","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"ca71cbc5498361f6","toSide":"top"},
+		{"id":"1c22a0ad7fcdb940","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"db9f6e0520463277","toSide":"top"},
+		{"id":"fdcc32f7f2697c8f","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"6180587bd712995e","toSide":"right"},
+		{"id":"aed1d367b54bc15f","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"4c90aa2e6b8e759a","toSide":"left"},
+		{"id":"26e25f7021239a46","fromNode":"7b1e2b3fc56344ce","fromSide":"bottom","toNode":"0db33a0fe98edd4e","toSide":"top"}
 	]
 }
