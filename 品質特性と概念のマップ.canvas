@@ -1,6 +1,5 @@
 {
 	"nodes":[
-		{"id":"bcbb0348d3fa1732","type":"file","file":"保守性.md","x":-461,"y":158,"width":400,"height":400},
 		{"id":"908464ffab1bcf78","type":"file","file":"再構築.md","x":40,"y":158,"width":400,"height":400},
 		{"id":"98569b1740b235c1","type":"file","file":"拡張性.md","x":-1000,"y":158,"width":400,"height":400},
 		{"id":"419c9575fbb0896d","type":"file","file":"変更容易性.md","x":-160,"y":-420,"width":400,"height":400},
@@ -19,15 +18,15 @@
 		{"id":"0db33a0fe98edd4e","type":"file","file":"凝集度.md","x":140,"y":2053,"width":400,"height":400},
 		{"id":"18dcae828244dac8","type":"file","file":"抽象化.md","x":40,"y":849,"width":400,"height":400},
 		{"id":"7b1e2b3fc56344ce","type":"text","text":"分割統治","x":-145,"y":660,"width":250,"height":60},
-		{"id":"fc1f23f0ec5bd149","x":820,"y":-420,"width":400,"height":400,"type":"file","file":"相互運用性.md"},
-		{"id":"ee0b86d509cecfb6","x":1520,"y":-420,"width":400,"height":400,"type":"file","file":"効率性.md"},
-		{"id":"2b22bbe19f1906c3","x":1980,"y":-400,"width":400,"height":400,"type":"file","file":"信頼性.md"},
-		{"id":"b6f4fa4eeedae681","x":1660,"y":-780,"width":250,"height":60,"type":"text","text":"ソフトウェアの品質を上げるには"},
-		{"id":"725b134fbf77a2dd","x":2480,"y":-400,"width":400,"height":400,"type":"file","file":"テスト容易性.md"}
+		{"id":"ee0b86d509cecfb6","type":"file","file":"効率性.md","x":1520,"y":-420,"width":400,"height":400},
+		{"id":"2b22bbe19f1906c3","type":"file","file":"信頼性.md","x":1980,"y":-400,"width":400,"height":400},
+		{"id":"725b134fbf77a2dd","type":"file","file":"テスト容易性.md","x":2480,"y":-400,"width":400,"height":400},
+		{"id":"bcbb0348d3fa1732","type":"file","file":"保守性.md","x":360,"y":-1080,"width":400,"height":400},
+		{"id":"fc1f23f0ec5bd149","type":"file","file":"相互運用性.md","x":1060,"y":-820,"width":400,"height":400},
+		{"id":"b6f4fa4eeedae681","type":"text","text":"ソフトウェアの品質を上げるには","x":1595,"y":-1360,"width":250,"height":60}
 	],
 	"edges":[
 		{"id":"b9f67e8c304c0c28","fromNode":"419c9575fbb0896d","fromSide":"bottom","toNode":"98569b1740b235c1","toSide":"top"},
-		{"id":"7df528ba77efb40e","fromNode":"419c9575fbb0896d","fromSide":"bottom","toNode":"bcbb0348d3fa1732","toSide":"top"},
 		{"id":"1b11571e498552ad","fromNode":"419c9575fbb0896d","fromSide":"bottom","toNode":"908464ffab1bcf78","toSide":"top"},
 		{"id":"871fb96337db392f","fromNode":"419c9575fbb0896d","fromSide":"bottom","toNode":"ca71cbc5498361f6","toSide":"top"},
 		{"id":"d4c4a2d64122f5b1","fromNode":"98569b1740b235c1","fromSide":"bottom","toNode":"c1438e37d6b1b184","toSide":"top"},
@@ -36,7 +35,7 @@
 		{"id":"84f4e19342c01b75","fromNode":"c1438e37d6b1b184","fromSide":"bottom","toNode":"5476238daadac7af","toSide":"top"},
 		{"id":"1f344a8e60e2344e","fromNode":"c1438e37d6b1b184","fromSide":"bottom","toNode":"49eefcfa1d72383b","toSide":"top"},
 		{"id":"fd2b069aee155b0e","fromNode":"c1438e37d6b1b184","fromSide":"bottom","toNode":"bc9de657f6d8773d","toSide":"top"},
-		{"id":"aa92e144c2a59f66","fromNode":"bcbb0348d3fa1732","fromSide":"bottom","toNode":"c1438e37d6b1b184","toSide":"top"},
+		{"id":"aa92e144c2a59f66","fromNode":"419c9575fbb0896d","fromSide":"bottom","toNode":"c1438e37d6b1b184","toSide":"top"},
 		{"id":"488118d3bdf7327d","fromNode":"7076e08b2a6057c1","fromSide":"bottom","toNode":"fd8efc7a215651bd","toSide":"top"},
 		{"id":"fca02b38ec89d5ce","fromNode":"7b1e2b3fc56344ce","fromSide":"bottom","toNode":"6db846ed3b0e34c6","toSide":"top"},
 		{"id":"37a20ea85f28984f","fromNode":"6db846ed3b0e34c6","fromSide":"bottom","toNode":"c1438e37d6b1b184","toSide":"top"},
@@ -44,7 +43,7 @@
 		{"id":"4073213a6d9b5faa","fromNode":"908464ffab1bcf78","fromSide":"bottom","toNode":"f12f316dcfd91c77","toSide":"top"},
 		{"id":"04e17af94e41d0a0","fromNode":"ca71cbc5498361f6","fromSide":"bottom","toNode":"f12f316dcfd91c77","toSide":"top"},
 		{"id":"5c27280f055c024d","fromNode":"fbc78e44f68a9086","fromSide":"bottom","toNode":"13df1db60020574d","toSide":"top"},
-		{"id":"c28f0410f2bc1fb8","fromNode":"bcbb0348d3fa1732","fromSide":"bottom","toNode":"7b1e2b3fc56344ce","toSide":"top"},
+		{"id":"c28f0410f2bc1fb8","fromNode":"419c9575fbb0896d","fromSide":"bottom","toNode":"7b1e2b3fc56344ce","toSide":"top"},
 		{"id":"84d4f37476be0d4c","fromNode":"7b1e2b3fc56344ce","fromSide":"bottom","toNode":"fbc78e44f68a9086","toSide":"top"},
 		{"id":"6cad86e41dcf4d7c","fromNode":"7076e08b2a6057c1","fromSide":"bottom","toNode":"c1438e37d6b1b184","toSide":"top"},
 		{"id":"c7a86c1d32d57f26","fromNode":"7b1e2b3fc56344ce","fromSide":"bottom","toNode":"7076e08b2a6057c1","toSide":"top"},
@@ -53,6 +52,12 @@
 		{"id":"c1412240da97079f","fromNode":"908464ffab1bcf78","fromSide":"bottom","toNode":"7b1e2b3fc56344ce","toSide":"top"},
 		{"id":"2beff92fc9833519","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"ee0b86d509cecfb6","toSide":"top"},
 		{"id":"cf227cabbc13080c","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"2b22bbe19f1906c3","toSide":"top"},
-		{"id":"c134f6795ec5d5f4","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"725b134fbf77a2dd","toSide":"top"}
+		{"id":"c134f6795ec5d5f4","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"725b134fbf77a2dd","toSide":"top"},
+		{"id":"d307f43f1efc36dd","fromNode":"bcbb0348d3fa1732","fromSide":"bottom","toNode":"419c9575fbb0896d","toSide":"top"},
+		{"id":"3cafa8819cced06c","fromNode":"bcbb0348d3fa1732","fromSide":"bottom","toNode":"f12f316dcfd91c77","toSide":"top"},
+		{"id":"a7d6e59ad636732d","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"bcbb0348d3fa1732","toSide":"top"},
+		{"id":"de9add64b466c95c","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"fc1f23f0ec5bd149","toSide":"top"},
+		{"id":"89b4f014b6ad2bb6","fromNode":"725b134fbf77a2dd","fromSide":"bottom","toNode":"c1438e37d6b1b184","toSide":"top"},
+		{"id":"7f5c4de94078e2f8","fromNode":"725b134fbf77a2dd","fromSide":"bottom","toNode":"fbc78e44f68a9086","toSide":"top"}
 	]
 }
