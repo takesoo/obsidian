@@ -18,7 +18,12 @@
 		{"id":"fbc78e44f68a9086","type":"file","file":"カプセル化.md","x":-220,"y":1460,"width":400,"height":400},
 		{"id":"0db33a0fe98edd4e","type":"file","file":"凝集度.md","x":140,"y":2053,"width":400,"height":400},
 		{"id":"18dcae828244dac8","type":"file","file":"抽象化.md","x":40,"y":849,"width":400,"height":400},
-		{"id":"7b1e2b3fc56344ce","type":"text","text":"分割統治","x":-145,"y":660,"width":250,"height":60}
+		{"id":"7b1e2b3fc56344ce","type":"text","text":"分割統治","x":-145,"y":660,"width":250,"height":60},
+		{"id":"fc1f23f0ec5bd149","x":820,"y":-420,"width":400,"height":400,"type":"file","file":"相互運用性.md"},
+		{"id":"ee0b86d509cecfb6","x":1520,"y":-420,"width":400,"height":400,"type":"file","file":"効率性.md"},
+		{"id":"2b22bbe19f1906c3","x":1980,"y":-400,"width":400,"height":400,"type":"file","file":"信頼性.md"},
+		{"id":"b6f4fa4eeedae681","x":1660,"y":-780,"width":250,"height":60,"type":"text","text":"ソフトウェアの品質を上げるには"},
+		{"id":"725b134fbf77a2dd","x":2480,"y":-400,"width":400,"height":400,"type":"file","file":"テスト容易性.md"}
 	],
 	"edges":[
 		{"id":"b9f67e8c304c0c28","fromNode":"419c9575fbb0896d","fromSide":"bottom","toNode":"98569b1740b235c1","toSide":"top"},
@@ -45,6 +50,9 @@
 		{"id":"c7a86c1d32d57f26","fromNode":"7b1e2b3fc56344ce","fromSide":"bottom","toNode":"7076e08b2a6057c1","toSide":"top"},
 		{"id":"6ea67de68fb67501","fromNode":"fbc78e44f68a9086","fromSide":"bottom","toNode":"0db33a0fe98edd4e","toSide":"top"},
 		{"id":"2f186139910a6609","fromNode":"7b1e2b3fc56344ce","fromSide":"bottom","toNode":"18dcae828244dac8","toSide":"top"},
-		{"id":"c1412240da97079f","fromNode":"908464ffab1bcf78","fromSide":"bottom","toNode":"7b1e2b3fc56344ce","toSide":"top"}
+		{"id":"c1412240da97079f","fromNode":"908464ffab1bcf78","fromSide":"bottom","toNode":"7b1e2b3fc56344ce","toSide":"top"},
+		{"id":"2beff92fc9833519","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"ee0b86d509cecfb6","toSide":"top"},
+		{"id":"cf227cabbc13080c","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"2b22bbe19f1906c3","toSide":"top"},
+		{"id":"c134f6795ec5d5f4","fromNode":"b6f4fa4eeedae681","fromSide":"bottom","toNode":"725b134fbf77a2dd","toSide":"top"}
 	]
 }
