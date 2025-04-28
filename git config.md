@@ -1,12 +1,8 @@
 ---
-Tags:
+tags:
   - ssh
   - 公開鍵
-Status: Draft
-TechArticles:
-  - "[[SSH]]"
-Last edited time: Invalid date
-Created time: Invalid date
+  - Git
 ---
 ## Gitの設定ファイルは３種類
 
