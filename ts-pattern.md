@@ -2,7 +2,7 @@
 tags:
   - npm
 ---
-パターンマッチライブラリ
+パターンマッチングライブラリ
 ```js
 import { match, P } from 'ts-pattern';
 
@@ -24,3 +24,4 @@ const html = match(result)
 ```
 
 [gvergnaud/ts-pattern: 🎨 The exhaustive Pattern Matching library for TypeScript, with smart type inference.](https://github.com/gvergnaud/ts-pattern)
+[ts-patternでTypeScriptにパターンマッチングを持ち込み、より型安全な世界へ](https://zenn.dev/aki202/articles/5d725c080640f9)
