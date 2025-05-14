@@ -65,7 +65,12 @@
 		{"id":"e36403a95045e257","type":"text","text":"沢木が旅したような時代。まだ情報の海が世界を覆う前。パッチワークの世界。","x":240,"y":-73,"width":250,"height":102},
 		{"id":"5183015026d83a7e","type":"text","text":"文化を知る","x":-1060,"y":-133,"width":250,"height":60},
 		{"id":"b5e202ea55dc5819","type":"text","text":"言葉を覚える","x":-865,"y":-52,"width":250,"height":60},
-		{"id":"2ae7b13b8dec5164","x":-123,"y":1384,"width":263,"height":256,"type":"text","text":"トランプ詐欺\n睡眠薬強盗\nレイヴパーティー\n"}
+		{"id":"d6efb1c26611720b","x":-274,"y":1360,"width":250,"height":60,"type":"text","text":"ミャンマーで初めてバックパッカーを実感した"},
+		{"id":"f977d64b9b8e064e","x":-122,"y":1504,"width":250,"height":96,"type":"text","text":"民族衣装、噛みタバコ、人親切で懐こい人柄、喧騒、濃厚な異文化、わくわく"},
+		{"id":"a10539af73c4e92a","x":-428,"y":1504,"width":250,"height":60,"type":"text","text":"日系コンビニがない"},
+		{"id":"c3d3fd02eff6e332","x":340,"y":1420,"width":250,"height":60,"type":"text","text":"バックパッカー入門"},
+		{"id":"b298d7f2e653fc24","type":"text","text":"最初はやっぱりタイ、カオサンロード","x":377,"y":1220,"width":250,"height":60,"color":"4"},
+		{"id":"aa2820392f3c1707","x":627,"y":1420,"width":250,"height":192,"type":"text","text":"90年代のカオサン。たくさんの旅行代理店、情報ノート、ゲストハウス。旅の玄関口であり、帰ってくるところ。いろんな旅人の情報交換の場。"}
 	],
 	"edges":[
 		{"id":"14938677b7c2735e","fromNode":"b75469b109192a49","fromSide":"bottom","toNode":"72e50185457448de","toSide":"top"},
@@ -110,6 +115,10 @@
 		{"id":"69c4ed81951afa89","fromNode":"72e50185457448de","fromSide":"bottom","toNode":"279cbad9d73e0c68","toSide":"left"},
 		{"id":"4cf366d8cb947dc2","fromNode":"189f09a78caa1b64","fromSide":"bottom","toNode":"1ac1991779c39c6b","toSide":"top"},
 		{"id":"5f1f95bae56c54fa","fromNode":"189f09a78caa1b64","fromSide":"bottom","toNode":"1568842469d9e3fd","toSide":"top"},
-		{"id":"1b2d970ffa7025b8","fromNode":"189f09a78caa1b64","fromSide":"bottom","toNode":"0bbb7520c6085449","toSide":"top"}
+		{"id":"1b2d970ffa7025b8","fromNode":"189f09a78caa1b64","fromSide":"bottom","toNode":"0bbb7520c6085449","toSide":"top"},
+		{"id":"4cf52fccae7479f3","fromNode":"d6efb1c26611720b","fromSide":"bottom","toNode":"a10539af73c4e92a","toSide":"top"},
+		{"id":"f2c2aa0c4c33d958","fromNode":"d6efb1c26611720b","fromSide":"bottom","toNode":"f977d64b9b8e064e","toSide":"top"},
+		{"id":"c667b86ecf33b4cb","fromNode":"b298d7f2e653fc24","fromSide":"bottom","toNode":"c3d3fd02eff6e332","toSide":"top"},
+		{"id":"8c9ddcfa99253dcc","fromNode":"b298d7f2e653fc24","fromSide":"bottom","toNode":"aa2820392f3c1707","toSide":"top"}
 	]
 }
