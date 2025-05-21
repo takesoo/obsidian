@@ -29,3 +29,27 @@ tags:
 		- データ変更の物理ログ
 		- 目的：クラッシュリカバリに使用する
 	- [[Undoログ]]（InnoDB Undo Log）：
+
+```sql
+クライアント: BEGIN;
+↓
+MySQL: トランザクション開始
+↓
+クライアント: INSERT INTO users ...
+↓
+MySQL:
+  - Undoログに変更前の値を記録
+  - Redoログに変更内容（ページのバイト差分）を記録（まだフラッシュされていない）
+  - Buffer Pool の users ページを更新（ディスクにはまだ書かない）
+↓
+クライアント: COMMIT;
+↓
+MySQL:
+  - Redoログをディスクにフラッシュ（fsync）
+  - Binlog（論理ログ）に INSERT を書き込む（ROWまたはSQL）
+  - Binlog もディスクに fsync
+  - 両方のfsync完了 → COMMIT完了がクライアントに返る
+↓
+後でMySQLのバックグラウンドプロセスが変更されたページをディスクに書き込む（フラッシュ）
+
+```
