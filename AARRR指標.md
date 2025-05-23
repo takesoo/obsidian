@@ -91,3 +91,4 @@ toB
 ## Why
 - ユーザーの離脱状況を明確にするためのものであり、[[ファネルレポート]]の作成の際に使用する
 ## How
+toBの場合は受注が前に来て収益の発生になるので、問い合わせ（Acquisition）→トライアル（Activation）→受注（Revenue）→更新（Retention）→紹介（Referral）の順かも
