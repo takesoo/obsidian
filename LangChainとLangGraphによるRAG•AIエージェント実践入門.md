@@ -1,0 +1,11 @@
+---
+tags:
+  - book
+  - AI
+  - AIエージェント
+  - RAG
+---
+- LangChain
+	- LLMへの単発のリクエストを効率的に取り扱えるようにできるしくみ
+- LangGraph
+	- LLMに複数回
