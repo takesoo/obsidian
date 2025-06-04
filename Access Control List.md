@@ -3,7 +3,8 @@ tags:
   - AWS
 aliases:
   - ACL
-  - Access Control List
+  - NACL
+  - Network ACL
 ---
 # ACLとは
 
