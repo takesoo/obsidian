@@ -2,30 +2,22 @@
 tags:
   - react/hooks
 ---
-関数の計算結果をキャッシュ（メモ化）するためのフック。パフォーマンスの向上が期待できる。
+## what
+- 関数の計算結果をキャッシュ（[[メモ化]]）するためのフック
 ```js
-import { useMemo } from 'react';  
-
-function TodoList({ todos, tab }) {  
-	/**
-	calculateValueの戻り値を返す
-	*/
-	const visibleTodos = useMemo(  
-		/** 
-		calculateValue: キャッシュしたい値を計算する関数。
-		初回レンダリングでこの関数を呼び出す。
-		*/
-		() => filterTodos(todos, tab),
-		/**
-		dependencies: 依存配列。
-		この中の値が変わったときはcalculateValue関数が再実行される。
-		calculateValueのコード内で参照されるすべてのリアクティブな値のリスト。
-		*/
-		[todos, tab]  
-	);  
-	// ...  
+function ExpensiveComponent({ numbers }) {
+  // ❌ 毎回計算される
+  const sum = numbers.reduce((a, b) => a + b, 0);
+  
+  // ✅ numbersが変わった時だけ計算
+  const memoizedSum = useMemo(() => {
+    console.log('計算実行中...');
+    return numbers.reduce((a, b) => a + b, 0);
+  }, [numbers]);
+  
+  return <div>合計: {memoizedSum}</div>;
 }
 ```
 
-## メモ化
-同じ結果を返す処理について、初回のみ処理を実行してキャッシュしておくこと。
+## why
+- 重い計算結果をキャッシュすることでパフォーマンス向上につながる
