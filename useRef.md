@@ -6,19 +6,19 @@ aliases:
   - ref
 ---
 ## what
-- レンダリング時には不要な値を参照するためのhooks
-- refとは、レンダリングされたDOM要素やReactコンポーネントへの参照を保持するオブジェクト
-	- 特定のDOM要素への直接アクセスを可能にする。フォーカス設定やスクロール位置の調整などに使われる
-	- コンポーネントの再レンダリング間で値を保持できる
-	- refを変更しても再レンダリングは発生しない
+- ミュータブルなオブジェクト(ref)を提供するhooks
+- refはコンポーネントの再レンダリング間で値を保持できる
+- refを変更しても再レンダリングは発生しない
 ## why
-- refの活用方法は2つ
-	- refでDOMを操作するため
-	- 値の再生成を防ぐため（パフォーマンス改善）
+- コンポーネントにミュータブルなグローバル変数を提供する
+- Reactがクラスコンポーネントだったころのインスタンス変数の役割を関数コンポーネントで受け継いだのがuseRef
 ## how
 - useRefでrefを宣言
 - ref.currentで値を参照
 - ref.currentの値を更新しても再レンダリングは発生しない
+- refの活用方法は2つ
+	- refでDOMを操作する（フォーカス、スクロール）
+	- 値の再生成を防ぐ（パフォーマンス改善）
 ### refでDOMを操作する
 - フォームのフォーカス操作
 - ページトップへ移動
@@ -28,7 +28,7 @@ aliases:
 import { useRef } from 'react';
 
 function TextInputWithFocusButton() {
-  const inputEl = useRef(null);
+  const inputEl = useRef(null); // 初期値nullの場合はDOM要素がセットされる
 
   const onButtonClick = () => {
     // `current` points to the mounted text input element

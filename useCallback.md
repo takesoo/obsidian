@@ -32,8 +32,9 @@ export const ProductPage = () => {
 ```
 ## why
 - 関数の再作成を防ぐことでパフォーマンスの向上につながる
-- ==関数が都度作成されるとなぜパフォーマンスが悪い？==
 ```ts
+// この例は間違ってるかもしれない
+
 // ❌ 毎回新しい関数が作られる
 function Parent({ items }) {
   const handleClick = (id) => {
