@@ -3,7 +3,6 @@ tags:
   - react/hooks
 ---
 ## what
-- 
 - [[useEffect]]の一種
 - パフォーマンスを低下させる可能性があるので、[[useEffect]]の使用を推奨
 ```ts
