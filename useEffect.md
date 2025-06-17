@@ -10,12 +10,38 @@ aliases:
 - エフェクト：
 	- レンダー自体によって引き起こされる副作用を指定するためのもの。
 	- DOMへのコミットの後に実行される
+	- つまりDOMへの変更（副作用）を記述する時にエフェクトを使用する
 ## why
 - Reactコンポーネントはレンダーコードとイベントハンドラによって構成されるが、実際にはレンダー自体によって引き起こされる計算がもあり、それを記述するため
 - 外部システムと同期するために使用される
 ## how
 ```ts
 useEffect(setup, dependencies?)
+
+useEffect(() => {
+  let ignore = false;
+  async function startFetching() {
+    const json = await fetchTodos(userId);
+    if (!ignore) {
+      setTodos(json);
+    }
+  }
+
+  startFetching();
+
+  /**
+   * cleanup関数
+   * コンポーネントがアンマウントされる時に実行される
+   */
+  return () => {
+    ignore = true;
+  };
+
+  /**
+   * dependencies
+   * これらの値が変更されると再レンダリングされる
+   */
+}, [userId]);
 ```
 ### useEffectはできるだけ避ける
 #### 予期せぬ再実行
