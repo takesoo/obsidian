@@ -50,12 +50,47 @@ function Form() {
   const [firstName, setFirstName] = useState('Taylor');  
   const [lastName, setLastName] = useState('Swift');  
 
-// 🔴 Avoid: redundant state and unnecessary Effect  
-const [fullName, setFullName] = useState('');  
-useEffect(() => {  
-setFullName(firstName + ' ' + lastName);  
-}, [firstName, lastName]);  
-// ...  
+  // 🔴 Avoid: redundant state and unnecessary Effect  
+  const [fullName, setFullName] = useState('');  
+  useEffect(() => {  
+    setFullName(firstName + ' ' + lastName);  
+  }, [firstName, lastName]);  
+
+  // ✅ Good: calculated during rendering  
+  const fullName = firstName + ' ' + lastName;
+  // ...  
+}
+```
+#### propsが変更された時に全てのstateをリセットする
+```js
+// 🔴 userIdを変更した時にcommentが残ってしまうのでuseEffectのdependenciesにuserIdを追加した
+// 効率が悪い
+// userIdが変更されて再レンダーが発生（commentは古いまま）→DOM更新→エフェクト実行→再レンダー発生
+export default function ProfilePage({ userId }) {  
+  const [comment, setComment] = useState('');  
+
+  // 🔴 Avoid: Resetting state on prop change in an Effect  
+  useEffect(() => {  
+    setComment('');  
+  }, [userId]);  
+  // ...  
+}
+
+// userIdが変更されると初回レンダーが実行されるため、stateが初期化される
+// ✅ Divide Components, Give key
+export default function ProfilePage({ userId }) {  
+  return (  
+    <Profile  
+      userId={userId}  
+      key={userId}  
+    />  
+  );  
+}  
+
+function Profile({ userId }) {  
+  // ✅ This and any other state below will reset on key change automatically  
+  const [comment, setComment] = useState('');  
+  // ...  
 }
 ```
 - 既存のpropsやstateからstateを計算してはいけない（だいたいエフェクトを使って計算してる）
