@@ -43,6 +43,23 @@ useEffect(() => {
    */
 }, [userId]);
 ```
+### アンチパターン
+#### propsまたはstateに基づいてstateを更新する
+```js
+function Form() {  
+  const [firstName, setFirstName] = useState('Taylor');  
+  const [lastName, setLastName] = useState('Swift');  
+
+// 🔴 Avoid: redundant state and unnecessary Effect  
+const [fullName, setFullName] = useState('');  
+useEffect(() => {  
+setFullName(firstName + ' ' + lastName);  
+}, [firstName, lastName]);  
+// ...  
+}
+```
+- 既存のpropsやstateからstateを計算してはいけない（だいたいエフェクトを使って計算してる）
+- イベントハンドラでできることをエフェクトにやらせない
 ### useEffectはできるだけ避ける
 #### 予期せぬ再実行
 ```ts
