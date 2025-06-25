@@ -2,6 +2,7 @@
 tags:
   - nextjs
 ---
+## what
 [[Next.js]]のプロジェクト内でフロントエンドとバックエンドのロジックを分離して管理する方法を提供するしくみ
 `pages/api`ディレクトリにサーバーサイドコードを実装する
 	`pages/api/users.js`は`/api/users`エンドポイントに対応する
@@ -28,3 +29,7 @@ export default async function handler(req, res) {
 }
 ```
 
+## why
+- サーバーサイドでトークンなどの機密情報を扱い、ブラウザから隠蔽できる
+- 中間APIとして実装することでBFF
+- webhookの受け口
