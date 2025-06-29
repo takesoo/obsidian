@@ -21,6 +21,11 @@ Auth.jsの設定ファイル
 handlers
 - 実態は`{ GET, POST }`という形式のオブジェクト
 - 後述の`app/api/auth/[...nextauth]/route.ts`でimportされ、定義されることで、そこに届くGETとPOSTリクエストはAuth.jsが処理するようになる
+signIn
+- 後述の`components/sign-in.tsx`のようにsignIn関数を呼び出すことで認証プロセスを開始できる
+auth
+- 現在のリクエストにおける認証状況（セッションなど）を確認する関数
+- sessionをカスタマイズすることで独自の認証オブジェクトを作成できる
 ```ts
 import NextAuth from "next-auth"
 import GitHub from "next-auth/providers/github"
@@ -39,7 +44,6 @@ export const { GET, POST } = handlers
 ```
 
 ### components/sign-in.tsx
-
 ```tsx
 import { signIn } from "@/auth"
  
