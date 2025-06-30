@@ -1,6 +1,8 @@
 ---
 tags:
   - npm
+aliases:
+  - NextAuth.js
 ---
 ## what
 - [[OAuth]]などの認証を楽にしてくれるライブラリ
@@ -65,4 +67,57 @@ export default function SignIn() {
 ミドルウェアを使用することでユーザーのログイン状態をチェックできる
 ```ts
 export { auth as middleware } from "@/auth"
+```
+
+### useSession
+- サインイン状態やセッション情報を取得するhooks
+- [[クライアントコンポーネント]]でのみ動作、[[サーバーコンポーネント]]では`getServerSession`を使用する
+```ts
+// app.tsx
+import { SessionProvider } from "next-auth/react"
+
+export default function App({ Component, pageProps: { session, ...pageProps } }) {
+  return (
+    <SessionProvider session={session}>
+      <Component {...pageProps} />
+    </SessionProvider>
+  )
+}
+
+// components/component.ts
+import { useSession } from "next-auth/react"
+
+export default function Component() {
+  const { data: session, status } = useSession()
+  if (status === "authenticated") {
+    return <p>Signed in as {session.user.email}</p>
+  }
+  return <a href="/api/auth/signin">Sign in</a>
+}
+
+// API Routes
+import { authOptions } from "pages/api/auth/[...nextauth]"
+import { getServerSession } from "next-auth/next"
+
+export default async function handler(req, res) {
+  const session = await getServerSession(req, res, authOptions)
+
+  if (!session) {
+    res.status(401).json({ message: "You must be logged in." })
+    return
+  }
+
+  return res.json({
+    message: "Success",
+  })
+}
+
+// App Routes
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "pages/api/auth/[...nextauth]"
+
+export default async function Page() {
+  const session = await getServerSession(authOptions)
+  return <pre>{JSON.stringify(session, null, 2)}</pre>
+}
 ```
