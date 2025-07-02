@@ -2,6 +2,8 @@
 tags:
   - Linux/コマンド
 overview: 文字列を検索する
+aliases:
+  - global regular expression print
 ---
 - 検索条件には[[正規表現]]を使用できる
 ```bash
