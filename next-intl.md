@@ -36,7 +36,7 @@ tags:
     ├── i18n
     │   └── request.ts  リクエストに基づいて多言語設定オブジェクトを生成し、翻訳メッセージをサーバーコンポーネントに提供する。
     └── app
-        ├── layout.tsx
+        ├── layout.tsx  getLocaleによってlocaleを取得
         └── page.tsx
 ```
 
