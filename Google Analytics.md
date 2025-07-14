@@ -66,18 +66,19 @@ export default function RootLayout({
 }
 
 // app/page.tsx
-import { GoogleAnalytics } from '@next/third-parties/google'
+'use client'
  
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+import { sendGAEvent } from '@next/third-parties/google'
+ 
+export function EventButton() {
   return (
-    <html lang="en">
-      <body>{children}</body>
-      <GoogleAnalytics gaId="G-XYZ" />
-    </html>
+    <div>
+      <button
+        onClick={() => sendGAEvent('event', 'buttonClicked', { value: 'xyz' })}
+      >
+        Send Event
+      </button>
+    </div>
   )
 }
 ```
