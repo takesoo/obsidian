@@ -3,6 +3,7 @@ tags:
   - npm
 aliases:
   - NextAuth.js
+  - useSession
 ---
 ## what
 - [[OAuth]]などの認証を楽にしてくれるライブラリ
