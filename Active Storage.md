@@ -14,7 +14,7 @@ Ruby on Railsにおいてファイルを扱うための機能。ファイルは�
 
 ### active_storage_blobs
 [[ActiveStorageBlob|ActiveStorage::Blob]]モデルのテーブル
-[[BLOB]]の情報（識別キー、ファイル名、Content-Type、メタデータ、サイズなど）を保存するテーブル
+[[Blob]]の情報（識別キー、ファイル名、Content-Type、メタデータ、サイズなど）を保存するテーブル
 
 ### active_storage_attachments
 [[ActiveStorageAttachments|ActiveStorage::Attachments]]モデルのテーブル
