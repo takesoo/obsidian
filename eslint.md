@@ -58,7 +58,14 @@ export default [
   {
     rules: {
       "no-unused-vars": "error", // ["off" | "warn" | "error" ]
-      "no-undef": "error"
+      "no-undef": "error",
+      // フォーマット関連のルール
+
+	  'indent': ['error', 2, {
+	    SwitchCase: 1,
+	    ignoredNodes: ['JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild']
+	
+	}],
     }
   }
 ];
@@ -147,6 +154,7 @@ export default [
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit" // eslintの自動修正を有効にする
   },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint" // eslintでフォーマットもする場合はこれも
 }
 ```
 ## [[prettier]]との連携
