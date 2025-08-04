@@ -44,6 +44,7 @@ Manual Set Up
 - v9からの設定方式
 - `override`や`extends`という概念が廃止された
 - ruleやconfigはJSのモジュール解決の仕組みを使う
+- 書き方はjs or tsやフレームワークによって異なるので、それぞれのプラグインのドキュメントを参考にした上で判断する
 ```js
 import js from "@eslint/js";
 
