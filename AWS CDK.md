@@ -42,7 +42,7 @@ cdk destroy
 - 
 ## モジュールの探し方
 - [API Reference · AWS CDK](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html)
-- [Construct Hub](https://constructs.dev/)
+- 
 ---
 ```dataview
 table
