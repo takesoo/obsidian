@@ -3,7 +3,7 @@ tags:
   - コンピュータ
   - メモリ
 aliases:
-  - Random Access Memory
+  - RAM
 ---
 [[主記憶装置|メモリ]]の一種
 自由に読み書きができる
