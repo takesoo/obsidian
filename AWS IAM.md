@@ -4,6 +4,7 @@ tags:
 aliases:
   - Identity and Access Management
 ---
+## what
 - 認証認可
 - 「誰（何）が」「何に対して」「どのような操作を」「どの条件で」実行できるかを制御するサービス
 - 最小権限の原則
