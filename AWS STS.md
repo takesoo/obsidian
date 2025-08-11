@@ -1,6 +1,5 @@
 ---
 tags:
-  - AWS
   - AWS/STS
 aliases:
   - AWS Security Token Service
