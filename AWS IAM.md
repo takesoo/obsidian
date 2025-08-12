@@ -5,6 +5,7 @@ aliases:
   - Identity and Access Management
 ---
 ## what
+- [[AWS入門ブログリレー2024〜AWS IAM編〜  DevelopersIO-2025-08-12 08-58-19]]
 - 認証認可
 - 「誰（何）が」「何に対して」「どのような操作を」「どの条件で」実行できるかを制御するサービス
 - 最小権限の原則
