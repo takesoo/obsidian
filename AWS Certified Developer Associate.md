@@ -1,0 +1,22 @@
+- Step FunctionsのAPIアクション
+	- ステートマシンのアクティビティワーカーとは
+	- CreateActivity API
+	- GetActivity API
+	- SendTaskHeartbeat API
+	- SendTaskSuccess API
+	- SendTaskFailure API
+- DynamoDB
+	- DynamoDB Streams
+		- DynamoDBの変更を検知してLambdaを呼び出すイベントを作成できる。SNSトピックの作成はできない
+- セッションステータスの保持
+	- Redis用ElastiCache
+- Lambda実行環境
+	- 関数コード内だがハンドラーメソッド外でデータベース接続を初期化すると、データベース接続を他のLambdaとで再利用できる。ハンドラーメソッド内で初期化しているとLambda起動のたびに接続を生成する。
+- CodeDeployの設定ファイル(appspec.yml)の置き場所
+- サーバーレスアーキテクチャ
+	- Lambdaプロキシ統合のルート設定
+- CloudWatchとX-Ray
+- Lambda関数エイリアスと修飾ARNバージョン
+- SQSとSNS
+- ElastiCacheクラスターの書き込みスルー戦略
+- 
