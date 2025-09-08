@@ -19,4 +19,7 @@
 - Lambda関数エイリアスと修飾ARNバージョン
 - SQSとSNS
 - ElastiCacheクラスターの書き込みスルー戦略
+- StepFunctionsのエラー処理
+- AWS KMSとAWS Database Encryption SDK
+- Lambda関数のイベントソースマッピング
 - 
