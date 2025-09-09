@@ -13,3 +13,6 @@ tags:
 ステートマシン自体は[[Amazon States Language|ASL]]で書かれたJSON定義であり、実行(Execution)することで初期化される。
 各状態間でデータの受け渡しができる
 RetryやCatchを設定してエラーハンドリングを定義できる
+タスクタイプ
+- Service Task: AWSサービスを直接呼び出すタスク
+- Activity Task: アクティビティワーカー（外部のワーカープロセス）がタスクをポーリングで取得して処理する。
