@@ -11,7 +11,7 @@ aliases:
 		- docker build
 		- docker push ECR_REPO_URI:latest
 		- lambdaで↑のイメージを使用するように定義
-- 内部的にはFirecracker
+- 内部的にはFirecrackerという技術をベースに稼働している。コンテナのようなもの。
 - イベント: Lambdaの実行を起動するトリガーとなるデータや出来事
 	- API Gateway, S3, DynamoDB, CloudWatch Events, SQS, SNS
 - ハンドラー関数: Lambdaが実行する際のエントリーポイントとなる関数
@@ -38,3 +38,5 @@ def lambda_handler(event, context):
 	- 実行環境終了時に拡張機能へ通知され、クリーンアップ処理が行われる
 - コールドスタート: Lambda関数を1から起動させること
 - ウォームスタート: 起動済みのLambdaコンテナに対してInvokeフェーズだけ実行すること。
+- Lambda Extensions: Lambda関数と並行して実行される軽量なプロセスで、Lambda関数のライフサイクル全体を通じて動作し、監視、セキュリティ、ガバナンス、その他の機能を提供する
+	
