@@ -2,6 +2,8 @@
 aliases:
   - node package executer
 ---
+## what
+- node modulesを実行するコマンド
 - npm install + npm exec + npm delete
 - 一時的なパッケージインストールと実行
 - 環境の整理やディスクスペースの節約
