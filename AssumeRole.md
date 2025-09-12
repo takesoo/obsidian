@@ -6,7 +6,9 @@ aliases:
   - スイッチロール
   - SwitchRole
 ---
+## what
 - [[プリンシパル]]に一時的に[[IAMロール]]を付与する仕組み
+- コンソール上で「ロールの切り替え」をすることがSwitchRole。内部的にはAssumeRole APIを使用している。CLIやSDKではAssumeRoleと呼び、コンソール上ではSwitchRoleと呼ぶ感じ。
 
 1. AssumeRoleしたいIAMユーザーのポリシーで`sts:AssumeRole`を許可する（[[アイデンティティベースのポリシー]]）
 	```json
