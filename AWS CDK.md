@@ -16,9 +16,12 @@ npm install -g aws-cdk
 # はじめてCDKを使うAWSアカウントに対して実行する
 cdk bootstrap aws://ACCOUNT-NUMBER/REGION
 
+mkdir sample
+cd sample
+
 # cdkプロジェクトの初期化
 # gitリポジトリも作成される
-cdk init [project-name] --language typescript
+cdk init [app|lib|sample-app] --language=typescript
 
 # Cfnテンプレートをcdk.outに作成する
 cdk synth
@@ -30,6 +33,13 @@ cdk deploy
 cdk destroy
 ```
 
+---
+## 構成要素
+![[スクリーンショット 2025-09-17 10.25.34.png]]
+- App
+- Stack
+- Construct
+- Cloud Assembly
 ---
 ## ディレクトリ構成
 ![[Pasted image 20240330165238.png]]
