@@ -13,9 +13,16 @@ aliases:
 		- docker push ECR_REPO_URI:latest
 		- lambdaで↑のイメージを使用するように定義
 - 内部的にはFirecrackerという技術をベースに稼働している。コンテナのようなもの。
-- イベント: Lambdaの実行を起動するトリガーとなるデータや出来事
-	- API Gateway, S3, DynamoDB, CloudWatch Events, SQS, SNS
+- Lambda関数: AWS Lambdaで実行するアプリケーションそのもの
+	- コードは依存関係も含めてビルド、パッケージングした上でS3に暗号化されて保存される
+	- メモリ
+		- 128MB~3008MB
+		- 容量に応じてCPU能力なども比例する
+	- タイムアウト
+		- 最大900sec(15min)
+	- 実行ロール: AWSリソースへのアクセスを許可する[[IAMロール]]
 - ハンドラー関数: Lambdaが実行する際のエントリーポイントとなる関数
+	- json形式のイベントデータにアクセスできる
 ```python
 def lambda_handler(event, context):
     # event: イベントデータ
@@ -25,7 +32,15 @@ def lambda_handler(event, context):
         'body': 'Hello World'
     }
 ```
-- Execution Role: Lambdaが他のAWSサービスにアクセスするための[[IAMロール]]
+- イベントソース: Lambdaの実行を起動するトリガーとなるデータや出来事
+	- API Gateway, S3, DynamoDB, CloudWatch Events, SQS, SNS
+	- ポーリングベース: Lambdaがポーリングして処理するデータがある場合に実行する
+		- ストリームベース
+			- [[DynamoDB]], [[AWS Kinesis]], etc
+		- ストリーム以外
+			- 
+	- ポーリング以外: 呼び出し元のサービス側からLambdaを呼び出す
+		- イベントソールマッピング：呼び出し元のサービス側で、呼び出すLambdaファンクションの設定情報を保持する
 - Layer: 複数の関数で共有できるライブラリやコードのパッケージ
 - Lambda実行環境([Lambda 実行環境 - AWS Lambda](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/lambda-runtime-environment.html))
 ![[Pasted image 20250910093611.png]]
@@ -42,7 +57,6 @@ def lambda_handler(event, context):
 - Lambda Extensions: Lambda関数と並行して実行される軽量なプロセスで、Lambda関数のライフサイクル全体を通じて動作し、監視、セキュリティ、ガバナンス、その他の機能を提供する
 - Lambdaエイリアス：特定のバージョンに対するエイリアス。devやprodなど
 - 修飾ARN：バージョン番号やエイリアス名が末尾に付与されたLambda関数のARN。特定のバージョンを明確に指定して関数を呼び出すために使用される。
-- イベントソースマッピング：Lambdaがポーリング型のイベントソース([[AWS SQS]]など)からイベントを読み取り、Lambda関数を呼び出すための設定
 ## how
 ## ベストプラクティス・アンチパターン
 ## セキュリティ
