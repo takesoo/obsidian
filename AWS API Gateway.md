@@ -3,8 +3,18 @@ tags:
   - AWS
 ---
 ## what
-- フルマネージドAPI
+- フルマネージドなAPIの窓口
+	- 自動スケール
+	- OS管理不要
+	- 使用量に応じた課金
 - REST APIやWebSocket APIを作成、公開、維持、監視、保護できる
+- リージョンレベルで動作する
+- 
+### REST API
+
+### WebSocket API
+
+### 
 ### Lambdaプロキシ統合
 - API Gatewayと[[AWS Lambda]]を連携させる統合方式の一つで、最も一般的で推奨される方法
 - API Gatewayが受け取ったHTTPリクエストのすべての情報（ヘッダー、クエリパラメータ、パスパラメータ、ボディなど）を、JSONオブジェクトとしてLambda関数に渡す
@@ -31,4 +41,5 @@ prod ステージ:
 dev: LambdaAlias = dev
 	prod: LambdaAlias = prod
 	```
-	
+
+## 
