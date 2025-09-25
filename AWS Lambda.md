@@ -170,4 +170,6 @@ def lambda_handler(event, context):
 		- prod: CloudFormation
 	- エイリアスを使用したトラフィックシフトが可能
 ## セキュリティ
+- アカウント管理とIAM管理。最小権限の原則。
+- 認証情報をハードコーディングしない
 - 
