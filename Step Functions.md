@@ -5,19 +5,53 @@ tags:
 ## what
 - サーバーレスアプリケーションのワークフローを視覚的に設計・実行できるサービス。複数のAWSサービスを組み合わせて、複雑なビジネスロジックを分散システムとして構築できる。
 - ワークフロー全体をステートマシン(State Machine)と呼び、各ステップを状態(State)と呼ぶ。状態には以下のタイプがある
-	- Task状態：Lambda関数やAWSサービスの実行
-	- Choice状態：条件に基づく分岐処理
-	- Wait状態：指定時間の待機
-	- Parallel状態：複数タスクの並行実行
-	- Pass状態：データの変換や渡し
-	- Fail/Success状態：ワークフローの終了
+	- Task：Lambda関数やAWSサービスの実行
+	- Choice：条件に基づく分岐処理
+	- Wait指定時間の待機
+	- Parallel：複数タスクの並行実行。並列実行されるStateのうちいずれかが失敗すると、Parallel State全体が失敗扱いになる。
+	- Pass：データの変換や渡し
+	- Fail：実行結果を失敗として終了する
+	- Succeed状態：実行結果を成功として終了する
 - ステートマシン自体は[[Amazon States Language|ASL]]で書かれたJSON定義であり、実行(Execution)することで初期化される。
 - 各状態間でデータの受け渡しができる
 - RetryやCatchを設定してエラーハンドリングを定義できる
 - タスクタイプ
 	- Service Task: AWSサービスを直接呼び出すタスク
 	- Activity Task: アクティビティワーカー（外部のワーカープロセス）がタスクをポーリングで取得して処理する。
+- 実行方法・呼び出し元
+	- [[Amazon CloudWatch Events]]
+	- [[AWS API Gateway]]
+	- マネジメントコンソール
+	- AWS CLI
+	- 各種SDK
+- 呼び出し可能なAWSサービス
+	- [[AWS Lambda|Lambda]]
+	- [[DynamoDB]]
+	- [[AWS Batch]]
+	- [[AWS ECS|ECS]]
+	- [[AWS SNS]]
+	- [[AWS SQS]]
+	- [[AWS Glue]]
+	- [[Amazon SageMaker]]
+	- Activity
+		- サーバーやコンテナなどに実装したアプリケーションからポーリングすることで、独自定義の処理を実行する
+		- ハートビートを送って死活確認も可能
+- 入出力
+	- 入力
+		- InputPath
+			- InputPathフィールドで入力データから引用できる
+			- JsonPath構文をASLに指定する
+		- Parameters
+			- InputPathと異なりJSONが構成できるので、より柔軟
+	- 出力
+		- ResultPath
+			- ResultPathフィールドでレスポンスデータから引用できる
+			- JsonPath構文をASLに指定する
+		- OutputPath
+			- レスポンスデータの中から必要なキーだけに絞り込む
 ## how
-- Retry.MaxAttempts: リトライの最大試行回数
+- States: ステートマシンを構成するStateを指定する。複数含めることが可能。 
+- Retry: エラーハンドリング
+	- MaxAttempts: リトライの最大試行回数
 - HeartbeatSeconds: Activity Taskで長時間実行中の生存確認間隔
 - TimeoutSeconds: タスクを失敗とみなす最大タスク継続時間
