@@ -52,6 +52,15 @@ tags:
 ## how
 - States: ステートマシンを構成するStateを指定する。複数含めることが可能。 
 - Retry: エラーハンドリング
+	- ErrorEquals: リトライ対象とするエラーを指定
+	- IntervalSeconds: 最初のリトライまでの秒数
+	- BackoffRate: リトライ間隔を増加させる乗数
 	- MaxAttempts: リトライの最大試行回数
+- Catch: エラーハンドリング
+	- ErrorEquals: リトライ対象とするエラーを指定
+	- Next: 遷移させるState
+	- ResultPath: エラーの内容を出力に含める
 - HeartbeatSeconds: Activity Taskで長時間実行中の生存確認間隔
 - TimeoutSeconds: タスクを失敗とみなす最大タスク継続時間
+- ErrorEqualsにLambdaで定義した独自例外を指定することもできる
+- ローカル実行でテストできるStep Functions Localが便利
