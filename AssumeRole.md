@@ -41,6 +41,16 @@ aliases:
 3. [[AWS STS]]から一時認証情報を受け取る
 	`$ aws sts assume-role --role-arn arn:aws:iam::123456789:role/dev-role --role-session-name dev-session --profile dev-user`
 4. 一時認証情報を使って操作する
-
+## how
+### ターミナルアプリからassume roleする方法
+```bash
+# 一時的なクレデンシャルを要求
+$ aws sts assume-role \
+  --role-arn arn:aws:iam::xxxxxxxxxxxx:role/xxxxxxxxxxxx \ # スイッチ先のIAM RoleのARN 
+  --role-session-name foo-bar-session \ # セッション名 自由に指定できる 
+  --duration-second 900 \ 一時クレデンシャルの有効期限 900秒以上 
+  --profile foo-bar # assume-role をコールするユーザ情報
+# レスポンスのアクセスキーID, シークレットキー, セッショントークンを環境変数に格納すると、それ以降のawsコマンド実行はスイッチ先のアカウントに実行される
+```
 ---
 [イラストで理解するAssumeRoleの疑問](https://zenn.dev/fdnsy/articles/e98c43d9c3f611)
