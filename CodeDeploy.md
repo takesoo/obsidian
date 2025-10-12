@@ -62,3 +62,12 @@ tags:
 	- 
 - ECSの場合
 	- blue/greenデプロイ
+
+
+|                 | EC2                                       | オンプレミス                                    | Lambda                                                       | ECS                                          |
+| --------------- | ----------------------------------------- | ----------------------------------------- | ------------------------------------------------------------ | -------------------------------------------- |
+| 対象/方式           | In-Place, Blue/Green                      | In-Place                                  | Canary, Linear, All-at-once<br>（関数重み付けエイリアスによるトラフィックの段階的シフト） | 新旧タスクセットとロードバランサーのターゲットグループ切り替えによるBlue/Green |
+| デプロイ設定          | AllAtOnce, HalfAtOnce, OneAtATime, Custom | AllAtOnce, HalfAtOnce, OneAtATime, Custom | Canary, Linear, All-at-once                                  | Canary, Linear, All-at-once                  |
+| AppSpec（設定ファイル） |                                           |                                           |                                                              |                                              |
+| 必須コンポーネント       | CodeDeployAgent                           | CodeDeployAgent                           |                                                              |                                              |
+| ロールバック          | フック失敗やヘルス不良で自動ロールバック                      | フック失敗やヘルス不良で自動ロールバック                      | バリデーションフック失敗やCloudWatchアラームによるロールバック                         | バリデーション/アラームで中止・ロールバック                       |
