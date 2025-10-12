@@ -40,34 +40,25 @@ tags:
 	- 環境の定義：本番、ステージング
 	- サービスロール
 		- CodeDeployに付与するIAMロール
+		- EC2, Lambda, ECSへのアクセス許可
 		- AWS管理ポリシーが用意されている
 	- IAMインスタンスプロファイル
 		- EC2インスタンスに付与するIAMロール
-		- S3から配布物を取得できるようにする
+		- 配布物取得のためにS3へのアクセス許可
 
 ### appspec.yml
 - デプロイ時にサーバー上で何をするかの手順書
+- リビジョンのルートに配置する
+- デプロイ先（EC2/オンプレミス、Lambda、ECS）によって記述内容が異なる
 - 構成要素
 	- Resouces: デプロイする先とデプロイ方式の指定
 	- Hooks: デプロイの各ステップの間に差し込む処理
 ## how
-- EC2/オンプレミスの場合
-	- アプリケーション、デプロイグループ、アプリケーションリビジョン、デプロイメントの作成
-	- サービスロールの指定
-	- デプロイ方式の指定
-	- CodeDeployエージェントのインストール
-	- appspec.ymlファイルをルートディレクトリに配置
-- Lambda関数の場合
-	- 関数重み付けエイリアス
-	- 
-- ECSの場合
-	- blue/greenデプロイ
 
-
-|                 | EC2                                       | オンプレミス                                    | Lambda                                                       | ECS                                          |
-| --------------- | ----------------------------------------- | ----------------------------------------- | ------------------------------------------------------------ | -------------------------------------------- |
-| 対象/方式           | In-Place, Blue/Green                      | In-Place                                  | Canary, Linear, All-at-once<br>（関数重み付けエイリアスによるトラフィックの段階的シフト） | 新旧タスクセットとロードバランサーのターゲットグループ切り替えによるBlue/Green |
-| デプロイ設定          | AllAtOnce, HalfAtOnce, OneAtATime, Custom | AllAtOnce, HalfAtOnce, OneAtATime, Custom | Canary, Linear, All-at-once                                  | Canary, Linear, All-at-once                  |
-| AppSpec（設定ファイル） |                                           |                                           |                                                              |                                              |
-| 必須コンポーネント       | CodeDeployAgent                           | CodeDeployAgent                           |                                                              |                                              |
-| ロールバック          | フック失敗やヘルス不良で自動ロールバック                      | フック失敗やヘルス不良で自動ロールバック                      | バリデーションフック失敗やCloudWatchアラームによるロールバック                         | バリデーション/アラームで中止・ロールバック                       |
+|              | EC2                                                                          | オンプレミス                                                               | Lambda                                                                                   | ECS                                          |
+| ------------ | ---------------------------------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------- |
+| 対象/方式        | In-Place, Blue/Green                                                         | In-Place                                                             | Canary, Linear, All-at-once<br>（[[AWS Lambda#Lambdaエイリアス\|関数重み付けエイリアス]]によるトラフィックの段階的シフト） | 新旧タスクセットとロードバランサーのターゲットグループ切り替えによるBlue/Green |
+| デプロイ設定       | AllAtOnce, HalfAtOnce, OneAtATime, Custom                                    | AllAtOnce, HalfAtOnce, OneAtATime, Custom                            | Canary, Linear, All-at-once                                                              | Canary, Linear, All-at-once                  |
+| AppSpecの記述内容 | files, permissions, hooks                                                    | files, permissions, hooks                                            | 関数名、エイリアス、バリデーションフック                                                                     | サービス、タスク定義、ロードバランサーのターゲットグループ、フック            |
+| 必須コンポーネント    | CodeDeployAgentをサーバーにインストール。<br>IAMインスタンスプロファイルの作成。<br>CodeDeployサービスロールの作成。 | CodeDeployAgentをサーバーにインストール。<br>EC2 IAM ロールの作成。CodeDeployサービスロールの作成。 |                                                                                          |                                              |
+| ロールバックトリガー   | フック失敗<br>ヘルス不良                                                               | フック失敗<br>ヘルス不良                                                       | バリデーションフック失敗<br>CloudWatchアラーム発火                                                         | ヘルスチェック失敗<br>CloudWatchアラーム発火                |
