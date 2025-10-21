@@ -35,6 +35,11 @@ tags:
 	- カスタムルートを定義し、メッセージデータ内でカスタムルートを指定すると、そのルートが選択される
 
 
+|      | REST API                                                                       | WebSocket API                                                                                                                                                                 |
+| ---- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| url  | `https://<api-id>.execute-api.<region-id>.amazonaws.com/<stage-name>/...`      | `wss://<api-id>.execute-api.<region-id>.amazonaws.com/<stage-name>`<br><br>`https://<api-id>.execute-api.<region-id>.amazonaws.com/<stage-name>/@connections/<connection-id>` |
+| 認証認可 | エンドポイント単位で設定<br>- [[Amazon Cognito]]<br>- Lambda オーソライザー<br>- IAM認証<br>- APIキー | API単位で設定<br>- Lambda オーソライザー<br>- IAM認証                                                                                                                                       |
+
 ### 認証認可
 - RESTの場合はエンドポイント単位で認証設定が可能
 - WebSocketの場合はAPI単位での認証設定
