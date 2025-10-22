@@ -52,7 +52,18 @@ cdk destroy
 - 
 ## モジュールの探し方
 - [API Reference · AWS CDK](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html)
-- 
+## リソース命名
+- [AWS CDK の Construct ID はどのように命名するべきか？ | DevelopersIO](https://dev.classmethod.jp/articles/best-way-to-name-aws-cdk-construct-id/)
+- CDKでリソース名を指定するのは非推奨。CDK側で自動生成する方が更新の時に何かと都合がいい。
+- リソース名はConstractIdや[[CDK Pipelines]]のStage名から、[[AWS CloudFormation]]の論理idが生成され、論理idからリソース名が決定される
+- ベストプラクティス
+	- Construct IdはPascalCase
+	- Construct IDに`Construct`や`Stack`をつけない
+	- 技術詳細を含めない
+		- 🙅‍♀️ `new ApiGatewaySqsLambdaConstruct('ApiGatewaySqsLambda')`
+		- 論理idが変更されるとリソース再生成になるが、本番稼働中では再生成できないケースもあるため
+	- 親コンストラクトで表している情報を繰り返さない
+	- カスタムコンストラクトの中では`Resource`を使う。将来的にカスタムコンストラクトの外にリソース定義を移動させる想定があるなら`Default`を使う。
 ---
 ```dataview
 table
@@ -63,3 +74,4 @@ sort file.cday asc
 
 ---
 [実践！AWS CDK #1 導入 | DevelopersIO](https://dev.classmethod.jp/articles/cdk-practice-1-introduction/)
+[AWS CDK の Construct ID はどのように命名するべきか？ | DevelopersIO](https://dev.classmethod.jp/articles/best-way-to-name-aws-cdk-construct-id/)
