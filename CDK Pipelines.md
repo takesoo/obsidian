@@ -3,7 +3,7 @@ tags:
   - AWS
   - AWS/CDK
 ---
-- CDKの[[CodePipeline]]を利用したCI/CDのワークフローを構築してくれる、[[CDK Construct]]
+- CDKの[[Code Pipeline]]を利用したCI/CDのワークフローを構築してくれる、[[CDK Construct]]
 - CDK Pipelineを使用したスタックをデプロイすると以下の処理フローがCodePipelineに作成される
 	- Source：GitリポジトリのCDKソースコードを取得する
 	- Build：CDKソースコードからCloudFormationのスタックテンプレートが正常に作成されるかテストする
