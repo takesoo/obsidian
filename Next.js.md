@@ -80,7 +80,7 @@ tree -I node_modules
 	- [[スタティックサイトジェネレーション|Static Site Generation]]
 		- APIを叩く時は`getStaticProps`を使用する
 		- ビルド時にサーバーサイドでデータフェッチする
-		- ビルドでHTMLファイルを生成するので[[静的ホスティングサービス]]へのデプロイでOK
+		- ビルドでHTMLファイルを生成するので[[ホスティングサービス]]へのデプロイでOK
 	- [[サーバーサイドレンダリング|Server Side Rendering]]
 		- APIっを叩く時は`getServerSideProps`を使用する
 		- リクエスト時にサーバーサイドでデータフェッチする
@@ -89,7 +89,7 @@ tree -I node_modules
 - [[クライアントサイドレンダリング|Client Side Rendering]]
 	- APIを叩く時は[[SWR]]や[[tanstack query]]、[[React Query]]などを使用する
 	- リクエスト時にクライアントサイドでデータフェッチする
-	- [[静的ホスティングサービス]]へのデプロイでOK
+	- [[ホスティングサービス]]へのデプロイでOK
 - [[Search Engine Optimization|SEO]]を気にしなくていいならCSRでいい
 - いずれの場合も[[Vercel]]へのデプロイで動作する
 ## Styling
