@@ -1,9 +1,6 @@
 ---
 Tags:
   - CS50
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 webアプリケーションの作成には主にフレームワークが使われる。Flaskはその一つ
 

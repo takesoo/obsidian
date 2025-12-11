@@ -5,8 +5,8 @@ title: "[Obsidian] 基本コマンドはセレブへの第一歩でございま�
 source: https://pouhon.net/obsidian-commands/7869/
 clipped: 2023-08-21
 published: 2023-06-05
-topics: 
-tags: [clippings ソフトウェア]
+tags:
+  - clippings ソフトウェア
 ---
 
 恐れ入ります。  

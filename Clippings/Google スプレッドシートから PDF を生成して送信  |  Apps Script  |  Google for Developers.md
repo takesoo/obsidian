@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
-author: 
-title: "Google スプレッドシートから PDF を生成して送信  |  Apps Script  |  Google for Developers"
+author:
+title: Google スプレッドシートから PDF を生成して送信  |  Apps Script  |  Google for Developers
 source: https://developers.google.com/apps-script/samples/automations/generate-pdfs?hl=ja
 clipped: 2023-11-10
-published: 
-topics: 
-tags: [clippings]
+published:
+tags:
+  - clippings
 ---
 
 bookmark\_border コレクションでコンテンツを整理 必要に応じて、コンテンツの保存と分類を行います。

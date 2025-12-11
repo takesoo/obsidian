@@ -1,6 +1,3 @@
----
-finished-reading: true
----
 # やや中級者向け「ReadItLater」を使用したWebクリップ方法-インストール編｜a-natsuki
   #ReadItLater 
  #ReadableArticle

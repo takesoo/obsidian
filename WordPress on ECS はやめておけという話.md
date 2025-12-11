@@ -2,9 +2,6 @@
 Tags:
   - AWS
   - Wordpress
-Status: Done
-Last edited time: Invalid date
-Created time: Invalid date
 ---
   
 

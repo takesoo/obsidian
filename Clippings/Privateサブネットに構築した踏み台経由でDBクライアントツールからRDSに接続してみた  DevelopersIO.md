@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/db-client-through-ssm/
 ---
 [![](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/05/aws-systems-manager-ssm.png)](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/05/aws-systems-manager-ssm.png)

@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[ELEMINIST]]"
-title: "半農半Xとは　兼業農家との違いや各自治体による支援事例"
+title: 半農半Xとは　兼業農家との違いや各自治体による支援事例
 source: https://eleminist.com/article/1835
 clipped: 2023-09-01
-published: 
-topics: 
-tags: [clippings]
+published:
+tags:
+  - clippings
 ---
 
 ## 半農半X（はんのうはんエックス）とは

@@ -2,8 +2,6 @@
 tags:
   - システム設計
   - clippings
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 # 概要
 

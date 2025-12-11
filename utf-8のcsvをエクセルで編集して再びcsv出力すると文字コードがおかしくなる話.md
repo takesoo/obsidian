@@ -1,9 +1,6 @@
 ---
 Tags:
   - コンピュータ
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 UTF-8 with BOMのcsvがあるとする
 

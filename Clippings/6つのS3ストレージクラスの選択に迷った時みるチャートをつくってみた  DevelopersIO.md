@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/should_i_choice_s3_storage_class/
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/05/amazon-s3.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/05/amazon-s3.png)

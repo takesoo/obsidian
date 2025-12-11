@@ -1,9 +1,6 @@
 ---
 Tags:
   - Ruby_on_Rails
-Status: Done
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 ## preload
 

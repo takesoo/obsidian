@@ -1,10 +1,8 @@
 ---
-aliases: 
+aliases:
 tags:
   - ruby/gems
   - factory_bot
-cssclasses: 
-publish: false
 ---
 https://github.com/thoughtbot/factory_bot
 

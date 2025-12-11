@@ -1,11 +1,7 @@
 ---
 tags:
   - book
-Status:
-  - 読みかけ
-Auther: 
-Purpuse: 
-Summary: 
+Summary:
 Start: 2024-11-09
 End:
 ---

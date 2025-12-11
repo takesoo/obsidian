@@ -5,7 +5,6 @@ title: Railsの複数DB機能で負荷を分散する - 弥生開発者ブログ
 source: https://tech-blog.yayoi-kk.co.jp/entry/2020/10/09/110000
 clipped: 2023-09-12
 published: 2020-10-09
-topics: 
 tags:
   - clippings
   - Ruby_on_Rails

@@ -1,7 +1,6 @@
 ---
 tags:
   - GraphQL
-関連ページ: "[[GraphQLを徹底解説する記事]]"
 ---
 ## GraphQLとは
 > # A query language for your API

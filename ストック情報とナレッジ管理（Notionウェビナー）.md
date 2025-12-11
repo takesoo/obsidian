@@ -2,9 +2,6 @@
 Tags:
   - Notion
   - ウェビナー
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 [https://www.youtube.com/watch?v=ALmMQmHcadw](https://www.youtube.com/watch?v=ALmMQmHcadw)
 

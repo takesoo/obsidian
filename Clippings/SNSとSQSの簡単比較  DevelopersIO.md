@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/compare_sns_with_sqs/
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/04/amazon-sqs.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/04/amazon-sqs.png)

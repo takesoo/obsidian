@@ -1,9 +1,6 @@
 ---
 Tags:
   - Ruby_on_Rails
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 ## scopeはパブリックなメソッドとして振る舞うので変更に弱い。
 

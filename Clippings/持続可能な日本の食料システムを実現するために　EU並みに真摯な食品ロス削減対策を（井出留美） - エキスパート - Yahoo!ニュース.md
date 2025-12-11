@@ -4,8 +4,7 @@ author: "[[オリコン]]"
 title: 持続可能な日本の食料システムを実現するために　EU並みに真摯な食品ロス削減対策を（井出留美） - エキスパート - Yahoo!ニュース
 source: https://news.yahoo.co.jp/expert/articles/b4b7977b388693343a5e15aa294e8f768ebebe22
 clipped: 2023-09-01
-published: 
-topics: 
+published:
 tags:
   - clippings
   - 食料システム

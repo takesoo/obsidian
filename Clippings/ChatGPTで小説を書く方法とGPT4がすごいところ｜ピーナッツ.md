@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[note（ノート）]]"
-title: "ChatGPTで小説を書く方法とGPT4がすごいところ｜ピーナッツ"
+title: ChatGPTで小説を書く方法とGPT4がすごいところ｜ピーナッツ
 source: https://note.com/1za5ij/n/n8add9bcc280e
 clipped: 2023-11-10
 published: 2023-03-18
-topics: 
-tags: [clippings]
+tags:
+  - clippings
 ---
 
 **なんの役にも立たないゴミをChatGPTでつくったことはあるか？**

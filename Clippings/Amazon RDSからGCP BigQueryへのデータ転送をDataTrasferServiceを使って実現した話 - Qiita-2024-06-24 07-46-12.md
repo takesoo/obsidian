@@ -1,6 +1,3 @@
----
-finished-reading: false
----
 
 # Amazon RDSからGCP BigQueryへのデータ転送をDataTrasferServiceを使って実現した話 - Qiita
   #ReadItLater 

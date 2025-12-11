@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://terashim.com/posts/docker-build-secret/
 ---
 [![](https://terashim.com/img/ogp/docker-build-secret.png)](https://terashim.com/img/ogp/docker-build-secret.png)

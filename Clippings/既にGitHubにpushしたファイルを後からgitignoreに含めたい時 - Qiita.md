@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[by smallpalace]]"
-title: "既にGitHubにpushしたファイルを後からgitignoreに含めたい時 - Qiita"
+title: 既にGitHubにpushしたファイルを後からgitignoreに含めたい時 - Qiita
 source: https://qiita.com/YotaHamasaki/items/9f674f2a56381eb9888e
 clipped: 2023-09-18
 published: 2021-05-21
-topics: 
-tags: [clippings Git GitHub]
+tags:
+  - clippings Git GitHub
 ---
 
 git pushしたファイルの中に一般公開してはセキュリティ上良くないファイルがあったりすると思います。  

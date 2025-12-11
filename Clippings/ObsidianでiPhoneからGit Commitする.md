@@ -5,7 +5,6 @@ title: ObsidianでiPhoneからGit Commitする
 source: https://zenn.dev/silverbirder/articles/5fef9e9b6aa178
 clipped: 2023-09-18
 published: 2022-11-25
-topics: 
 tags:
   - clippings
   - obsidian

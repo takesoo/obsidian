@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://paiza.hatenablog.com/entry/2021/07/29/130000
 ---
 [![](https://cdn-ak.f.st-hatena.com/images/fotolife/p/paiza/20210728/20210728105658.jpg)](https://cdn-ak.f.st-hatena.com/images/fotolife/p/paiza/20210728/20210728105658.jpg)

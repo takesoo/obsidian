@@ -4,8 +4,7 @@ author: "[[Home]]"
 title: 🔖 Arcブラウザでブックマークレットを使う
 source: https://namaraii.com/post/2023/20230815/43750acf903ac6d0758e/
 clipped: 2023-09-25
-published: 
-topics: 
+published:
 tags:
   - clippings
   - bookmarklet

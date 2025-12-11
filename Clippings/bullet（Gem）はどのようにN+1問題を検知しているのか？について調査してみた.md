@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[シュンReact・Rails・AWSの技術を中心にWebエンジニアやってます。フォロー]]"
-title: "bullet（Gem）はどのようにN+1問題を検知しているのか？について調査してみた"
+title: bullet（Gem）はどのようにN+1問題を検知しているのか？について調査してみた
 source: https://zenn.dev/hososhun/articles/e7e0f72faebb65
 clipped: 2023-10-05
-published: 
-topics: 
-tags: [clippings]
+published:
+tags:
+  - clippings
 ---
 
 ## はじめに

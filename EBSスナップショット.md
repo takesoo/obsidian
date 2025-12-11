@@ -1,9 +1,6 @@
 ---
 Tags:
   - AWS
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 ポイントインタイムスナップショットを作成することで、Amazon EBSボリュームのデータを Amazon S3 にバックアップできます。
 

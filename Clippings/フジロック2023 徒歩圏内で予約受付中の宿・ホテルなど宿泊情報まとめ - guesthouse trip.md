@@ -1,8 +1,6 @@
 ---
 AI summary: フジロック2023の徒歩圏内にある宿泊施設の情報がまとめられています。江戸創業の幕末の宿や、越後湯沢駅から徒歩7分の和みのお宿滝乃湯などがあります。また、越後湯沢温泉さくら亭や猿ヶ京温泉湯元長生館などもあります。各宿泊施設の詳細や予約方法はリンクから確認できます。
-Created: Invalid date
 URL: https://guesthouse-trip.com/music/fujirock/
-カテゴリー: 宿泊情報
 ---
 [![](https://guesthouse-trip.com/wp-content/uploads/2023/01/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2023-01-19-12.48.47.jpg)](https://guesthouse-trip.com/wp-content/uploads/2023/01/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2023-01-19-12.48.47.jpg)
 

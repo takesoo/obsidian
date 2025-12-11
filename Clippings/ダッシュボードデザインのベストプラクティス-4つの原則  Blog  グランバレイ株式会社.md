@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://www.granvalley.co.jp/blog/4-design-principles-creating-better-dashboards
 ---
 [![](https://www.granvalley.co.jp/wp/wp-content/uploads/2018/07/header_dashboard-mockup_of_sisense.jpg)](https://www.granvalley.co.jp/wp/wp-content/uploads/2018/07/header_dashboard-mockup_of_sisense.jpg)

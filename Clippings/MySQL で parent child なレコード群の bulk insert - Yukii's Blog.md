@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[Yukii's Blog]]"
-title: "MySQL で parent child なレコード群の bulk insert - Yukii's Blog"
+title: MySQL で parent child なレコード群の bulk insert - Yukii's Blog
 source: https://blog.yukii.work/posts/2023-03-14-mysql-parent-child-bulk-insert/#gsc.tab=0
 clipped: 2023-10-13
-published: 
-topics: 
-tags: [clippings]
+published:
+tags:
+  - clippings
 ---
 
 Published: 2023/3/14

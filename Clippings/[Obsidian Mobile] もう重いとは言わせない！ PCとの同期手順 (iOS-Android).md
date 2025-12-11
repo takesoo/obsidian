@@ -5,8 +5,8 @@ title: "[Obsidian Mobile] もう重いとは言わせない！ PCとの同期手
 source: https://pouhon.net/obsidian-mobile/6320/#toc10
 clipped: 2023-09-05
 published: 2021-11-16
-topics: 
-tags: [clippings ソフトウェア]
+tags:
+  - clippings ソフトウェア
 ---
 
 ※ この記事はObsidianのVaultを「iCloudやGoogle Driveで同期する」方に向けた記事となっています。しかし現在、Obsidianの同期方法は他にもいくつかの方法が発見され、実際に運用されています。  

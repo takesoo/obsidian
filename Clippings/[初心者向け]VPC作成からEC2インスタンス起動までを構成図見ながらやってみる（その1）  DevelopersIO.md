@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/creation_vpc_ec2_for_beginner_1/
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/05/amazon-vpc.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/05/amazon-vpc.png)

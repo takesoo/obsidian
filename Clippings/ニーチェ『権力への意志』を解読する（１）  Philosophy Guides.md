@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://www.philosophyguides.org/decoding/decoding-of-nietzsche-wille-zur-macht-1/
 ---
 ニーチェ

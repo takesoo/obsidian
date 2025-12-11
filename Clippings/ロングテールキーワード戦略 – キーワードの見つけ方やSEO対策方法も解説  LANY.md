@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 Tags:
   - SEO
 URL: https://lany.co.jp/seo/blog/long-tail-keyword/

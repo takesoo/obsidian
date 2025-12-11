@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://infra-note.net/aws-saa/
 ---
 [![](https://infra-note.net/wp-content/uploads/3cc5f0b0511bf3dd59f04e52ab805d28.png)](https://infra-note.net/wp-content/uploads/3cc5f0b0511bf3dd59f04e52ab805d28.png)

@@ -2,10 +2,6 @@
 tags:
   - グロービス学び放題
   - 論理思考
-Status:
-  - Not started
-Last edited time: Invalid date
-Created time: Invalid date
 aliases:
   - Mutually Exclusive Collectively Exhaustive
 ---

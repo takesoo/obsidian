@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/aws-all-iac/
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/11/eyecatch-min.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/11/eyecatch-min.png)

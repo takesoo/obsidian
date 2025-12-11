@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://github.com/Selleo/pattern#query
 ---
 # Pattern

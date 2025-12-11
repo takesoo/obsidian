@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/switchrole-try/
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/05/aws-iam.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/05/aws-iam.png)

@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://www.sukerou.com/2019/12/git-tipsgit.html
 ---
 既存のフォルダを、git管理下にしてリモートリポジトリと紐づけする方法を解説します。

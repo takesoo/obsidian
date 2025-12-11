@@ -5,8 +5,8 @@ title: "Ruby: mallocでマルチスレッドプログラムのメモリが倍増
 source: https://techracho.bpsinc.jp/hachi8833/2022_06_23/50109
 clipped: 2023-08-17
 published: 2022-06-23
-topics: 
-tags: [clippings]
+tags:
+  - clippings
 ---
 
 ## Ruby: mallocでマルチスレッドプログラムのメモリが倍増する理由（翻訳）

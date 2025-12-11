@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/20211008-vscode-extention-settings/
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/06/vscode-2020-eyecatch-1200x630-1.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/06/vscode-2020-eyecatch-1200x630-1.png)

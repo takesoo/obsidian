@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://hakuhin.jp/js/file.html
 ---
 ## Blob と File クラスについて

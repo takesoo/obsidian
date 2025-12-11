@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://linksmate.jp/article/smartphone_connect/
 ---
 [![](https://linksmate.jp/img/sns/twitter/article.png)](https://linksmate.jp/img/sns/twitter/article.png)

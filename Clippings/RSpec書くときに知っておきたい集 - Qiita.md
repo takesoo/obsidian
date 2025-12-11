@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://qiita.com/yokoto/items/c7973a4b222fe19a657a
 ---
 ## GitHub

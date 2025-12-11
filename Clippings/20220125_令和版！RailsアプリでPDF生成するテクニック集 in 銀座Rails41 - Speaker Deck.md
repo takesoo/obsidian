@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://speakerdeck.com/morimorihoge/20220125-ling-he-ban-railsapuridepdfsheng-cheng-surutekunitukuji-in-yin-zuo-rails-number-41?slide=26
 ---
 [jacobian 263 20k](https://speakerdeck.com/jacobian/how-to-ace-a-technical-interview)

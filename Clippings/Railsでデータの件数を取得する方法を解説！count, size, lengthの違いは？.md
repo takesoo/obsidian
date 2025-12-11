@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
-author: 
-title: "Railsでデータの件数を取得する方法を解説！count, size, lengthの違いは？"
+author:
+title: Railsでデータの件数を取得する方法を解説！count, size, lengthの違いは？
 source: https://himakuro.com/rails-count-length-size-guide
 clipped: 2023-10-10
 published: 2021-01-17
-topics: 
-tags: [clippings]
+tags:
+  - clippings
 ---
 
 ![](https://himakuro.com/wp-content/uploads/2020/02/boy-nayamu.png)

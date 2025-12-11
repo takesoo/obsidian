@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://www.indoorcorgielec.com/resources/raspberry-pi/raspberry-pi-os%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab/
 ---
 Raspberry Pi(ラズパイ)を動かすには、ストレージとなるmicroSDカードへOSをインストールする必要があります。Raspberry Pi公式のSDカード作成ツールのImagerを用いて、Raspberry Pi OS (Raspbian)をインストールする手順をWindows/Mac/Ubuntuそれぞれについて解説しています。

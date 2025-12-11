@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://techracho.bpsinc.jp/hachi8833/2022_03_24/47287
 ---
 原著者の許諾を得て翻訳・公開いたします。

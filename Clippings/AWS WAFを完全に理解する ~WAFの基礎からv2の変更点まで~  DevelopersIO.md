@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/fully-understood-aws-waf-v2/
 ---
 [![](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/05/aws-waf.png)](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/05/aws-waf.png)

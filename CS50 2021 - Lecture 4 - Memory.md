@@ -1,9 +1,6 @@
 ---
 Tags:
   - CS50
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 16進数
 

@@ -1,8 +1,3 @@
----
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
----
 Ok. Here is departers. what’s the Flight No. again?
 
 ==Okay. Here are the departures.==

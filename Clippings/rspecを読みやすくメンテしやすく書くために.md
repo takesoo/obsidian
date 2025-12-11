@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://zenn.dev/yuji_developer/articles/52cc0e356b3748
 ---
 ## はじめに

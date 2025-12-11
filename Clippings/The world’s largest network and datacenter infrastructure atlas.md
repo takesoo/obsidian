@@ -1,9 +1,5 @@
 ---
-AI summary: The document is an announcement of a website called Infrapedia,
-  which is described as the world's largest network and datacenter
-  infrastructure atlas. The document also mentions the use of cookies on the
-  website and provides a link to the privacy policy page for more information.
-Created: Invalid date
+AI summary: The document is an announcement of a website called Infrapedia, which is described as the world's largest network and datacenter infrastructure atlas. The document also mentions the use of cookies on the website and provides a link to the privacy policy page for more information.
 URL: https://www.infrapedia.com/
 ---
 [![](https://www.infrapedia.com/infrapedia-2.jpg)](https://www.infrapedia.com/infrapedia-2.jpg)

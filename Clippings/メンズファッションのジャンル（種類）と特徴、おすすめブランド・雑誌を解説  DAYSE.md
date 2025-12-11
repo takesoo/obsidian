@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://mensdrip.com/fashion/mensfashion-kind
 ---
 [![](https://mensdrip.com/wp-content/uploads/2016/01/1513.jpg)](https://mensdrip.com/wp-content/uploads/2016/01/1513.jpg)

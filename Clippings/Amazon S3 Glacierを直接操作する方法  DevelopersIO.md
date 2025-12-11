@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/glacier-instructions-001/
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/05/amazon-s3-glacier.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/05/amazon-s3-glacier.png)

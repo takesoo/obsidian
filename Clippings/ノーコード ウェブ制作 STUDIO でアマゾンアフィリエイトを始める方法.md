@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://leadtheselfjapan.com/blog/studio_amazon_affiliate1
 ---
 [![](https://storage.googleapis.com/studio-cms-assets/projects/ogO0Ay2Qq2/s-960x540_v-fs_webp_dd83be82-1a15-4194-8721-e28da98bae63.jpg)](https://storage.googleapis.com/studio-cms-assets/projects/ogO0Ay2Qq2/s-960x540_v-fs_webp_dd83be82-1a15-4194-8721-e28da98bae63.jpg)

@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[by moonstruckdrops@github]]"
-title: "Protocol Buffers を使って、Rails の RESTful API をスキーマ駆動開発してみた - Qiita"
+title: Protocol Buffers を使って、Rails の RESTful API をスキーマ駆動開発してみた - Qiita
 source: https://qiita.com/t0yohei/items/8b04bd427767c8df7465
 clipped: 2023-10-04
 published: 2019-12-20
-topics: 
-tags: [clippings Ruby Rails protobuf ProtocolBuffers]
+tags:
+  - clippings Ruby Rails protobuf ProtocolBuffers
 ---
 
 こんにちは、クラウドワークスの [@t0yohei](https://qiita.com/t0yohei "t0yohei") です。普段は Rails や Vue.js などを使って crowdworks.jp の開発をしています。  

@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[mita2 database life]]"
-title: "MySQL 8.0 でも utf8mb4_general_ci を使い続けたい僕らは - mita2 database life"
+title: MySQL 8.0 でも utf8mb4_general_ci を使い続けたい僕らは - mita2 database life
 source: https://mita2db.hateblo.jp/entry/2020/12/07/000000
 clipped: 2023-10-16
 published: 2020-12-07
-topics: 
-tags: [clippings]
+tags:
+  - clippings
 ---
 
 このエントリーは [MySQL Advent Calendar 2020](https://qiita.com/advent-calendar/2020/mysql) の 12/7 のエントリーです。

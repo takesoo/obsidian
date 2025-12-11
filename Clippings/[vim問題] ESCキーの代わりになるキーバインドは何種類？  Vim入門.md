@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://vim.blue/vim-esc-altanative-keybind/
 ---
 [![](https://vim.blue/wp-content/uploads/2019/11/vim_esc_alternate.gif)](https://vim.blue/wp-content/uploads/2019/11/vim_esc_alternate.gif)

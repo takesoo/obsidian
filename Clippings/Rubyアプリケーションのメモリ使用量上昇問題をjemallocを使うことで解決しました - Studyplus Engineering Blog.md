@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[Studyplus Engineering Blog]]"
-title: "Rubyアプリケーションのメモリ使用量上昇問題をjemallocを使うことで解決しました - Studyplus Engineering Blog"
+title: Rubyアプリケーションのメモリ使用量上昇問題をjemallocを使うことで解決しました - Studyplus Engineering Blog
 source: https://tech.studyplus.co.jp/entry/2019/09/09/094140
 clipped: 2023-08-17
 published: 2019-09-09
-topics: 
-tags: [clippings]
+tags:
+  - clippings
 ---
 
 こんにちは、スタディプラスの栗山([id:shepherdMaster](http://blog.hatena.ne.jp/shepherdMaster/))です。  

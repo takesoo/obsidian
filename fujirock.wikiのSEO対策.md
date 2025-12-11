@@ -1,9 +1,6 @@
 ---
 Tags:
   - SEO
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 ## 最低限のSEO対策
 

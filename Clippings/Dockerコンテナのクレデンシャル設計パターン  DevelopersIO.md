@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/creds-design-pattern-in-docker/
 ---
 [![](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2013/11/docker.png)](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2013/11/docker.png)

@@ -5,8 +5,8 @@ title: "[Obsidian] Self-hosted LiveSyncとデータ同期に迫る！ (対談企
 source: https://pouhon.net/selfhosted_livesync/7470/
 clipped: 2023-08-16
 published: 2022-09-20
-topics: 
-tags: [clippings ソフトウェア]
+tags:
+  - clippings ソフトウェア
 ---
 
 私の記憶が確かならば、昭和の初めから「オムライス」の一番美味しいところは決まっていた。

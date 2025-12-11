@@ -1,9 +1,6 @@
 ---
 Tags:
   - AWS
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 IPアドレスにはクラスがあり、クラスによって紐づけられる機器の台数が変わる
 

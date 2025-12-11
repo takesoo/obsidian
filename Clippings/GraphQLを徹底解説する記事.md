@@ -5,7 +5,6 @@ title: GraphQLを徹底解説する記事
 source: https://zenn.dev/nameless_sn/articles/graphql_tutorial
 clipped: 2023-09-06
 published: 2023-03-03
-topics: 
 tags:
   - clippings
   - GraphQL

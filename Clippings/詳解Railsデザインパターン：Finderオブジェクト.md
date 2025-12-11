@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://takaokouji.github.io/output/finder-object/
 ---
 高尾が解説する 詳解Railsデザインパターン・シリーズの「Finderオブジェクト」編です。

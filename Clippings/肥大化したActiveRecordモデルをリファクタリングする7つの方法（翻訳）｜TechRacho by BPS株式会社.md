@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://techracho.bpsinc.jp/hachi8833/2021_01_07/14738
 ---
 > 更新情報: 2013/11/19: 初版公開 2021/01/08: 訳文見直し、追記

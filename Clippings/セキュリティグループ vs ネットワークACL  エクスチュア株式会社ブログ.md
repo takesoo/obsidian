@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://ex-ture.com/blog/2021/07/14/securitygroup-and-networkacl/
 ---
 [![](https://ex-ture.com/blog/wp-content/uploads/2021/03/Screen-Shot-0003-03-01-at-11.08.51.png)](https://ex-ture.com/blog/wp-content/uploads/2021/03/Screen-Shot-0003-03-01-at-11.08.51.png)

@@ -1,6 +1,3 @@
----
-finished-reading: true
----
 
 # CloudBeaver Documentation - DBeaver
   #ReadItLater 

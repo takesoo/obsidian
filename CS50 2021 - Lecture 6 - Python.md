@@ -1,9 +1,6 @@
 ---
 Tags:
   - CS50
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 pythonは動的型付け言語（インタプリタ）
 

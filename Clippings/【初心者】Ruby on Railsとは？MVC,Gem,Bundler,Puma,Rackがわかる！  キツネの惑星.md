@@ -1,9 +1,6 @@
 ---
-AI summary: Rubyで作られたWebアプリケーションフレームワークであるRuby on
-  Railsについて、MVCアーキテクチャパターンやGem、Bundler、Puma、Rackなどの概要を解説しています。Rails環境を構築するために必要な知識が多岐にわたることが分かります。
-Created: Invalid date
+AI summary: Rubyで作られたWebアプリケーションフレームワークであるRuby on Railsについて、MVCアーキテクチャパターンやGem、Bundler、Puma、Rackなどの概要を解説しています。Rails環境を構築するために必要な知識が多岐にわたることが分かります。
 URL: https://kitsune.blog/rails-summary
-カテゴリー: プログラミング
 ---
 Ruby on Rails（通称：Rails）とは、**Rubyエンジニアを名乗るのであれば、絶対に知っておきたいフレームワークの１つ**です。
 

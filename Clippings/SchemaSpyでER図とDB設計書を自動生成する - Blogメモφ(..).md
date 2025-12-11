@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://blog.nightonly.com/2021/07/23/schemaspy%E3%81%A7er%E5%9B%B3%E3%81%A8db%E8%A8%AD%E8%A8%88%E6%9B%B8%E3%82%92%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90%E3%81%99%E3%82%8B/
 ---
 [![](https://blog.nightonly.com/wp-content/uploads/sites/2/2021/07/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2021-07-23-11.29.41-1024x148.png)](https://blog.nightonly.com/wp-content/uploads/sites/2/2021/07/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2021-07-23-11.29.41-1024x148.png)

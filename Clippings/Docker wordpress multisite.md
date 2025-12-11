@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://bobcares.com/blog/docker-wordpress-multisite/
 ---
 _Wondering how to create Docker wordpress multisite? We can help you._

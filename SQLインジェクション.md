@@ -1,7 +1,6 @@
 ---
 aliases: []
-tags: [サイバー攻撃]
-cssclass:
-publish: false
+tags:
+  - サイバー攻撃
 ---
 リクエストの中にSQL文を紛れ込ませ、データベースからデータを不正に入手する攻撃方法

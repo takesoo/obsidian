@@ -1,9 +1,6 @@
 ---
-AI summary: Ruby on RailsのStrong
-  Parameterについて、permit/require/fetchメソッドの使い方や組み合わせ例を紹介したブログ記事です。具体的なコード例を交えながら、許可する要素を絞り込む方法や、多段のハッシュの要素を許可する方法などを解説しています。
-Created: Invalid date
+AI summary: Ruby on RailsのStrong Parameterについて、permit/require/fetchメソッドの使い方や組み合わせ例を紹介したブログ記事です。具体的なコード例を交えながら、許可する要素を絞り込む方法や、多段のハッシュの要素を許可する方法などを解説しています。
 URL: https://nishinatoshiharu.com/overview-strong-parameter/
-カテゴリー: 技術
 ---
 [![](https://i1.wp.com/nishinatoshiharu.com/wp-content/uploads/2023/01/overview-strong-parameter.001.jpeg?fit=800%2C418&ssl=1)](https://i1.wp.com/nishinatoshiharu.com/wp-content/uploads/2023/01/overview-strong-parameter.001.jpeg?fit=800%2C418&ssl=1)
 

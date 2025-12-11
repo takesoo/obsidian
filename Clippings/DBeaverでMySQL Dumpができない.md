@@ -4,8 +4,7 @@ author: "[[Nな人のWeb示録]]"
 title: DBeaverでMySQL Dumpができない
 source: https://nnahito.com/articles/63
 clipped: 2023-10-02
-published: 
-topics: 
+published:
 tags:
   - clippings
   - dbeaver

@@ -4,8 +4,7 @@ author: "[[defaultcfフォロー]]"
 title: Bookmarklet を改めて学ぶ
 source: https://zenn.dev/defaultcf/articles/learn-bookmarklet
 clipped: 2023-09-19
-published: 
-topics: 
+published:
 tags:
   - clippings
   - bookmarklet

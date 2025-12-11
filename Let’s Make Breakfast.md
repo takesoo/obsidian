@@ -1,8 +1,6 @@
 ---
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
-tags: [english cooking children]
+tags:
+  - english cooking children
 ---
 Let’s the price moment that for delicious breakfast. べーりすさーふぇー. They worked so much in this weekend, so very tired.
 

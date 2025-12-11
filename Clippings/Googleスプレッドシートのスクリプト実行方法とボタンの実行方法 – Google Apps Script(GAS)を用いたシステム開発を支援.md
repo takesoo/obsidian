@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
-author: 
-title: "Googleスプレッドシートのスクリプト実行方法とボタンの実行方法 – Google Apps Script(GAS)を用いたシステム開発を支援"
+author:
+title: Googleスプレッドシートのスクリプト実行方法とボタンの実行方法 – Google Apps Script(GAS)を用いたシステム開発を支援
 source: https://www.acrovision.jp/service/gas/?p=269
 clipped: 2023-11-10
-published: 
-topics: 
-tags: [clippings]
+published:
+tags:
+  - clippings
 ---
 
 Googleスプレッドシートのスクリプトエディタ機能の使い方にお困りでしょうか？ここではスクリプトの実行方法とスプレッドシートにボタンを作成してスプレッドシート上で処理を実行する方法をご紹介していきます。

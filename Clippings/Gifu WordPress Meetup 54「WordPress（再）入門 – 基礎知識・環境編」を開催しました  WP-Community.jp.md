@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://wp-community.jp/blog/2023/01/236
 ---
 [![](https://wp-community.jp/wp-content/uploads/2023/01/IMG_3608.jpg)](https://wp-community.jp/wp-content/uploads/2023/01/IMG_3608.jpg)

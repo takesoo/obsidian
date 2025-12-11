@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://note.com/takchaaan/n/n240918299bca
 ---
 [![](https://assets.st-note.com/production/uploads/images/77501801/rectangle_large_type_2_a1d02505229a723b83b10abc6604444b.png?fit=bounds&quality=85&width=1280)](https://assets.st-note.com/production/uploads/images/77501801/rectangle_large_type_2_a1d02505229a723b83b10abc6604444b.png?fit=bounds&quality=85&width=1280)

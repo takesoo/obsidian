@@ -1,8 +1,6 @@
 ---
 AI summary: Notionのツリー構造の深化は情報のサイロ化を引き起こすことがあるが、Wiki機能を使えばデータベースのような機能を持ちながら、Wikiのように情報を閲覧できる。WikiデータベースはNotionの可視性を高め、社内ポータル等を運用するのに便利な機能をたくさん備えていると感じられる。
-Created: Invalid date
 URL: https://blog.cloudnative.co.jp/15990/
-カテゴリー: Notionの使い方
 ---
 [![](https://blog.cloudnative.co.jp/wp-content/uploads/2023/04/fda16b3cc8eb0e88485a6c0ee80ddc52.jpg)](https://blog.cloudnative.co.jp/wp-content/uploads/2023/04/fda16b3cc8eb0e88485a6c0ee80ddc52.jpg)
 

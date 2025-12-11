@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://www.indoorcorgielec.com/resources/raspberry-pi/raspberry-pi-setup/
 ---
 Raspberry Pi(ラズパイ)をはじめて起動する方向けに、ハードウェアのセットアップとOSの初期設定方法を、画像つきで解説しています。マウス、キーボード、ディスプレイ、電源などの接続例やトラブル事例別の対処法も記載しました。

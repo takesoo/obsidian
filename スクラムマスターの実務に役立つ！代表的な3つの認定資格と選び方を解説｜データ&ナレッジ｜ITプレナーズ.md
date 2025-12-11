@@ -2,9 +2,6 @@
 Tags:
   - アジャイル開発
   - スクラム
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 URL: https://www.itpreneurs.co.jp/data-and-knowledge/scrum-certifications
 ---
 [![](https://www.itpreneurs.co.jp/wp-content/uploads/2022/05/header-3.png)](https://www.itpreneurs.co.jp/wp-content/uploads/2022/05/header-3.png)

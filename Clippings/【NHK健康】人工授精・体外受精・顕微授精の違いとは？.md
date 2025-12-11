@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[解説いただいた専門家埼玉医科大学　教授石原　理（いしはら・おさむ）]]"
-title: "【NHK健康】人工授精・体外受精・顕微授精の違いとは？"
+title: 【NHK健康】人工授精・体外受精・顕微授精の違いとは？
 source: https://www.nhk.or.jp/kenko/atc_875.html
 clipped: 2023-10-29
 published: 2021-05-08
-topics: 
-tags: [clippings ]
+tags:
+  - clippings
 ---
 
 1.  [NHKトップ](https://www.nhk.or.jp/)

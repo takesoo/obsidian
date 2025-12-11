@@ -2,9 +2,6 @@
 Tags:
   - DNS
   - ドメイン
-Status: Done
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 ## A
 

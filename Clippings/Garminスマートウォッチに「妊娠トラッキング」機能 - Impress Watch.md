@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://www.watch.impress.co.jp/docs/news/1306420.html
 ---
 [![](https://www.watch.impress.co.jp/img/ipw/list/1306/420/garmin1.jpg)](https://www.watch.impress.co.jp/img/ipw/list/1306/420/garmin1.jpg)

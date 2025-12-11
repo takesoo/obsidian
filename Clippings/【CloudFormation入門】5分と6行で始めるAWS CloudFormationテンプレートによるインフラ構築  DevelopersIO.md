@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/cloudformation-beginner01/
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2014/05/AWS_CloudFormation.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2014/05/AWS_CloudFormation.png)

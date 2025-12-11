@@ -1,8 +1,3 @@
----
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
----
 docker-compose.yml, Dockerfileをコピー
 
 .devcontainer/をコピー

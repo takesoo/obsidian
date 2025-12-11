@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://speakerdeck.com/smt7174/gitcao-zuo-bian
 ---
 [![](https://files.speakerdeck.com/presentations/fb83e0bb866a48d2998f48e6c9e6d4a3/slide_0.jpg?22282251)](https://files.speakerdeck.com/presentations/fb83e0bb866a48d2998f48e6c9e6d4a3/slide_0.jpg?22282251)

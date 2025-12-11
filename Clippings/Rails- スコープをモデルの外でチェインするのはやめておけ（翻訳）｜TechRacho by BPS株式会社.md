@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://techracho.bpsinc.jp/hachi8833/2023_02_14/53537
 ---
 [![](https://techracho.bpsinc.jp/wp-content/uploads/2018/03/rails_say_no_to_chained_scopes_eyecatch-min.png)](https://techracho.bpsinc.jp/wp-content/uploads/2018/03/rails_say_no_to_chained_scopes_eyecatch-min.png)

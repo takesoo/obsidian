@@ -1,9 +1,6 @@
 ---
 Tags:
   - Notion
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 ## 対象のページ
 

@@ -2,11 +2,6 @@
 Tags:
   - AWS
   - Wordpress
-Status: Not started
-TechArticles:
-  - "[[EFSにファイルをアップロード・ダウンロードする方法]]"
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 ## Simple File Manager for Amazon EFS
 

@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://shin-hack.com/notion-domain/
 ---
 [![](https://shin-hack.com/wp-content/uploads/notion-00.jpg)](https://shin-hack.com/wp-content/uploads/notion-00.jpg)

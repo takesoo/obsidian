@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/amazon-vpc-acl/
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2011/11/AWS.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2011/11/AWS.png)

@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://www.iscle.com/web-it/nagesen-system.html
 ---
 [![](https://www.iscle.com/wp-content/uploads/2019/01/blog-nagesen-00.png)](https://www.iscle.com/wp-content/uploads/2019/01/blog-nagesen-00.png)

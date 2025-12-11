@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[by vintersnow]]"
-title: "homebrewとは何者か。仕組みについて調べてみた - Qiita"
+title: homebrewとは何者か。仕組みについて調べてみた - Qiita
 source: https://qiita.com/omega999/items/6f65217b81ad3fffe7e6
 clipped: 2023-10-02
 published: 2014-12-04
-topics: 
-tags: [clippings Mac homebrew]
+tags:
+  - clippings Mac homebrew
 ---
 
 ## [](#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB)はじめに

@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/make-github-issue-with-slack-by-issit/
 ---
 [![](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/07/github-eyecatch.png)](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/07/github-eyecatch.png)

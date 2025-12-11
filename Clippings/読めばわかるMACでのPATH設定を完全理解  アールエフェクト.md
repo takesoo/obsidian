@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://reffect.co.jp/windows/full_understanding_mac
 ---
 [![](https://reffect.co.jp/wp-content/uploads/2019/01/mac_path.png)](https://reffect.co.jp/wp-content/uploads/2019/01/mac_path.png)

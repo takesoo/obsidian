@@ -1,9 +1,6 @@
 ---
 Tags:
   - Ruby_on_Rails
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 ```
 class Foo < ApplicationRecord	with_options on: :update do	  validate :a_validation	  validate :b_validation	end	with_options on: :destroy do	  validate :a_validation	  validate :c_validation	end	private	def a_validation		p 'a_validation'	end	def b_validation		p 'b_validation'	end	def c_validation		p 'c_validation'	endend

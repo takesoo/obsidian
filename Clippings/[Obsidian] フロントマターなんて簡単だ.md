@@ -5,8 +5,8 @@ title: "[Obsidian] フロントマターなんて簡単だ"
 source: https://pouhon.net/obsidian-frontmatter/7261/
 clipped: 2023-08-20
 published: 2022-02-23
-topics: 
-tags: [clippings ソフトウェア]
+tags:
+  - clippings ソフトウェア
 ---
 
 > **幽霊の 正体見たり 枯れ尾花**  

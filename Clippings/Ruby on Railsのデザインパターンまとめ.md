@@ -1,10 +1,6 @@
 ---
-AI summary: Ruby on Railsのデザインパターンを導入することで、Fat ModelやFat Controller、Fat
-  Viewなどの設計上の問題を防ぐことができます。デザインパターンの導入にはオブジェクト指向設計の原則を忠実に守る必要があります。代表的なデザインパターンには、Decorator、Delivery、Form、Interactor、Policy、Query、Validator、Value、View
-  Componentがあります。
-Created: Invalid date
+AI summary: Ruby on Railsのデザインパターンを導入することで、Fat ModelやFat Controller、Fat Viewなどの設計上の問題を防ぐことができます。デザインパターンの導入にはオブジェクト指向設計の原則を忠実に守る必要があります。代表的なデザインパターンには、Decorator、Delivery、Form、Interactor、Policy、Query、Validator、Value、View Componentがあります。
 URL: https://applis.io/posts/rails-design-patterns
-カテゴリー: Ruby on Railsのデザインパターンまとめ
 ---
 [![](https://applis.io/api/og?title=Ruby+on+Rails%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E3%81%BE%E3%81%A8%E3%82%81&tag=Ruby+on+Rails)](https://applis.io/api/og?title=Ruby+on+Rails%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E3%81%BE%E3%81%A8%E3%82%81&tag=Ruby+on+Rails)
 

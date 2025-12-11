@@ -1,9 +1,5 @@
 ---
-AI summary: The GraphQL Ruby gem is a trusted tool for creating a
-  self-documenting, strongly-typed API. Define your application with the GraphQL
-  schema and run queries. The gem is used by GitHub, Shopify, Flexport, Chime,
-  and Kickstarter.
-Created: Invalid date
+AI summary: The GraphQL Ruby gem is a trusted tool for creating a self-documenting, strongly-typed API. Define your application with the GraphQL schema and run queries. The gem is used by GitHub, Shopify, Flexport, Chime, and Kickstarter.
 URL: https://graphql-ruby.org/
 ---
 ## Install the Gem

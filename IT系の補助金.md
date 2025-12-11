@@ -1,8 +1,3 @@
----
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
----
 ## IT導入補助金
 
 国に登録された事業者だけが申請できる

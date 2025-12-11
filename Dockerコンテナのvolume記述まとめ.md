@@ -1,9 +1,6 @@
 ---
 Tags:
   - Docker
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 - ボリューム
     - Dockerコンテナで扱うデータを永続化する仕組み

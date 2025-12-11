@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 tags:
   - clippings
 ---

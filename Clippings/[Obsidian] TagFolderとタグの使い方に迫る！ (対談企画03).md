@@ -5,8 +5,8 @@ title: "[Obsidian] TagFolderとタグの使い方に迫る！ (対談企画03)"
 source: https://pouhon.net/obsidian-tagfolder/7552/
 clipped: 2023-08-20
 published: 2022-10-03
-topics: 
-tags: [clippings ソフトウェア]
+tags:
+  - clippings ソフトウェア
 ---
 
 「セレンディピティ」とは、  

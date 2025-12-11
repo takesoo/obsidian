@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/iam-role-passrole-assumerole/#toc-15
 ---
 [![](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/12/iamrole-omenn.png)](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/12/iamrole-omenn.png)

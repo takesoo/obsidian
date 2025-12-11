@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://www.isoroot.jp/blog/4530/
 ---
 今回は各種AWSサービスにかかる料金が分からず、AWSを触って学習するのが怖い初心者の方向けに、  

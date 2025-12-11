@@ -1,8 +1,6 @@
 ---
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
-tags: [english airport]
+tags:
+  - english airport
 ---
 I need the ticket to LA today.
 

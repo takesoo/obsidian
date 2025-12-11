@@ -3,9 +3,6 @@ Tags:
   - ふりかえり
   - アジャイル開発
   - スクラム
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 URL: https://dev.classmethod.jp/articles/would-you-like-to-introduce-dpa-in-your-retrospective/
 ---
 [![](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2022/12/eye_catch_teambuilding.png)](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2022/12/eye_catch_teambuilding.png)

@@ -1,9 +1,6 @@
 ---
 Tags:
   - AWS
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 Virtual Private Cloud (VPC) は、AWS アカウント専用の仮想ネットワークです。
 

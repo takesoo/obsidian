@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://dev.classmethod.jp/articles/transfer-for-sftp-with-cloudformation/
 ---
 [![](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/04/aws-transfer-for-sftp.png)](https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/04/aws-transfer-for-sftp.png)

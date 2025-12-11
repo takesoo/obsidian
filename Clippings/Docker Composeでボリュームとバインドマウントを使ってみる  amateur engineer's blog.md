@@ -1,7 +1,5 @@
 ---
-Created: Invalid date
 URL: https://amateur-engineer-blog.com/docer-compose-volumes/
-カテゴリー: IT
 ---
 [![](https://gcs.amateur-engineer-blog.com/2022/02/0b3a27d0-docer-compose-volumes.jpg)](https://gcs.amateur-engineer-blog.com/2022/02/0b3a27d0-docer-compose-volumes.jpg)
 

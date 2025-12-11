@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[Qiita]]"
-title: "エンジニアのスキルマップ - Qiita"
+title: エンジニアのスキルマップ - Qiita
 source: https://qiita.com/uskiita/items/e9010f023a6db7785135
 clipped: 2023-08-24
 published: 2019-08-20
-topics: 
-tags: [clippings キャリア 書籍紹介 スキル スキルマップ]
+tags:
+  - clippings キャリア 書籍紹介 スキル スキルマップ
 ---
 
 ## [](#%E3%81%93%E3%81%AE%E8%A8%98%E4%BA%8B%E3%81%AF%E4%BD%95)この記事は何？

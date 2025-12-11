@@ -16,7 +16,10 @@ tags:
 >
 > フレックスボックス機能は、1 次元レイアウトのニーズに最適なソリューションでしょう。早速みてみましょう。
 > [フレックスボックス - ウェブ開発の学習 | MDN](https://developer.mozilla.org/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox#%E3%81%AA%E3%81%9C%E3%83%95%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AA%E3%81%AE%E3%81%8B)
-- 
+- アイテムの並び順や伸縮を柔軟に制御するのに適している。
+- ナビゲーションバーやボタンの配置に最適。
+- 行と列の2次元方向のレイアウトなら[[grid]]が適している
+- ページ全体のレイアウトはgridで作り、その中の要素はflexで配置する使い分けが一般的。
 ## how
 ```html
 <div class="container">
@@ -40,5 +43,5 @@ tags:
 ```
 
 - justify-content: 水平方向の揃え
-	- 
+	- space-around: 等間隔に配置
 - align-items: 垂直方向の揃え

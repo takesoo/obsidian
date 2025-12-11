@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://applis.io/posts/rails-design-pattern-query-objects
 ---
 RailsのデザインパターンのひとつにQueryオブジェクトがあります。これはコントローラからActiveRecordモデルに対する絞り込みなどの操作を、ひとつの責務としてクラスに切り出すパターンです。コントローラの肥大化を防ぎ、またテストが書きやすくなります。このQueryオブジェクトについて示します。

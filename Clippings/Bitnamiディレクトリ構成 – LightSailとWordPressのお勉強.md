@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 Tags:
   - wordpress
 URL: http://176.34.40.79/2020/09/30/bitnami%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%A7%8B%E6%88%90/

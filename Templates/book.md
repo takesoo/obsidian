@@ -1,11 +1,9 @@
 ---
-Status: [未読, 読了, 読みかけ]
-Auther:
-Purpuse: 
-Summary: 
+Summary:
 Start:
 End:
-tags: [book]
+tags:
+  - book
 ---
 
 ## ロジックツリー

@@ -1,9 +1,6 @@
 ---
 Tags:
   - VSCode
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 ## 概要
 - VSCodeの開発環境をDockerコンテナ内に構築する仕組み

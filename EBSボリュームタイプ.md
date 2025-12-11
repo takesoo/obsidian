@@ -1,9 +1,6 @@
 ---
 Tags:
   - AWS
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
 ---
 # 汎用SSD (gp2, gp3)
 

@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[utahkaフォロー]]"
-title: "GitHub Actions で Issue を Notion に連携するしくみを作ろう！"
+title: GitHub Actions で Issue を Notion に連携するしくみを作ろう！
 source: https://zenn.dev/utahka/articles/a953af65069a5c
 clipped: 2023-08-25
 published: 2023-08-25
-topics: 
-tags: [clippings]
+tags:
+  - clippings
 ---
 
 この投稿では、複数リポジトリに分散している GitHub Issue を、 Notion データベースに同期して一括管理するしくみを GitHub Actions でつくった方法を解説します。

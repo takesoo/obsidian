@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://mogulla3.tech/articles/2019-08-29-01
 ---
 RSpecは慣れるととても手に馴染むテスティングツールだが、割と癖があってRSpecでテストを書くのに苦労している人も多いのではないだろうか。

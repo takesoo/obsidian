@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://milestone-of-se.nesuke.com/sv-advanced/aws/internet-nat-gateway/
 ---
 [![](https://milestone-of-se.nesuke.com/wp-content/uploads/2019/02/inet-gw-and-nat-gw-1.png)](https://milestone-of-se.nesuke.com/wp-content/uploads/2019/02/inet-gw-and-nat-gw-1.png)

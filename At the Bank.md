@@ -1,8 +1,6 @@
 ---
-Status: Not started
-Last edited time: Invalid date
-Created time: Invalid date
-tags: [english bank]
+tags:
+  - english bank
 ---
 Hello. How can I help you?
 

@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://note.com/npaka/n/n8c4a2dec7685
 ---
 [![](https://assets.st-note.com/production/uploads/images/75119471/rectangle_large_type_2_b19be5c8baaecf30b9bf35b7b1c16548.png?fit=bounds&quality=85&width=1280)](https://assets.st-note.com/production/uploads/images/75119471/rectangle_large_type_2_b19be5c8baaecf30b9bf35b7b1c16548.png?fit=bounds&quality=85&width=1280)

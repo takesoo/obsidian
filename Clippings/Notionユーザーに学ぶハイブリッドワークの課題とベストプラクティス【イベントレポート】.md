@@ -1,8 +1,6 @@
 ---
 AI summary: リモートワーク・ハイブリッドワーク下では、アライメントとスピードを保つことが重要である。情報共有のために情報の地図を作成する、透明性と自走を促進する、非同期のコミュニケーションを促進するなどのベストプラクティスがある。現場主導の取り組みが重要であり、新しい働き方を実践するためには最新のツールを試してみることが重要である。
-Created: Invalid date
 URL: https://levtech.jp/media/article/column/detail_32/
-カテゴリー: WFA働き方
 ---
 [![](https://levtech.jp/media/wp-content/uploads/2021/12/image3-1.jpg)](https://levtech.jp/media/wp-content/uploads/2021/12/image3-1.jpg)
 

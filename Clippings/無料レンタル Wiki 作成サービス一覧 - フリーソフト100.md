@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://freesoft-100.com/homepage/rental/wiki.html
 ---
 [![](https://freesoft-100.com/apple-touch-icon.png)](https://freesoft-100.com/apple-touch-icon.png)

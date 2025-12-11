@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://aws.amazon.com/jp/blogs/news/running-wordpress-amazon-ecs-fargate-ecs/
 ---
 [![](https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2021/06/22/image-2021-05-20T153609.196-557x630.png)](https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2021/06/22/image-2021-05-20T153609.196-557x630.png)

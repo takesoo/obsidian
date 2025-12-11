@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://chasuke.com/raspberrypi3-starter/
 ---
 [![](https://chasuke.com/wp/wp-content/uploads/2017/05/ras33.jpeg)](https://chasuke.com/wp/wp-content/uploads/2017/05/ras33.jpeg)

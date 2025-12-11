@@ -1,8 +1,6 @@
 ---
 AI summary: ChatGPTを独自データと連携させるためのエンベディングにより、関連する文章が抽出されるが、最終的に生成されたプロンプトを受け取って回答しているだけであり、ChatGPTが本の全文を読むわけではない。エンベディングとは別に、プロンプトとそれに対して期待される回答のセットを独自データとして用意して追加学習させるファインチューニングもあるが、現時点ではGPT-3のベースモデルに限られる。ChatGPTをカスタマイズする際には、どんな仕組みが使われているのか、解像度を上げて中身を知ることが重要。
-Created: Invalid date
 URL: https://note.com/ogatahisato/n/n899dcb459f35
-カテゴリー: 技術
 ---
 [![](https://assets.st-note.com/production/uploads/images/105521327/rectangle_large_type_2_5e8fba9cbd3cc7f68a4bff4eac4577c1.jpeg?fit=bounds&quality=85&width=1280)](https://assets.st-note.com/production/uploads/images/105521327/rectangle_large_type_2_5e8fba9cbd3cc7f68a4bff4eac4577c1.jpeg?fit=bounds&quality=85&width=1280)
 

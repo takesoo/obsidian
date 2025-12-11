@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[Runner in the High]]"
-title: "ドメイン・イベントについて＆Ruby製のよさげなPub/Subインターフェースgemまとめ - Runner in the High"
+title: ドメイン・イベントについて＆Ruby製のよさげなPub/Subインターフェースgemまとめ - Runner in the High
 source: https://izumisy.work/entry/2020/02/22/152900
 clipped: 2023-10-23
 published: 2020-02-22
-topics: 
-tags: [clippings]
+tags:
+  - clippings
 ---
 
 [Ruby](http://d.hatena.ne.jp/keyword/Ruby)で特に[Rails](http://d.hatena.ne.jp/keyword/Rails)を使う際に「特定の[ドメイン](http://d.hatena.ne.jp/keyword/%A5%C9%A5%E1%A5%A4%A5%F3)の変化によって別の処理の実行をトリガする」みたいなケースでは大抵の場合コールバックが使われる。 しかし、ぶっちゃけた話コールバックはかなり結合度の高いコードになってしまいがちで、実装的にスケールさせるためには[ドメイン](http://d.hatena.ne.jp/keyword/%A5%C9%A5%E1%A5%A4%A5%F3)・イベントを使うほうが健全であると言える。 [martinfowler.com](https://martinfowler.com/eaaDev/DomainEvent.html)

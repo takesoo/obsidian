@@ -1,5 +1,4 @@
 ---
-Created: Invalid date
 URL: https://blog.serverworks.co.jp/aws-waf-block-from-overseas-countries
 ---
 [![](https://cdn-ak.f.st-hatena.com/images/fotolife/s/swx-watanabe/20200825/20200825193346.png)](https://cdn-ak.f.st-hatena.com/images/fotolife/s/swx-watanabe/20200825/20200825193346.png)

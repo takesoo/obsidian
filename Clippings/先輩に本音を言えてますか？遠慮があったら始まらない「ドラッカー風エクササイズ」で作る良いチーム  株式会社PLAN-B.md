@@ -1,8 +1,6 @@
 ---
 AI summary: チームビルディングの手法の1つであるドラッカー風エクササイズを紹介。4つの質問に答え、お互いの考えや価値観、期待のすり合わせを行い、心理的安全性を高めることができる。具体的な質問内容や事例も紹介されている。
-Created: Invalid date
 URL: https://www.plan-b.co.jp/blog/tech/13361/
-カテゴリー: チームビルディング
 ---
 [![](https://service.plan-b.co.jp/wp/wp-content/uploads/blog/drucker_style_00.jpg)](https://service.plan-b.co.jp/wp/wp-content/uploads/blog/drucker_style_00.jpg)
 

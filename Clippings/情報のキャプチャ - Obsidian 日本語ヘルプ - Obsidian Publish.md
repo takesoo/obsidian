@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
-author: 
-title: "情報のキャプチャ - Obsidian 日本語ヘルプ - Obsidian Publish"
+author:
+title: 情報のキャプチャ - Obsidian 日本語ヘルプ - Obsidian Publish
 source: https://publish.obsidian.md/help-ja/%E3%82%AC%E3%82%A4%E3%83%89/%E6%83%85%E5%A0%B1%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3
 clipped: 2023-08-16
-published: 
-topics: 
-tags: [clippings]
+published:
+tags:
+  - clippings
 ---
 
 情報のキャプチャ

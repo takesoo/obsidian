@@ -5,7 +5,6 @@ title: サービス分割に備えたモノリス（モジュラーモノリス�
 source: https://tech-blog.rakus.co.jp/entry/20201026/microservice
 clipped: 2023-09-12
 published: 2020-10-26
-topics: 
 tags:
   - clippings
   - ラクス

@@ -1,12 +1,12 @@
 ---
 category: "[[Clippings]]"
 author: "[[by nanamen]]"
-title: "オニオンアーキテクチャとは何か - Qiita"
+title: オニオンアーキテクチャとは何か - Qiita
 source: https://qiita.com/cocoa-maemae/items/e3f2eabbe0877c2af8d0
 clipped: 2023-10-04
 published: 2022-03-30
-topics: 
-tags: [clippings 設計 ドメイン駆動設計 アーキテクチャ クリーンアーキテクチャ オニオンアーキテクチャ]
+tags:
+  - clippings 設計 ドメイン駆動設計 アーキテクチャ クリーンアーキテクチャ オニオンアーキテクチャ
 ---
 
 オニオンアーキテクチャはJeffrey Palermo氏により考案されたアーキテクチャパターンである。伝統的な[階層化アーキテクチャ](https://ja.wikipedia.org/wiki/%E5%A4%9A%E5%B1%A4%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)と[オブジェクト指向](https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91)の考え方を踏襲しつつ、これまでよりも保守性、テスト容易性、依存性の点で優れたアプリケーションを構築することを目的としている。本記事ではこのオニオンアーキテクチャとは何かについて[Palermo氏の記事](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/)を参考にして考察する。
