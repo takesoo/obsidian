@@ -25,13 +25,13 @@ tags:
 }
 
 .named-container {
-  container
-  container-type: inline-size; %% この要素をcontainer queryの基準とする %%
+  container-name: hoge;
+  container-type: inline-size;
   width: 500px
 }
 
-%% containerクラスの要素のwidthが300px以上ならdisplay: flex;にする %%
-@container (min-width: 300px) {
+%% container-nameで指定することもできる %%
+@container hoge (min-width: 300px) {
   ul {
     display: flex;
     justify-content: space-between;
@@ -39,5 +39,9 @@ tags:
   li {
     width: 33%
   }
+}
+
+.bulkset-container {
+  container: hoge / inline-size; %% 一括設定 %%
 }
 ```
