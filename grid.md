@@ -4,18 +4,11 @@ tags:
 ---
 ## what
 - グリッドレイアウトの作成
+- 可変サイズのグリッドには`fr`を使う
 ## how
-```html
-<div class="container">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
-```
 ```css
 .container {
-  display: grid;
+  display: grid;　/* またはinline-grid */
   grid: repeat(2, 60px) / auto-flow 80px;
 }
 
@@ -25,6 +18,15 @@ tags:
   height: 50px;
 }
 ```
+```html
+<div class="container">　<!-- グリッドコンテナー -->
+  <div></div> <!-- グリッドトラック -->
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
+
 ### grid-template
 - grid-template-columns: 
 - grid-template-rows:
