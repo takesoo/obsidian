@@ -1,1 +1,1 @@
-[[ECMA]]によって定義された[[JavaScript]]の標準仕様
+[[Ecma International]]によって定義された[[JavaScript]]の標準仕様
