@@ -199,7 +199,7 @@ const [state, setState] = React.useState(() => myExpensiveFn());
 ```
 - [[useContext|context]]の前にlift-stateやchildrenでの状態管理を検討すること
 - [[useContext|context]]は、テーマ、ユーザーデータなど、定速度のデータに適しており、中速/高速のデータの場合はセレクタをサポートしている[[use-context-selector]]、[[jotai]]などを検討する。
-- パフォーマンスに影響するような頻繁な更新がある場合には、ランタイムスタイリングソリューション([[emotion]]など)から、ゼロランタイムスタイリングソリューション([[tailwind]]、[[vanilla-extract]]など)を検討する。
+- パフォーマンスに影響するような頻繁な更新がある場合には、ランタイムスタイリングソリューション([[emotion]]など)から、ゼロランタイムスタイリングソリューション([[Tailwind CSS|tailwind]]、[[vanilla-extract]]など)を検討する。
 ### チルドレン
 - childrenを上手に分割すると、親のコンポーネントのライフサイクルと独立させ、不要な再レンダリングを回避できる。
 ```tsx
