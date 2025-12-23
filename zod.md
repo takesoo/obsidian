@@ -2,7 +2,10 @@
 tags:
   - npm
 ---
+## what
+- 実行時バリデーション＋型推論・型生成ライブラリ
 - 
+## how
 ```js
 import { z } from "zod";
 
@@ -28,3 +31,5 @@ User.parse({ username: "Ludwig" });
 type User = z.infer<typeof User>;
 // { username: string }
 ```
+### サーバーサイドのZodとのE2E型安全
+- サーバーサイドでZodを使った型生成をし、[[tRPC]]でクライアントサイドへ型を共有し、サーバーサイドとクライアントサイド間で型を共有できる。[[React Hook Form]]などに型を利用でき、型の差異をなくすことができる。
