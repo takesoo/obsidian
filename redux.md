@@ -2,6 +2,9 @@
 tags:
   - npm
   - React
+aliases:
+  - Redux Toolkit Query
+  - RTK Query
 ---
 - state管理ライブラリ
 - 登場人物
