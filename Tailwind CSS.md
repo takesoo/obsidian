@@ -15,4 +15,11 @@ aliases:
 ## how
 ### globals.css
 - アプリケーションで共通のデザインルールを記述するファイル
-- 
+### container query
+```html
+<div class="@container">
+  <div class="flex flex-col @md:flex-row">
+    <!-- ... -->
+  </div>
+</div>
+```
