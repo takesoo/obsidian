@@ -1,6 +1,15 @@
 ## what
 - TypeScriptによる[[Remote Procedure Call|RPC]]
-- プロシージャ：クライアントサイドにエクスポートされる関数。`query`, `mutation`, `subscription`の3種類
+- プロシージャ：
+	- クライアントサイドにエクスポートされる関数。APIエンドポイント。
+	- 種類：
+		- `query`：gets some data
+		- `mutation`: creates, updates, or deletes some data
+		- `subscription`: コネクションの確立と変更のlesten
+- Router: 共有名前空間下のプロシージャのコレクション
+- Context: セッションステートやデータベースコネクションのような、全てのプロシージャで共同利用されるもの。
+- Middleware: プロシージャの前後で実行させる関数
+- Validation: inputデータのチェック
 ## why
 - REST APIの場合は、サーバーサイドとクライアントサイドで型を共有する方法が課題だったが、tRPCではサーバーサイドで定義した型をフロントエンドに推論されるため、型共有問題が解決する
 - IDEの支援をフルで得られる
@@ -22,6 +31,7 @@
 	import { publicProcedure, router } from './trpc';
 	
 	// procedure that asserts that the user is logged in
+	// t.procedure.use()はミドルウェア定義
 	export const authedProcedure = publicProcedure.use(async function isAuthed(opts) {
 		const { ctx } = opts;
 		// `ctx.user` is nullable
