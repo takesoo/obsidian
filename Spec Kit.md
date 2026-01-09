@@ -19,18 +19,30 @@
 - `specs/`ディレクトリ内にmdファイルで管理
 ## how
 ```shell
-# 1. プロジェクト原則、開発ガイドラインの作成
+# 1. プロジェクト原則、開発ガイドラインの定義しconstitution.mdを作成(最初に一度実行)
 /speckit.constitution
 
-# 2. 仕様の記述。技術スタックは含まず、何を、なぜ作るのかにフォーカス。
-/speckit.specify
+# 2. 機能仕様書(spec.md)を作成。技術スタックは含まず、何を、なぜ作るのかにフォーカス。
+/speckit.specify ユーザー認証機能を追加したい
 
-# 3. 実装計画の作成。技術スタックとアーキテクチャの選択
+# 2.5 仕様の曖昧な点を質問形式で明確化
+/speckit.clarify
+
+# 3. 技術設計書(plan.md)を作成。技術スタックとアーキテクチャの選択
 /speckit.plan
 
-# 4. タスク分割
+# 4. 実装タスク一覧(tasks.md)を作成
 /speckit.tasks
 
-# 5. 実装
+# 5. tasks.mdに沿って実装を実行
 /speckit.implement
+
+# spec/plan/tasks間の整合性チェック
+/speckit.analyze
+
+# 要件品質検証用チェックリスト生成
+/speckit.checklist
+
+# タスクをGithub Issueに変換
+/speckit.taskstoissues
 ```
