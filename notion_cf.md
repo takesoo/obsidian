@@ -2,6 +2,7 @@
 tags:
   - 個人開発
   - メモ
+  - 個人開発/アイデア
 ---
 notionのページ構成をyamlコードベースで構成管理するしくみを個人開発する
 cf = cloudformation

@@ -1,0 +1,15 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "読書"
+    order:
+      - file.name
+      - tags
+      - Summary
+    sort:
+      - property: formula.Untitled
+        direction: ASC
+    columnSize:
+      note.tags: 243
