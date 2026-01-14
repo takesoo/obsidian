@@ -46,3 +46,26 @@ git worktree remove ../my-project-new-ui
 git worktree prune
 
 ```
+
+## Github Actions
+```yml
+name: CI # ワークフロー名
+
+on:  # いつ実行するか
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  　　
+jobs: # 何をするか
+  build-and-test:  # ジョブ名
+    runs-on: ubuntu-latest # 実行環境
+    steps:
+      - uses: actions/checkout@v4 # リポジトリのコードをチェックアウト
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'  # node_modulesをキャッシュする
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test
+      - run: npx cdk synth
+```
