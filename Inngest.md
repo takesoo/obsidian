@@ -107,4 +107,7 @@ export const POST = inngest.endpoint(async (req: NextRequest) => {
 	- `step.waitForEvent()`: 別イベントを待つ
 	- `step.waitForSignal()`: 特定のrunを再開する
 	- `step.invoke()`: 別のInngest Functionをサブワークフローとして呼び出す
-	- `step.sendEvent()`fire-and-forgetなトリガー
+	- `step.sendEvent()`[[fire-and-forget]]なトリガー
+- Crons (Scheduled Functions): 定時実行
+	- createFunction()のトリガーにcronを指定すると、スケジュール実行されるInngest Functionが作れる
+	- 
