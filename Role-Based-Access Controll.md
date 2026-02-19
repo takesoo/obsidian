@@ -11,5 +11,7 @@ tags:
 - 「開発者」「経理」「閲覧専用」といった役割ごとに、どのテーブルに対してどのような操作を許可するかを設定できるようにするため
 ## how
 ```sql
-GRANT SELECT ON users TO readonly;
+CREATE ROLE readonly_group;
+GRANT SELECT ON users TO readonly_group;
+GRANT readonly_group TO taro;
 ```

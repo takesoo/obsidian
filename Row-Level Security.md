@@ -12,5 +12,8 @@ tags:
 - マルチユーザー・マルチテナントで、A社のデータはA社の社員にしか見えないようにすることができる
 ## how
 ```sql
-USING (user_id = current_user_id);
+-- すべてのテーブルにuser_idまたはtenant_idを持たせる
+-- user_idが同じものだけにフィルタされるようにポリシーを定義
+USING (user_id = current_setting('app.current_user_id'));
+-- アプリケーション側でフィルタしてなくてもDB側で強制的にフィルタされる
 ```
