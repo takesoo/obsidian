@@ -32,4 +32,8 @@ SELECT * FROM users WHERE metadata->'tags' @> '["admin"]';
 ```
 ### Anti Pattern
 - JSONの値を頻繁に更新する。
-	- JSONの
+	- JSONの一部を変更するだけでもJSON全体を書き直すので遅い
+- インデックス・ブロート
+	- GINインデックスは強力だが更新が重い
+- クエリ最適化（プランナー）はjsonbの内部までは見ない
+- 
