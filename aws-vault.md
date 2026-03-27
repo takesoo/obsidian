@@ -39,3 +39,19 @@ $ aws-vault rotate dev-user --no-session
 # AWSコンソールへのログイン
 $ aws-vault login dev-user
 ```
+
+### 仕組み
+`aws-vault exec <profile>`を実行すると環境変数に認証情報が出力される。この状態ではこの認証情報を使ってawsへの操作を行う。
+```shell
+$ aws-vault exec takuzo -- env | grep AWS
+AWS_VAULT=takuzo
+AWS_ACCESS_KEY_ID=ASIAxxxxxx
+AWS_SECRET_ACCESS_KEY=xxx
+AWS_SESSION_TOKEN=xxx
+AWS_SECURITY_TOKEN=xxx
+AWS_SESSION_EXPIRATION=2023-12-12T20:52:12Z
+# aws-vaultなしでは何も表示されない
+$ env | grep AWS
+$ 
+
+```
