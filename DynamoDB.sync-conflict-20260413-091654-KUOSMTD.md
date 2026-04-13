@@ -1,0 +1,12 @@
+---
+tags:
+  - AWS
+---
+- AWSフルマネージド型のNoSQLデータベース
+- オンデマンドキャパシティ: 自動スケーリング。アクセスパターンが予測困難なケース向け。
+- プロビジョンドキャパシティ: 読み取り・書き込み容量を事前設定。予測可能なワークロード向け。
+- DAX(DynamoDB Accelerator): インメモリキャッシュ
+- DynamoDB Stream
+	- データ変更をリアルタイムでキャプチャ
+	- [[AWS Lambda|Lambda]]との連携が可能
+	- [[AWS Kinesis|Kinesis]]や[[AWS Glue|Glue]]との統合
