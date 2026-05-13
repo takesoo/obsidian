@@ -1,6 +1,7 @@
 ---
 aliases:
   - nvm
+  - nvmrc
 ---
 ## what
 - [[Node.js]]のバージョン管理ツール
@@ -14,4 +15,4 @@ nvm install --lts --latest-npm
 nvm use stable
 ```
 
-Node.jsのバージョンを固定したい場合は`.nvmrc`を使用する
+Node.jsのバージョンを固定したい場合は`.nvmrc`を使用する。`nvm use`で`.nvmrc`で指定されたバージョンが使用される。
