@@ -63,3 +63,43 @@ const registerUserWorkflow = (input: string) => {
 // 最終的には非同期処理になるので、呼び出し側は await する
 const finalResult = await registerUserWorkflow("raw_input_data");
 ```
+### Result.map
+```ts
+/**
+ * Result<T, E>をResult<U, E>に、成功時の値の型を変換する
+ * string型のTをnumber型のUに変換
+ */
+ok("1").map(v => Number(v))
+```
+### Result.andThen
+```ts
+/**
+ * andThen<U, F>(callback: (value: T) => Result<U, F>): Result<U, E | F> { ... }
+ * okの場合にのみ実行される
+ * 引数に渡す関数がResultを返す必要がある
+ */
+
+const double = v => ok(v + v)
+
+ok(2).andThen(double).andThen(double) // Ok(8)
+err(2).andThen(err).andThen(double) // Err(2)
+```
+### Result.match
+```ts
+/**
+ * okとerr両方の処理が定義できる
+ * 戻り値はResultではなく返した値の型
+ * システムの入り口で、okなら200レスポンス、errなら500レスポンスといった分岐に使う？
+ */
+class Result<T, E> {
+  match<A>(
+    okCallback: (value: T) => A,
+    errorCallback: (error: E) => A,
+  ): A => { ... }
+}
+```
+### Result.fromThrowable
+例外を投げる可能性がある関数と投げられた例外を変換する関数の二つを引数に取り、結果をResultで返す関数に変換する関数。
+例外を投げる外部ライブラリをラップする時に使う。
+### ResultAsync.fromPromise
+例外を投げる可能性がある`Promise`を`ResultAsync`に変換する関数。
