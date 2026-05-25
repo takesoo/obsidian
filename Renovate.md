@@ -1,5 +1,6 @@
 ## what
 - 依存関係の自動更新ツール
+	- [[node package]]が主。[[Github Actions]]のバージョン管理もできる。
 ## how
 ### getting start
 1. github apps インストール
