@@ -3,15 +3,20 @@ tags:
   - nodejs
   - npm
 ---
-https://github.com/nodejs/corepack?tab=readme-ov-file#utility-commands
-
-node.jsのパッケージマネージャ([[npm]], [[yarn]], [[pnpm]])のバージョン管理ツール
-グローバルにcorepackをインストールしていて、プロジェクトのpackage.jsonにパッケージマネージャーと利用バージョンを指定しておくと、そのパッケージマネージャーを自動的にインストールして使用できる。
-
+## what
+- [[パッケージ管理システム|パッケージマネージャ]]のバージョンを管理するマネージャー
+## how
+1. corepackを有効化する
 ```bash
-// パッケージマネージャーとバージョンを指定
-$ corepack use pnpm@8.15.5
+corepack enable
 ```
-
-2024/09/30追記
-[[Node.js]]にバンドルされなかったみたい。今後はあまり優位性がないかも。
+2. `package.json`で指定する。
+```json
+// package.json
+{
+	"name": "my-project",
+	"version": "1.0.0",
+	"packageManager": "pnpm@10.0.0"
+}
+```
+3. `pnpm`コマンドが自動で↑のバージョンになる
