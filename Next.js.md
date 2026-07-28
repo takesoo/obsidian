@@ -2,6 +2,8 @@
 tags:
   - nextjs
 ---
+## what
+- [[React]]、[[モジュールバンドラ]]、ルーティングシステムがパッケージングされたフレームワーク。
 Next.jsは[[React]]の実行に必要な[[Webpack]]や[[Babel]]やらなんやらが全てパッケージされたフレームワーク。フロントエンド開発はもちろんのこと、[[API Routes]]を使ってフルスタック開発もできる。
 https://nextjs.org/docs/pages/building-your-application/routing
 https://ja.next-community-docs.dev/docs/app-router/getting-started/
@@ -107,6 +109,7 @@ tree -I node_modules
 ## フルスタック開発
 [[API Routes]]を使用してサーバーサイドロジックを実装することもできる。
 ## Next.jsにおけるクライアントサイドとサーバーサイド
+![[nextjs-vercel-executing-environment.png]]
 ### クライアントサイド
 [[クライアントサイドレンダリング|CSR]]のコンポーネントやクライアントサイドでのデータフェッチなど、クライアントサイドで動作する部分。
 ### サーバーサイド
