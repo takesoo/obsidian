@@ -4,13 +4,13 @@
 
 ### キーと認証
 
-| キー                    | 形式                     | 概要              | RLS   | 注意          |
-| --------------------- | ---------------------- | --------------- | ----- | ----------- |
-| publishable           | `sb_publishable_xxxxx` | 通常の認証キー         | 適用される |             |
-| secret                | `sb_secret_xxxxx`      | RLSをバイパスする管理者キー | バイパス  | ブラウザへの公開はNG |
-| anon (Legacy)         | 長期間有効JWT               | 通常の認証キー         | 適用される |             |
-| service_roel (Legacy) | JWT                    | RLSをバイパスする管理者キー | バイパス  | ブラウザへの公開はNG |
-- publishableキーは単なるAPIキー。Supabase AuthのJWTと一緒にAPIにおくること
+| キー                    | 形式                     | 概要              | 認可範囲                         | 注意          |
+| --------------------- | ---------------------- | --------------- | ---------------------------- | ----------- |
+| publishable           | `sb_publishable_xxxxx` | 通常の認証キー         | Grant: 適用される<br>RLS: 適用される   |             |
+| secret                | `sb_secret_xxxxx`      | RLSをバイパスする管理者キー | Grant: 適用される<br>RLS: バイパスされる | ブラウザへの公開はNG |
+| anon (Legacy)         | 長期間有効JWT               | 通常の認証キー         | Grant: 適用される<br>RLS: 適用される   |             |
+| service_roel (Legacy) | JWT                    | RLSをバイパスする管理者キー | Grant: 適用される<br>RLS: バイパスされる | ブラウザへの公開はNG |
+- publishableキーは単なるAPIキー。Supabase AuthのJWTと一緒にAPIに送ることで、RLSが適用される。
 ```
 Browser
   │
