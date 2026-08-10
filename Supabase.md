@@ -2,4 +2,37 @@
 - [[PostgreSQL]]ベースのBaaS
 ## how
 
-### anon key
+### キーと認証
+
+| キー                    | 形式                     | 概要              | RLS   | 注意          |
+| --------------------- | ---------------------- | --------------- | ----- | ----------- |
+| publishable           | `sb_publishable_xxxxx` | 通常の認証キー         | 適用される |             |
+| secret                | `sb_secret_xxxxx`      | RLSをバイパスする管理者キー | バイパス  | ブラウザへの公開はNG |
+| anon (Legacy)         | 長期間有効JWT               | 通常の認証キー         | 適用される |             |
+| service_roel (Legacy) | JWT                    | RLSをバイパスする管理者キー | バイパス  | ブラウザへの公開はNG |
+- publishableキーは単なるAPIキー。Supabase AuthのJWTと一緒にAPIにおくること
+```
+Browser
+  │
+  │ Cookie
+  │ └─ Supabase Auth のユーザーセッション
+  ▼
+Next.js
+Route Handler
+  │
+  │ Publishable Key
+  │ +
+  │ ユーザーの Access Token (JWT)
+  ▼
+Supabase Data API
+  │
+  │ role = authenticated
+  │ auth.uid() = ユーザーID
+  ▼
+RLS
+  │
+  ├─ tenant A のメンバー → tenant A のデータだけ
+  └─ tenant B のメンバー → tenant B のデータだけ
+  ▼
+PostgreSQL
+```
