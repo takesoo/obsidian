@@ -44,7 +44,7 @@ Publishable       Publishable + JWT     Secret
 - Secret/service_roleの場合には、`BYPASSRLS` 権限が付与される。
 ### PostgreSQL直接接続の場合
 ```
-DB Client(eg: drizzle...)
+DB Client(eg: drizzle, etc...)
  ↓ 接続情報
 postgres driver
  ↓
