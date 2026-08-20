@@ -1,4 +1,8 @@
 ## What
+### drizzle-orm
+### drizzle-kit
+- マイグレーションなどDB操作
+- 
 ## Why
 ## How
 - `drizzle-kit push`: スキーマ定義と実 DB を比較して、差分 DDL をその場で生成して直接適用する。
