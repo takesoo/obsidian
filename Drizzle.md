@@ -9,4 +9,4 @@
 - `drizzle-kit generate`: スキーマ定義の変化からマイグレーションファイルを生成する。
 - `drizzle-kit migrate`: マイグレーションファイルを適用する
 - `drizzle-kit studio`: DB を閲覧編集できる Web GUI を起動する
-- 
+### マイグレーションの流れ
