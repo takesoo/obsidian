@@ -7,4 +7,5 @@ aliases:
 	- 現在は、[[Radix UI]]、[[Base UI]]、[[React Aria]] の3種類のプリミティブから選べるようになっている。
 - [[npm]]パッケージではなく、レジストリ+CLI。`add`コマンドをうちとコンポーネントのソースコードそのものがリポジトリにコピーされる。（土台となるヘッドレスライブラリだけはnpmでインストールされる。）
 ## how
-- shadcn/uiのコンポーネントを取り込んだ上で、ページファイルにimportして使用する
+- components.json: CLI設定ファイル
+- `pnpm dlx shadcn@latest add tooltip`
