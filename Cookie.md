@@ -1,22 +1,46 @@
 ## what
 - webサイトがユーザーのブラウザに一時的に保存するテキストデータ
-- HTTPリクエストごとに自動送信されるため、セッション管理やユーザー追跡に使用される。
-- **保存期間**: 開発者が指定（セッション終了、または指定された期間）
-- **容量**: 約4KB
-- **スコープ**: ドメインとパスで制御可能
-- **セキュリティ**: HTTPOnlyオプションを使用することでJavaScriptからのアクセスを制限可能
+- ブラウザが[[HTTPリクエスト]]を送る時に、条件に一致するCookieを自動的に付与する。
+### 属性
+
+| 属性       | 役割                             | 値                                                                                                            |
+| -------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| HttpOnly | JavaScriptからCookieを読み取れなくする    |                                                                                                              |
+| Secure   | HTTPS通信でのみ送信する（localhost以外）    |                                                                                                              |
+| SameSite | [[クロスサイトリクエスト]]でのCookie送信を制御する | Strict: クロスサイトリクエストでは送信しない, Lax: 原則クロスサイトリクエストでは送信しないが、通常のリンク遷移など一部で送信する, None: クロスサイトリクエストでも送信できる。Secure必須。 |
+| Domain   | Cookieを送信する対象ドメインを指定する         |                                                                                                              |
+| Path     | Cookieを送信するURLパスを指定する          |                                                                                                              |
+| Max-Age  | Cookieの有効期間（sec）               |                                                                                                              |
+| Expires  | Cookieの有効期限（日時）                |                                                                                                              |
+
 ## why
+- [[HTTP]]自体には存在しない「状態」を継続して扱うため
 - セッション管理
+	- ログイン状態の維持
+	- 言語設定の保存
+	- ショッピングカートの管理
 - トラッキング
 ## how
-```ts
-// Cookiesの設定
-document.cookie = "username=John Doe; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+① ブラウザがログインAPIを呼び出す
 
-// Cookiesの取得
-const cookies = document.cookie;
+```http
+POST /api/login
+Content-Type: application/json
 
-// Cookiesの削除
-document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+{"email":"user@example.com","password":"..."}
+```
 
+② サーバーがCookieを発行する
+
+```http
+HTTP/1.1 200 OK
+Set-Cookie: session=abc123; HttpOnly; Secure; SameSite=Lax; Path=/
+```
+
+ブラウザは`Set-Cookie`ヘッダーを受け取り、Cookieを保存する。
+
+③ 次回以降、ブラウザがCookieを自動送信する
+```http
+GET /api/profile
+Cookie: session=abc123
 ```
