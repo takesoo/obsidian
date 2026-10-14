@@ -168,7 +168,7 @@ function Component() {
 	- [[Sentry]]使う
 ## Security
 - Authentication
-	- [[SPA]]では[[JWT]]を使うのが一般的
+	- [[SPA]]では[[JSON Web Token]]を使うのが一般的
 	- トークンは[[Cookie]]か[[LocalStorage]]に保存する
 		- HttpOnly属性で設定されたCookiedに保存することで、クライアントサイドJavaScriptからアクセスできないようにする。js-cookieなどを使用する
 	- [[クロスサイトスクリプティング|XSS]]対策として、[[サニタイズ]]する
